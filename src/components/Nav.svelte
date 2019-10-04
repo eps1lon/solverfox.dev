@@ -4,7 +4,7 @@
 
 <style>
 	nav {
-		border-bottom: 2px solid #D8C3A5;
+		border-bottom: 2px solid #d8c3a5;
 		font-weight: 300;
 		padding: 0 1em;
 	}
@@ -26,17 +26,17 @@
 		float: left;
 	}
 
-	.selected {
+	[aria-current] {
 		position: relative;
 		display: inline-block;
 	}
 
-	.selected::after {
+	[aria-current]::after {
 		position: absolute;
 		content: '';
 		width: calc(100% - 1em);
 		height: 2px;
-		background-color: #E85A4F;
+		background-color: #e85a4f;
 		display: block;
 		bottom: -2px;
 	}
@@ -51,10 +51,10 @@
 <nav>
 	<ul>
 		<li>
-			<a class={segment === undefined ? 'selected' : ''} href=".">home</a>
+			<a aria-current={segment === undefined ? 'page' : undefined} href=".">home</a>
 		</li>
 		<li>
-			<a class={segment === 'about' ? 'selected' : ''} href="about">about</a>
+			<a aria-current={segment === 'about' ? 'page' : undefined} href="about">about</a>
 		</li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
@@ -62,7 +62,7 @@
 		<li>
 			<a
 				rel="prefetch"
-				class={segment === 'blog' ? 'selected' : ''}
+				aria-current={segment === 'blog' ? 'page' : undefined}
 				href="blog">
 				blog
 			</a>
