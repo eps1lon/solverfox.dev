@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "sapper dev --ext '.svx .svelte'",
 		"build": "sapper build --legacy",
-		"export": "sapper export --legacy",
+		"export": "sapper export --legacy --ext '.svx .svelte'",
 		"format": "prettier --ignore-path ./.eslintignore \"**/*.{js,jsx,json,ts,tsx,yml}\" --write",
 		"format:check": "prettier --ignore-path ./.eslintignore \"**/*.{js,jsx,json,ts,tsx,yml}\" --check",
 		"start": "node __sapper__/build",
