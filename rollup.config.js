@@ -1,4 +1,6 @@
 /* eslint-env node */
+import { mdsvex } from 'mdsvex';
+import * as path from 'path';
 import resolve from 'rollup-plugin-pnp-resolve';
 import replace from 'rollup-plugin-replace';
 import commonjs from 'rollup-plugin-commonjs';
@@ -32,6 +34,15 @@ export default {
 				dev,
 				hydratable: true,
 				emitCss: true,
+				extensions: ['.svelte', '.svx'],
+				preprocess: mdsvex({
+					extension: '.svx',
+					// you can add markdown-it options here, html is always true
+					markdownOptions: {
+						typographer: true,
+						linkify: true,
+					},
+				}),
 			}),
 			resolve({
 				extensions: moduleExtensions,
@@ -83,6 +94,14 @@ export default {
 			svelte({
 				generate: 'ssr',
 				dev,
+				extensions: ['.svelte', '.svx'],
+				preprocess: mdsvex({
+					extension: '.svx',
+					markdownOptions: {
+						typographer: true,
+						linkify: true,
+					},
+				}),
 			}),
 			resolve({
 				extensions: moduleExtensions,

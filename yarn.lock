@@ -975,6 +975,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"argparse@npm:^1.0.7":
+  version: 1.0.10
+  resolution: "argparse@npm:1.0.10"
+  dependencies:
+    sprintf-js: "npm:~1.0.2"
+  checksum: f0b382b138049618e7958f6345a52b33e673e7ca6baa7c4efa758938a4b586e40467cc198a8b3fda9a8f627078fb46bfe5933fc507d5a07a75d2145e706466d3
+  languageName: node
+  linkType: hard
+
 "babel-plugin-dynamic-import-node@npm:^2.3.0":
   version: 2.3.0
   resolution: "babel-plugin-dynamic-import-node@npm:2.3.0"
@@ -1192,6 +1201,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"entities@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "entities@npm:2.0.0"
+  checksum: 206592bd41a8e8428cc89ecea6cbad1811f8b6f76170dce423ab10cd0d685f1bb63e0ea9f6b9218bfb3a5c2528b5db451f512e4a4ffaff56893e8f749719a614
+  languageName: node
+  linkType: hard
+
+"entities@npm:~1.1.1":
+  version: 1.1.2
+  resolution: "entities@npm:1.1.2"
+  checksum: 5932e4e60e4606f6be7547d6e8ee5bea2962d7457d06d32b0fa6f2cec4eeffa49642ee9114fea58c43a308393310497752c283521bfa0868cf3281f86a0302a7
+  languageName: node
+  linkType: hard
+
 "error-ex@npm:^1.3.1":
   version: 1.3.2
   resolution: "error-ex@npm:1.3.2"
@@ -1237,6 +1260,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esprima@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "esprima@npm:4.0.1"
+  bin:
+    esparse: ./bin/esparse.js
+    esvalidate: ./bin/esvalidate.js
+  checksum: a9bec67e9a3dfccc29a2d54c65a3210129668b3eeae7fe296145bc564c963c4d1d7be101dd13fbe65000414ac07f35bd2f85ac9d3254016e5a2f3aa13d18caf1
+  languageName: node
+  linkType: hard
+
 "estree-walker@npm:^0.6.1":
   version: 0.6.1
   resolution: "estree-walker@npm:0.6.1"
@@ -1255,6 +1288,15 @@ __metadata:
   version: 5.0.2
   resolution: "focus-visible@npm:5.0.2"
   checksum: f552a9a9fa33d648ad524e4f6ae3fcc4f3462fc4779d3181ca5de79dc06bf637cad448fffc9037a303485170093744a7bb12b780a733aa8b2513a98ade515cc2
+  languageName: node
+  linkType: hard
+
+"front-matter@npm:^3.0.1":
+  version: 3.0.2
+  resolution: "front-matter@npm:3.0.2"
+  dependencies:
+    js-yaml: "npm:^3.13.1"
+  checksum: e9ee4fe61750056aebfc434a020fb9b62114a79abbf8ff4886135bc6f781f7c9a8b33c6bbb5aea60d1599aeba750da470066355574ccb8bb322293c6ae29d6a7
   languageName: node
   linkType: hard
 
@@ -1437,6 +1479,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-yaml@npm:^3.13.1":
+  version: 3.13.1
+  resolution: "js-yaml@npm:3.13.1"
+  dependencies:
+    argparse: "npm:^1.0.7"
+    esprima: "npm:^4.0.0"
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: 4860a95f2baf230cda4bb5f3fc06e7bb504324f75732c683d625cfeb987686b40bb68ad838960ad6e39d152e790d75dba380c31032757968c75a1eeecdec8b63
+  languageName: node
+  linkType: hard
+
 "jsesc@npm:^2.5.1":
   version: 2.5.2
   resolution: "jsesc@npm:2.5.2"
@@ -1470,6 +1524,15 @@ __metadata:
   bin:
     json5: lib/cli.js
   checksum: d590aca587972744a44f1d6a544b5308b1b529da41fb59cacd99f8cf9d9e67ae2bc27ee426458c4aa4cfb720674d33ec4093f70eb7393b84fc4c8e0397f9bf42
+  languageName: node
+  linkType: hard
+
+"linkify-it@npm:^2.0.0":
+  version: 2.2.0
+  resolution: "linkify-it@npm:2.2.0"
+  dependencies:
+    uc.micro: "npm:^1.0.1"
+  checksum: a6a3ac5dfa6b1e23a0e29612be9fed9488bd66330802fd09fc803b3b17fdba9d525043e132f8a9ef3bed4524a870fdbefe99421cbae6fe6678ac80ba07a611dc
   languageName: node
   linkType: hard
 
@@ -1516,6 +1579,43 @@ __metadata:
   dependencies:
     sourcemap-codec: "npm:^1.4.4"
   checksum: 84f1edec7c01242bd313e0524d0eaff01e0ad531a96fc5c6fa72a46d05b92593b3b6a6fbcb67aa68c98baf9b386a7cb3c8bc57fd4d00a85e2ac2c0d880af449d
+  languageName: node
+  linkType: hard
+
+"markdown-it@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "markdown-it@npm:9.1.0"
+  dependencies:
+    argparse: "npm:^1.0.7"
+    entities: "npm:~1.1.1"
+    linkify-it: "npm:^2.0.0"
+    mdurl: "npm:^1.0.1"
+    uc.micro: "npm:^1.0.5"
+  bin:
+    markdown-it: bin/markdown-it.js
+  checksum: 592029c7681f780ea79be84ba3dc0137868ab29648b4792549f7c440f53d2c88684d773ae7e92613fc4f25fb6b9eb597a2d15ad23bc73617fc2dc3dfeec73212
+  languageName: node
+  linkType: hard
+
+"mdsvex@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "mdsvex@npm:0.4.0"
+  dependencies:
+    entities: "npm:^2.0.0"
+    front-matter: "npm:^3.0.1"
+    markdown-it: "npm:^9.1.0"
+    path-browserify: "npm:^1.0.0"
+    punycode: "npm:^2.1.1"
+  peerDependencies:
+    svelte: 3.x
+  checksum: b58c6067dcb6a7f9ab4ab175c92f3c98a105f101ac64e3e4e865b6f3fa2a5c8a4f2b019c6630069bc15a0d8d328e112690eafe2862d9d1b92c97bace4112fde7
+  languageName: node
+  linkType: hard
+
+"mdurl@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "mdurl@npm:1.0.1"
+  checksum: 63f60bdd605a046347fa4ac37b9edabe2dd25b85f85a74552c599b16c1525259afa730fc572146fae8e02a46816b2365a4ae969bde397767af5a790d9e78b378
   languageName: node
   linkType: hard
 
@@ -1712,6 +1812,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-browserify@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "path-browserify@npm:1.0.0"
+  checksum: 60a5c7a01b03c13ca77c0bdc643abf6e61aadd54798791724d5b656ca21ec7a289fb9367edc4e7237e099537a593b63c0cc083697b10d622c08509aa091c4c73
+  languageName: node
+  linkType: hard
+
 "path-key@npm:^2.0.1":
   version: 2.0.1
   resolution: "path-key@npm:2.0.1"
@@ -1774,6 +1881,13 @@ __metadata:
   version: 0.1.8
   resolution: "private@npm:0.1.8"
   checksum: 67a72ac1f349afe985446962b833313057de7346098189c9e51dd0d90db884826c66952e63ebf047bdfa08941f268a9f67760ec9ed3ccca8c201c5bad1988893
+  languageName: node
+  linkType: hard
+
+"punycode@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "punycode@npm:2.1.1"
+  checksum: 497a65093f48fc94a91a2166cf4365d162ab07977adc8dc23dfb6c109c3d0dc004ea3623813a64e62992ad85d14b6a13a489055acd5c4763f56cae0733d71095
   languageName: node
   linkType: hard
 
@@ -2095,6 +2209,7 @@ __metadata:
     "@sapper/service-worker": "link:./src/node_modules/@sapper/service-worker?locator=solverfox.dev%40workspace%3A."
     compression: "npm:^1.7.1"
     focus-visible: "npm:^5.0.2"
+    mdsvex: "npm:^0.4.0"
     npm-run-all: "npm:^4.1.5"
     polka: "npm:next"
     prettier: "npm:^1.18.2"
@@ -2174,6 +2289,13 @@ __metadata:
   version: 3.0.5
   resolution: "spdx-license-ids@npm:3.0.5"
   checksum: 604019ab88d3f1f024f9a51b89e9d11c1cb67d53dc4059811c73fb20f7457f5ecd1bc529dbcef0bbc684acc4f6ed926adcfe05560d53b20e7839b6c2afbd7b75
+  languageName: node
+  linkType: hard
+
+"sprintf-js@npm:~1.0.2":
+  version: 1.0.3
+  resolution: "sprintf-js@npm:1.0.3"
+  checksum: 17cbfc6bf2a82ae6548e3b0b4d3d65b09961cde328feb978b823b22da8a9243477ef3ffe96b64e56d3b333d49aaad0feb55580e27c78a40bc092caf139ff048e
   languageName: node
   linkType: hard
 
@@ -2273,6 +2395,13 @@ __metadata:
   dependencies:
     regexparam: "npm:^1.3.0"
   checksum: dddb45ca77cd122575763b505e17b680a6d9b6f85d6829a2d0f1234aa7c9a69cb468b043ac0928d7b3e7a9866049c5503ff458b83b533c949341a4456fac2d09
+  languageName: node
+  linkType: hard
+
+"uc.micro@npm:^1.0.1, uc.micro@npm:^1.0.5":
+  version: 1.0.6
+  resolution: "uc.micro@npm:1.0.6"
+  checksum: c3ebd3a2137bf9e40892fd899ff43ce7606086b459b202b0ed51a2a12529a353642e44d290776b0e65f05d43f6a8e8c6073dc0e0b8d8779e8697474bda0fb160
   languageName: node
   linkType: hard
 

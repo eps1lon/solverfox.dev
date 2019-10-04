@@ -1,0 +1,22 @@
+---
+title: About solverfox.dev
+---
+
+# { _metadata.title }
+
+## Author
+
+My name is Sebastian Silbermann. One of my earlier nicknames was _Silberfuchs_ which
+is German for _Silverfox_. Since there are plenty of websites using this name I
+thought about something similar and discovered by accident that _Solverfox_ is actually
+quite fitting as well since I like solving problems.
+
+## Stack used
+
+The [source is hosted on GitHub](https://github.com/eps1lon/solverfox.dev) so you can see every package I rely on.
+
+The page itself is powered by [sapper](https://sapper.svelte.dev/) which is a page-framework using [svelte](https://svelte.dev/).
+Since I'm mostly doing [react](https://reactjs.org/) you'll occasionally see some react trees inside the
+page.
+
+Hosting is freely given by [netlify](https://www.netlify.com/).
