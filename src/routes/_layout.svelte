@@ -1,4 +1,5 @@
 <script>
+	import 'focus-visible/dist/focus-visible.min.js';
 	import Nav from '../components/Nav.svelte';
 
 	export let segment;
@@ -14,8 +15,8 @@
 	}
 </style>
 
-<Nav {segment}/>
+<Nav {segment} />
 
 <main>
-	<slot></slot>
+	<slot />
 </main>

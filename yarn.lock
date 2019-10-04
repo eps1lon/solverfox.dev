@@ -1251,6 +1251,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"focus-visible@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "focus-visible@npm:5.0.2"
+  checksum: f552a9a9fa33d648ad524e4f6ae3fcc4f3462fc4779d3181ca5de79dc06bf637cad448fffc9037a303485170093744a7bb12b780a733aa8b2513a98ade515cc2
+  languageName: node
+  linkType: hard
+
 "function-bind@npm:^1.0.2, function-bind@npm:^1.1.1":
   version: 1.1.1
   resolution: "function-bind@npm:1.1.1"
@@ -2087,6 +2094,7 @@ __metadata:
     "@sapper/server": "link:./src/node_modules/@sapper/server?locator=solverfox.dev%40workspace%3A."
     "@sapper/service-worker": "link:./src/node_modules/@sapper/service-worker?locator=solverfox.dev%40workspace%3A."
     compression: "npm:^1.7.1"
+    focus-visible: "npm:^5.0.2"
     npm-run-all: "npm:^4.1.5"
     polka: "npm:next"
     prettier: "npm:^1.18.2"
