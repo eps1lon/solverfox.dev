@@ -1,20 +1,9 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"background_color": "#EAE8DC",
+	"theme_color": "#8E8D8A",
+	"name": "solverfox.dev",
+	"short_name": "Personal page of Sebastian Silbermann",
 	"display": "minimal-ui",
 	"start_url": "/",
-	"icons": [
-		{
-			"src": "logo-192.png",
-			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "logo-512.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	]
+	"icons": []
 }
