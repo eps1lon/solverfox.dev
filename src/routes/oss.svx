@@ -1,3 +1,11 @@
+---
+title: OSS
+---
+
+<svelte:head>
+  <title>{_metadata.title} | solverfox.dev</title>
+</svelte:head>
+
 # Open-source software
 
 ## Maintaining

@@ -1,6 +1,10 @@
 ---
-title: About solverfox.dev
+title: About
 ---
+
+<svelte:head>
+  <title>{_metadata.title} | solverfox.dev</title>
+</svelte:head>
 
 # { _metadata.title }
 
