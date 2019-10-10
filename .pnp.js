@@ -181,6 +181,8 @@ function $$SETUP_STATE(hydrateRuntimeState) {
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker?locator=solverfox.dev%40workspace%3A."],
             ["compression", "npm:1.7.4"],
             ["focus-visible", "npm:5.0.2"],
+            ["front-matter", "npm:3.0.2"],
+            ["glob", "npm:7.1.4"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
@@ -1640,11 +1642,35 @@ function $$SETUP_STATE(hydrateRuntimeState) {
           "linkType": "HARD"
         }]
       ]],
+      ["fs.realpath", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126.zip/node_modules/fs.realpath/",
+          "packageDependencies": [
+            ["fs.realpath", "npm:1.0.0"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
       ["function-bind", [
         ["npm:1.1.1", {
           "packageLocation": "./.yarn/cache/function-bind-npm-1.1.1-b56b322ae9.zip/node_modules/function-bind/",
           "packageDependencies": [
             ["function-bind", "npm:1.1.1"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["glob", [
+        ["npm:7.1.4", {
+          "packageLocation": "./.yarn/cache/glob-npm-7.1.4-8bd8317a74.zip/node_modules/glob/",
+          "packageDependencies": [
+            ["glob", "npm:7.1.4"],
+            ["fs.realpath", "npm:1.0.0"],
+            ["inflight", "npm:1.0.6"],
+            ["inherits", "npm:2.0.4"],
+            ["minimatch", "npm:3.0.4"],
+            ["once", "npm:1.4.0"],
+            ["path-is-absolute", "npm:1.0.1"]
           ],
           "linkType": "HARD"
         }]
@@ -1734,6 +1760,26 @@ function $$SETUP_STATE(hydrateRuntimeState) {
           "packageLocation": "./.yarn/cache/http-link-header-npm-1.0.2-e6e18b4a3d.zip/node_modules/http-link-header/",
           "packageDependencies": [
             ["http-link-header", "npm:1.0.2"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["inflight", [
+        ["npm:1.0.6", {
+          "packageLocation": "./.yarn/cache/inflight-npm-1.0.6-ccedb4b908.zip/node_modules/inflight/",
+          "packageDependencies": [
+            ["inflight", "npm:1.0.6"],
+            ["once", "npm:1.4.0"],
+            ["wrappy", "npm:1.0.2"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["inherits", [
+        ["npm:2.0.4", {
+          "packageLocation": "./.yarn/cache/inherits-npm-2.0.4-c66b3957a0.zip/node_modules/inherits/",
+          "packageDependencies": [
+            ["inherits", "npm:2.0.4"]
           ],
           "linkType": "HARD"
         }]
@@ -2194,6 +2240,16 @@ function $$SETUP_STATE(hydrateRuntimeState) {
           "linkType": "HARD"
         }]
       ]],
+      ["once", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/once-npm-1.4.0-ccf03ef07a.zip/node_modules/once/",
+          "packageDependencies": [
+            ["once", "npm:1.4.0"],
+            ["wrappy", "npm:1.0.2"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
       ["param-case", [
         ["npm:2.1.1", {
           "packageLocation": "./.yarn/cache/param-case-npm-2.1.1-e0aef3c289.zip/node_modules/param-case/",
@@ -2220,6 +2276,15 @@ function $$SETUP_STATE(hydrateRuntimeState) {
           "packageLocation": "./.yarn/cache/path-browserify-npm-1.0.0-9e4a64fb1e.zip/node_modules/path-browserify/",
           "packageDependencies": [
             ["path-browserify", "npm:1.0.0"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["path-is-absolute", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/path-is-absolute-npm-1.0.1-31bc695ffd.zip/node_modules/path-is-absolute/",
+          "packageDependencies": [
+            ["path-is-absolute", "npm:1.0.1"]
           ],
           "linkType": "HARD"
         }]
@@ -2654,6 +2719,8 @@ function $$SETUP_STATE(hydrateRuntimeState) {
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker?locator=solverfox.dev%40workspace%3A."],
             ["compression", "npm:1.7.4"],
             ["focus-visible", "npm:5.0.2"],
+            ["front-matter", "npm:3.0.2"],
+            ["glob", "npm:7.1.4"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
@@ -2961,6 +3028,15 @@ function $$SETUP_STATE(hydrateRuntimeState) {
           "packageDependencies": [
             ["which", "npm:1.3.1"],
             ["isexe", "npm:2.0.0"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
+      ["wrappy", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/wrappy-npm-1.0.2-916de4d4b3.zip/node_modules/wrappy/",
+          "packageDependencies": [
+            ["wrappy", "npm:1.0.2"]
           ],
           "linkType": "HARD"
         }]

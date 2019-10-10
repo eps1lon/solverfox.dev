@@ -1,18 +1,48 @@
-import posts from './_posts.js';
+import frontMatter from 'front-matter';
+import * as fs from 'fs';
+import glob from 'glob';
+import * as path from 'path';
+import { promisify } from 'util';
 
-const contents = JSON.stringify(
-	posts.map(post => {
-		return {
-			title: post.title,
-			slug: post.slug,
-		};
-	}),
-);
+const readFile = promisify(fs.readFile);
 
-export function get(req, res) {
+const promisedPosts = new Promise((resolve, reject) => {
+	// process.cwd is the root for some reason while __dirname is inside __sapper__
+	const writingsDir = path.resolve('src/routes/writing');
+	glob(path.join(writingsDir, '*.svx'), async (error, files) => {
+		if (error) reject(error);
+
+		const posts = await Promise.all(
+			files.map(async filePath => {
+				const slug = path.basename(filePath, '.svx');
+				const source = await readFile(filePath, 'utf8');
+				const { attributes } = frontMatter(source);
+
+				if (attributes.slug !== undefined) {
+					throw new TypeError(
+						'front-matter data had a property `slug`. This has no effect',
+					);
+				}
+
+				return {
+					...attributes,
+					slug,
+				};
+			}),
+		);
+
+		const publishedPosts = posts.filter(post => post.publishedAt !== undefined);
+
+		resolve(publishedPosts);
+	});
+});
+
+export async function get(req, res, next) {
+	const posts = await promisedPosts;
+
 	res.writeHead(200, {
 		'Content-Type': 'application/json',
 	});
 
-	res.end(contents);
+	res.end(JSON.stringify(posts));
 }

@@ -1291,7 +1291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"front-matter@npm:^3.0.1":
+"front-matter@npm:^3.0.1, front-matter@npm:^3.0.2":
   version: 3.0.2
   resolution: "front-matter@npm:3.0.2"
   dependencies:
@@ -1300,10 +1300,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs.realpath@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "fs.realpath@npm:1.0.0"
+  checksum: 7838256cafb93ee7a40754e7fdcae9c6e57b12528e22ae51a10bc6161ad6a647931dd99aa95ddf3a4ce8501766f78e57a56ed010043dddf8dddb4ad5af616acb
+  languageName: node
+  linkType: hard
+
 "function-bind@npm:^1.0.2, function-bind@npm:^1.1.1":
   version: 1.1.1
   resolution: "function-bind@npm:1.1.1"
   checksum: 6ed0e3f90e8eab9d2a32f526fddd51020a23ad48d6c3806583b0c6e9dd97fbd0736a11bc0d75ee59e32979f149b3ac3c7a8608540968ed3f87d7ef8799c54602
+  languageName: node
+  linkType: hard
+
+"glob@npm:^7.1.4":
+  version: 7.1.4
+  resolution: "glob@npm:7.1.4"
+  dependencies:
+    fs.realpath: "npm:^1.0.0"
+    inflight: "npm:^1.0.4"
+    inherits: "npm:2"
+    minimatch: "npm:^3.0.4"
+    once: "npm:^1.3.0"
+    path-is-absolute: "npm:^1.0.0"
+  checksum: c36b34c04efa6db9b8031c4e36c98d191464b36b860559fce3f28bf0cf0f7a2a2adfd350427a95b44e5d80011cbbf5301a7ad058fb65fdc338f368cbf0ed4679
   languageName: node
   linkType: hard
 
@@ -1381,6 +1402,23 @@ __metadata:
   version: 1.0.2
   resolution: "http-link-header@npm:1.0.2"
   checksum: 153bc5a9cb0e53fa22a1969dbf93724f6e5fd96714f79ab9ff78910cbc9f23c06a4f7d3908ce9bb9744466ad567e4e4301d4cf371d3b2486edff7830213e1e89
+  languageName: node
+  linkType: hard
+
+"inflight@npm:^1.0.4":
+  version: 1.0.6
+  resolution: "inflight@npm:1.0.6"
+  dependencies:
+    once: "npm:^1.3.0"
+    wrappy: "npm:1"
+  checksum: 4ae4f2a43120647487d1650aaecd81044692397040d46d38257c349f142889be56ffb23f599c09dadc4287baeb4f3381e304e7eef111d7c7fec00def06111c4c
+  languageName: node
+  linkType: hard
+
+"inherits@npm:2":
+  version: 2.0.4
+  resolution: "inherits@npm:2.0.4"
+  checksum: d11734fde3095ce63e83a4be33779c8597b0c95edec3efcadf9a78a9312a520028e25acb2d126656005791550f9f2e17de3ea6abeb026fa24627401e5e174d6c
   languageName: node
   linkType: hard
 
@@ -1793,6 +1831,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"once@npm:^1.3.0":
+  version: 1.4.0
+  resolution: "once@npm:1.4.0"
+  dependencies:
+    wrappy: "npm:1"
+  checksum: 47a04404e9aa3a209a7e536b199780fe75aba04df0a035b221285f2f703d0ab58286ffb402ff7cb5a3b894d0e86685eb4fc2766ce7a19555c14221437f248c03
+  languageName: node
+  linkType: hard
+
 "param-case@npm:^2.1.1":
   version: 2.1.1
   resolution: "param-case@npm:2.1.1"
@@ -1816,6 +1863,13 @@ __metadata:
   version: 1.0.0
   resolution: "path-browserify@npm:1.0.0"
   checksum: 60a5c7a01b03c13ca77c0bdc643abf6e61aadd54798791724d5b656ca21ec7a289fb9367edc4e7237e099537a593b63c0cc083697b10d622c08509aa091c4c73
+  languageName: node
+  linkType: hard
+
+"path-is-absolute@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "path-is-absolute@npm:1.0.1"
+  checksum: 0e197d7cfa28209bce077b65646e21beb9a9980cc2b57efa4a4bf3b3331ec003f823bfec0948326264a2cbc57645a666cf911eb5d949d627d9e788280cccaa07
   languageName: node
   linkType: hard
 
@@ -2209,6 +2263,8 @@ __metadata:
     "@sapper/service-worker": "link:./src/node_modules/@sapper/service-worker?locator=solverfox.dev%40workspace%3A."
     compression: "npm:^1.7.1"
     focus-visible: "npm:^5.0.2"
+    front-matter: "npm:^3.0.2"
+    glob: "npm:^7.1.4"
     mdsvex: "npm:^0.4.0"
     npm-run-all: "npm:^4.1.5"
     polka: "npm:next"
@@ -2480,5 +2536,12 @@ __metadata:
   bin:
     which: ./bin/which
   checksum: 8c639095289e694cbce93f17662e56f740ceafb8d73cdccf0d2b2968df0e8b9c8ddf16f44711d1d5a5efe4d2091cb3ca06d1afa2db359df48588a71a4b60d0c6
+  languageName: node
+  linkType: hard
+
+"wrappy@npm:1":
+  version: 1.0.2
+  resolution: "wrappy@npm:1.0.2"
+  checksum: 0796da084f06bced2351fed9686a7211f4a4b774a7a3b64c7ead1b3bef162b1721f2a1d3fb1268bf2e848c9d743eca189c2a243159a1512d5dfab4b0d4dd60b5
   languageName: node
   linkType: hard

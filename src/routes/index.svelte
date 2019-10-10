@@ -1,3 +1,18 @@
+<script context="module">
+	export async function preload() {
+		// the `slug` parameter is available because
+		// this file is called [slug].svelte
+		const res = await this.fetch(`writing.json`);
+		const data = await res.json();
+
+		if (res.status === 200) {
+			return { post: data };
+		} else {
+			this.error(res.status, data.message);
+		}
+	}
+</script>
+
 <style>
 	h1,
 	p {
