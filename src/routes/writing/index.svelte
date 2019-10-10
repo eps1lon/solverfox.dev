@@ -1,6 +1,6 @@
 <script context="module">
 	export function preload({ params, query }) {
-		return this.fetch(`writing.json`)
+		return this.fetch(`/writing.json`)
 			.then(r => r.json())
 			.then(posts => {
 				return { posts };
