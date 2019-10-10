@@ -52,15 +52,15 @@
 	<ul>
 		<li>
 			<a aria-current={segment === undefined ? 'page' : undefined} href=".">
-				home
+				solverfox.dev
 			</a>
 		</li>
 		<li>
 			<a
 				rel="prefetch"
-				aria-current={segment === 'blog' ? 'page' : undefined}
-				href="blog">
-				blog
+				aria-current={segment === 'writing' ? 'page' : undefined}
+				href="writing">
+				writing
 			</a>
 		</li>
 		<li>
