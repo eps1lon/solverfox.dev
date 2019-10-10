@@ -64,6 +64,11 @@
 			</a>
 		</li>
 		<li>
+			<a aria-current={segment === 'oss' ? 'page' : undefined} href="oss">
+				OSS
+			</a>
+		</li>
+		<li>
 			<a aria-current={segment === 'about' ? 'page' : undefined} href="about">
 				about
 			</a>

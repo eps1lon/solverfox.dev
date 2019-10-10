@@ -1,0 +1,53 @@
+# Open-source software
+
+## Maintaining
+
+## Material-UI
+
+Page: https://material-ui.com/
+
+Repository: https://github.com/mui-org/material-ui
+
+## testing-library/\*
+
+Page: https://testing-library.com
+
+Repository: https://github.com/testing-library
+
+The focus is on the DOM and React part. It involves quite some upstream work in
+`jsdom`, `aria-query` and other dependencies.
+
+## yarn
+
+Page: https://next.yarnpkg.com/
+
+Repository: https://github.com/yarnpkg/berry
+
+Only after the first release candidate was published. Most of the contributions
+smoothen the migration from v1. Beyond that it's mostly fixing the wider ecosystem
+and advocacy.
+
+## Created
+
+### material-ui-playroom
+
+Repository: https://github.com/eps1lon/material-ui-playroom
+
+Page: https://material-ui-playroom.netlify.com/
+
+seek-oss/playroom was first presented by [Mark Dalgleish](https://twitter.com/markdalgleish?lang=en) at
+ReactiveConf 2018. It is playground for design systems to be presented across multiple
+screen sizes. I only integrated Material-UI components into it as well as any demo
+on material-ui.com
+
+### dom-accessibility-library
+
+Repository: https://github.com/eps1lon/dom-accessibility-api
+
+This is currently an experimental utility library for computing various properites
+of the accessibility tree. The goal is to have a library that can be used in your
+unit tests that run with [`jsdom`](https://github.com/jsdom/jsdom) as well as in the browser.
+
+## Contributed
+
+TODO fetch PRs
