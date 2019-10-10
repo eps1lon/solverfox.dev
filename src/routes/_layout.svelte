@@ -1,6 +1,7 @@
 <script>
 	import 'focus-visible/dist/focus-visible.min.js';
 	import Nav from '../components/Nav.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	export let segment;
 </script>
@@ -20,3 +21,5 @@
 <main>
 	<slot />
 </main>
+
+<Footer />
