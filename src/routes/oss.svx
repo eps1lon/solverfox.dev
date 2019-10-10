@@ -6,6 +6,12 @@ title: OSS
   <title>{_metadata.title} | solverfox.dev</title>
 </svelte:head>
 
+<style>
+  h3 {
+    text-transform: initial;
+  }
+</style>
+
 # Open-source software
 
 ## Maintaining
