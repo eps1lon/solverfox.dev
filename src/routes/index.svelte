@@ -59,16 +59,18 @@
 	<a href="/oss">several other popular open-source libraries</a>
 </p>
 
-<h2>Recent posts</h2>
+{#if process.env.FEATURE_POSTS}
+	<h2>Recent posts</h2>
 
-<ul>
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
+	<ul>
+		{#each posts as post}
+			<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<li>
-			<a rel="prefetch" href="writing/{post.slug}">{post.title}</a>
-		</li>
-	{/each}
-</ul>
+			<li>
+				<a rel="prefetch" href="writing/{post.slug}">{post.title}</a>
+			</li>
+		{/each}
+	</ul>
+{/if}

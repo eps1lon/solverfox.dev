@@ -55,14 +55,16 @@
 				solverfox.dev
 			</a>
 		</li>
-		<li>
-			<a
-				rel="prefetch"
-				aria-current={segment === 'writing' ? 'page' : undefined}
-				href="writing">
-				writing
-			</a>
-		</li>
+		{#if process.env.FEATURE_POSTS}
+			<li>
+				<a
+					rel="prefetch"
+					aria-current={segment === 'writing' ? 'page' : undefined}
+					href="writing">
+					writing
+				</a>
+			</li>
+		{/if}
 		<li>
 			<a aria-current={segment === 'oss' ? 'page' : undefined} href="oss">
 				OSS
