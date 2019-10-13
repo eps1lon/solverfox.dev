@@ -1,7 +1,5 @@
 <script context="module">
 	export async function preload() {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
 		const res = await this.fetch(`/writing.json`);
 		const posts = await res.json();
 
@@ -14,6 +12,8 @@
 </script>
 
 <script>
+	import Posts from '../components/Posts.svelte';
+
 	export let posts;
 </script>
 
@@ -38,6 +38,10 @@
 			font-size: 4em;
 		}
 	}
+
+	#posts-heading {
+		text-align: center;
+	}
 </style>
 
 <svelte:head>
@@ -57,17 +61,7 @@
 </p>
 
 {#if process.env.FEATURE_POSTS}
-	<h2>Recent posts</h2>
+	<h2 id="posts-heading">Recent posts</h2>
 
-	<ul>
-		{#each posts as post}
-			<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-			<li>
-				<a rel="prefetch" href="writing/{post.slug}">{post.title}</a>
-			</li>
-		{/each}
-	</ul>
+	<Posts labelledby="posts-heading" {posts} />
 {/if}

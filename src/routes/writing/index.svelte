@@ -9,13 +9,17 @@
 </script>
 
 <script>
+	import Posts from '../../components/Posts.svelte';
+
 	export let posts;
 </script>
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
+	h1 {
+		margin-bottom: 0.5em;
+	}
+	:global([aria-labelledby='writings-heading']) {
+		margin: 0 0 1em 0 !important;
 	}
 </style>
 
@@ -23,16 +27,6 @@
 	<title>Writings</title>
 </svelte:head>
 
-<h1>Writings</h1>
+<h1 id="writings-heading">Writings</h1>
 
-<ul>
-	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-		<li>
-			<a rel="prefetch" href="writing/{post.slug}">{post.title}</a>
-		</li>
-	{/each}
-</ul>
+<Posts labelledby="writings-heading" {posts} />
