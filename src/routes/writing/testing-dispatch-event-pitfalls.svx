@@ -1,0 +1,136 @@
+---
+title: dispatchEvent pitfalls
+category: testing
+publishedAt: 2019-10-10
+description: Collection of common pitfalls when manually dispatch DOM events
+readingTime: 5
+slug: testing-dispatch-event-pitfalls
+---
+
+```js exec
+import SEO from './_SEO.svelte';
+
+let button = null;
+let button2 = null;
+```
+
+<SEO data={_metadata} />
+
+# { \_metadata.title }
+
+{ \_metadata.description }
+
+One of the first mistakes I made when using `enzyme`'s `simulate()` was assuming
+that this is pretty much equivalent to what happens in a browser. After encountering
+a couple of very confusing test failures I learned that it's basically just
+better to call the prop (`component.props()['onChange'](event)`) directly<sup>1</sup>.
+
+This approach gives you the amount of test coverage that most people would be
+satisfied with but gives you next to zero confidence that your component can respond
+properly to user events.
+
+`@testing-library/react`'s [`fireEvent`](https://testing-library.com/docs/dom-testing-library/api-events) is slightly better since it creates proper
+events and requires the tester to use the actual event target. Unfortunately even
+if you have no layer between the DOM and your tests your tests will still report
+false positives.
+
+The two main offenders I want to showcase is pressing a key and focusing an element.
+Both these events are important for accessibility testing since the keyboard is the
+main input device for visually impaired users and the focused element acts as a
+cursor.
+
+## element.dispatchEvent(focusEvent)
+
+It's pretty common to see something like
+
+```jsx
+const { fireEvent, getByRole } = render('<Button />');
+const button = getByRole('button');
+fireEvent.focus(button);
+
+expect(button).toHaveFocus();
+```
+
+What you'll encounter in this case is failed test since you `button` won't have
+focus. Now a clever test might just rewrite this spying on the `onFocus` listener
+and merge your `Button` implementation since the test passes. Unfortunately there's
+a big difference between receiving a focus event and actually being focused. Firing
+a focus event will not actually move the focus in the browser you can try this by
+clicking
+
+<button on:click={() => button.dispatchEvent(new window.FocusEvent('focus'))}>Clicking me fires a focus event at the element below!</button>
+
+<div bind:this={button} tabIndex={-1}>Focus Area</div>
+
+The second button shouldn't have an outline since it isn't focused. Now in the second
+example we have the same setup but as you'll see
+
+<button on:click={() => button2.focus()}>Clicking me fires a focus event at the button below!</button>
+
+<div bind:this={button2} tabIndex={-1}>Fire a focus event at me!</div>
+
+the area is focused!
+
+With a very minor adjustment we receive focus events and move focus:
+
+```diff
+-button.dispatchEvent(new FocusEvent('focus'))
++button.focus()
+```
+
+You even have to write less code (even though most libraries will have a event factory).
+
+But [HTMLElement.focus()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/focus)
+has another powerful benefit over dispatching focus events and listening to them:
+It checks if the element is actually focusable.
+
+This is especially important if you have to (re-)implement custom widgets and forget
+to add `tabindex` or add it to the wrong element. Not adding a `tabindex` will render
+those elements useless for assistive technology.
+
+## element.dispatchEvent(keydownEvent)
+
+I'll skip the intro this time: Don't dispatch keydown events on queried elements.
+You're cheating and I'll explain you how: Your browser will determine the target
+of your keydown events by checking the currently focused element i.e. `document.activeElement`.
+
+Applying
+
+```diff
+-element.dispatchEvent(keydownEvent)
++element.focus()
++document.activeElement.dispatchEvent(keydownEvent)
+```
+
+has two benefits:
+
+1. You test if your element is actually focusable
+2. Your code hits all the code paths an actual user would also hit
+
+## Summary
+
+It comes down to looking for lines in your code where the following diffs can be applied:
+
+```diff
+-button.dispatchEvent(new FocusEvent('focus'))
++button.focus()
+```
+
+```diff
+-element.dispatchEvent(keydownEvent)
++element.focus()
++document.activeElement.dispatchEvent(keydownEvent)
+```
+
+### Bonus
+
+If you dispatch a change event you almost always want to include the new value.
+Otherwise your element will never receive the change event.
+
+### Sources
+
+This material is based on https://testing-library.com/docs/guide-events#docsNav.
+The parts about focus and keydown were originally written by me. I wanted something
+easy to write as my first article on my page :)
+
+1. https://github.com/airbnb/enzyme/issues/1999#issuecomment-460155725

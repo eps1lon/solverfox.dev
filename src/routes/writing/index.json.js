@@ -18,9 +18,9 @@ const promisedPosts = new Promise((resolve, reject) => {
 				const source = await readFile(filePath, 'utf8');
 				const { attributes } = frontMatter(source);
 
-				if (attributes.slug !== undefined) {
+				if (attributes.slug !== undefined && attributes.slug !== slug) {
 					throw new TypeError(
-						'front-matter data had a property `slug`. This has no effect',
+						`front-matter data had a different slug ('${attributes.slug}' vs. '${slug}'). This is bad for SEO.`,
 					);
 				}
 
