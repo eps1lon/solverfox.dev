@@ -1,4 +1,6 @@
 <script>
+	import GitHubCorner from '../components/GitHubCorner.svelte';
+
 	export let segment;
 </script>
 
@@ -77,3 +79,5 @@
 		</li>
 	</ul>
 </nav>
+
+<GitHubCorner repo="eps1lon/solverfox.dev" />
