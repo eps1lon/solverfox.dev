@@ -111,7 +111,7 @@ those elements useless for assistive technology.
 
 I'll skip the intro this time: Don't dispatch keydown events on queried elements.
 You're cheating and I'll explain you how: Your browser will determine the target
-of your keydown events by checking the currently focused element i.e. `document.activeElement`.
+of your keydown events by checking the currently focused element i.e. `document.activeElement`<sup>2</sup>.
 
 Applying
 
@@ -153,3 +153,7 @@ The parts about focus and keydown were originally written by me. I wanted someth
 easy to write as my first article on my page :)
 
 1. https://github.com/airbnb/enzyme/issues/1999#issuecomment-460155725
+
+2. > The event target of a key event is the currently focused element which is processing the keyboard activity.
+
+   -- https://www.w3.org/TR/uievents/#events-keyboard-event-order

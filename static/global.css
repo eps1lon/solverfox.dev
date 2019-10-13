@@ -110,3 +110,10 @@ code {
 p {
 	max-width: 80ch;
 }
+
+blockquote {
+	border-left: 4px solid #d8c3a5;
+	font-style: italic;
+	margin: 0;
+	padding-left: 2ch;
+}
