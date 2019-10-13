@@ -183,6 +183,7 @@ function $$SETUP_STATE(hydrateRuntimeState) {
             ["focus-visible", "npm:5.0.2"],
             ["front-matter", "npm:3.0.2"],
             ["glob", "npm:7.1.4"],
+            ["highlight.js", "npm:9.15.10"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
@@ -1730,6 +1731,15 @@ function $$SETUP_STATE(hydrateRuntimeState) {
           "linkType": "HARD"
         }]
       ]],
+      ["highlight.js", [
+        ["npm:9.15.10", {
+          "packageLocation": "./.yarn/cache/highlight.js-npm-9.15.10-cb12fa0fbb.zip/node_modules/highlight.js/",
+          "packageDependencies": [
+            ["highlight.js", "npm:9.15.10"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
       ["hosted-git-info", [
         ["npm:2.8.4", {
           "packageLocation": "./.yarn/cache/hosted-git-info-npm-2.8.4-f21eeb7d81.zip/node_modules/hosted-git-info/",
@@ -2721,6 +2731,7 @@ function $$SETUP_STATE(hydrateRuntimeState) {
             ["focus-visible", "npm:5.0.2"],
             ["front-matter", "npm:3.0.2"],
             ["glob", "npm:7.1.4"],
+            ["highlight.js", "npm:9.15.10"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],

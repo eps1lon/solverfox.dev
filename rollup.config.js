@@ -1,4 +1,5 @@
 /* eslint-env node */
+import hljs from 'highlight.js';
 import { mdsvex } from 'mdsvex';
 import * as path from 'path';
 import resolve from 'rollup-plugin-pnp-resolve';
@@ -11,7 +12,32 @@ import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
 const featureFlags = {
-	posts: false,
+	posts: true,
+};
+
+const preprocess = () => {
+	return mdsvex({
+		extension: '.svx',
+		markdownOptions: {
+			typographer: true,
+			linkify: true,
+			highlight: (str, lang) => {
+				if (lang && hljs.getLanguage(lang)) {
+					try {
+						return (
+							'<pre class="hljs"><code>' +
+							hljs.highlight(lang, str, true).value +
+							'</code></pre>'
+						);
+					} catch (error) {
+						console.error(error);
+					}
+				}
+
+				return '';
+			},
+		},
+	});
 };
 
 const defaultReplaces = Object.fromEntries(
@@ -46,14 +72,7 @@ export default {
 				hydratable: true,
 				emitCss: true,
 				extensions: ['.svelte', '.svx'],
-				preprocess: mdsvex({
-					extension: '.svx',
-					// you can add markdown-it options here, html is always true
-					markdownOptions: {
-						typographer: true,
-						linkify: true,
-					},
-				}),
+				preprocess: preprocess(),
 			}),
 			resolve({
 				extensions: moduleExtensions,
@@ -107,13 +126,7 @@ export default {
 				generate: 'ssr',
 				dev,
 				extensions: ['.svelte', '.svx'],
-				preprocess: mdsvex({
-					extension: '.svx',
-					markdownOptions: {
-						typographer: true,
-						linkify: true,
-					},
-				}),
+				preprocess: preprocess(),
 			}),
 			resolve({
 				extensions: moduleExtensions,
