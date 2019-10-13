@@ -19,6 +19,11 @@
 	article :global(pre) {
 		max-width: 100ch;
 	}
+
+	/* break up long github issue links */
+	article :global(a) {
+		word-wrap: break-word;
+	}
 </style>
 
 <svelte:head>

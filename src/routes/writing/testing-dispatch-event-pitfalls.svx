@@ -39,7 +39,7 @@ Both these events are important for accessibility testing since the keyboard is 
 main input device for visually impaired users and the focused element acts as a
 cursor.
 
-## element.dispatchEvent(focusEvent)
+## dispatchEvent(focusEvent)
 
 It's pretty common to see something like
 
@@ -88,7 +88,7 @@ This is especially important if you have to (re-)implement custom widgets and fo
 to add `tabindex` or add it to the wrong element. Not adding a `tabindex` will render
 those elements useless for assistive technology.
 
-## element.dispatchEvent(keydownEvent)
+## dispatchEvent(keydownEvent)
 
 I'll skip the intro this time: Don't dispatch keydown events on queried elements.
 You're cheating and I'll explain you how: Your browser will determine the target
