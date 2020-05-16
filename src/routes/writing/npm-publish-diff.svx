@@ -27,11 +27,11 @@ The work required should be minimal. The holy grail is that we don't have to che
 
 Git provides all the diffing tools we need. The diff is even part of your Pull Request.
 
-The problem with that approach is that it this assumes that we're always interested in this diff.
+However, this assumes that we're always interested in diffing published files.
 On the initial review we care little about the output.
 Specifically, this is an optimization step.
 It's very likely we just want to get this bugfix in and optimize the output later.
-This approach also requires additional attention when opening and reviewing a PR since we don't know from which source it was build.
+This approach also requires additional attention when opening and reviewing a PR since we don't know from which source it was built.
 A check before committing or pushing or in CI is an option.
 However, this either slows down local development or adds another review roundtrip: push, wait for CI, fix CI.
 
