@@ -61,7 +61,7 @@
 <Nav {segment} />
 
 <main id="maincontent">
-	<article aria-details="webmentions" role="mark">
+	<article aria-details="webmentions">
 		<slot />
 	</article>
 	<hr />
