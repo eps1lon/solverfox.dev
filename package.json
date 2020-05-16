@@ -46,7 +46,6 @@
 		"svelte": "^3.12.1"
 	},
 	"prettier": {
-		"semi": true,
 		"singleQuote": true,
 		"trailingComma": "all",
 		"useTabs": true
