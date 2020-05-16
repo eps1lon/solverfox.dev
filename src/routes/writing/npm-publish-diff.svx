@@ -1,0 +1,210 @@
+---
+title: Show the difference of published files
+category: testing
+publishedAt: 2020-05-16
+description: Show a rich diff of your published files in npm in your CI environment.
+readingTime: 5
+slug: npm-publish-diff
+---
+
+```js exec
+import SEO from './_SEO.svelte';
+```
+
+<SEO data={_metadata} />
+
+# { \_metadata.title }
+
+{ \_metadata.description }
+
+I recently tried to optimize the published files of one of my packages: [`dom-accessibility-api`](https://www.npmjs.com/package/dom-accessibility-api).
+The goal was to remove transpilation helpers of [`babel`](https://babeljs.io/) that weren't actually needed.
+The task was pretty straight forward since I could just check the build output locally.
+But now I have to repeat this check for every commit I do. And what happens on Pull Requests? Now I need to check out each PR and build locally.
+
+## Problem description
+
+For specific changes we want to see the difference of our transpiled files before committing.
+We don't care about these changes when somebody improves the documentation of our package or adds a test.
+The work required should be minimal. The holy grail is that we don't have to check out anything locally to reduce context switches.
+
+## First idea
+
+Git provides all the diffing tools we need. The diff is even part of your Pull Request.
+
+The problem with that approach is that it this assumes that we're always interested in this diff.
+On the initial review we care little about the output.
+Specifically, this is an optimization step.
+It's very likely we just want to get this bugfix in and optimize the output later.
+This approach also requires additional attention when opening and reviewing a PR since we don't know from which source it was build.
+A check before committing or pushing or in CI is an option.
+However, this either slows down local development or adds another review roundtrip: push, wait for CI, fix CI.
+
+## Improved solution
+
+In the end I landed on a more complicated solution that does not require any additional work from individual contributors.
+I leveraged [`npm pack`](https://docs.npmjs.com/cli-commands/pack.html) and pipeline artifacts.
+I'm going to give a step-by-step explanation for [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/).
+The full pipeline can be found in [dom-accessibility-api/azure-pipelines.yml](https://github.com/eps1lon/dom-accessibility-api/blob/969da7d454b3d83dc7259d910f40e7e16a6eb560/azure-pipelines.yml) and the necessary steps combined are listed at the end of this article.
+For your CI provider the steps might be slightly different.
+If you have a working solution for other CI providers like CircleCI or Travis let me know how you did it and I will either incorporate these steps into this guide or link them.
+
+First we need to make sure we have all the distributed files in our task:
+
+```yml
+- script: |
+      yarn build
+    displayName: "Build"
+```
+
+`yarn build` transpiles my source files for all my targets.
+
+Then we need to make sure we collect all files that would actually be published via `npm publish`:
+
+```yml
+- script: |
+      npm pack
+      mv dom-accessibility-api-*.tgz dom-accessibility-api.tgz
+    displayName: "Create tarball"
+```
+
+`npm pack` will create a file that consists of the package name and the version string in your `package.json`. I'm removing the version via `mv` to have a consistent file name throughout the task.
+
+Since we want to diff against the latest version on the main branch I'm going to [publish this as a pipeline artifact](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/publish-pipeline-artifact?view=azure-devops).
+
+```yml
+- publish: $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz
+    displayName: "Publish tarball"
+    artifact: dom-accessibility-api
+```
+
+The value for `publish` needs to match the target of the previous `mv`.
+
+So far most CI providers should have these capabilities.
+Now comes the tricky part that might be exclusive to Azure Pipelines: [downloading a specific pipeline artifact](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-pipeline-artifact?view=azure-devops).
+
+```yml
+- task: DownloadPipelineArtifact@2
+  displayName: 'Download tarball from master'
+  inputs:
+    artifact: dom-accessibility-api
+    path: $(Agent.TempDirectory)/artifacts-master
+    source: specific
+    pipeline: $(System.DefinitionId)
+    project: $(System.TeamProject)
+    runVersion: latestFromBranch
+    runBranch: refs/heads/master
+```
+
+There's a lot to unpack here so I'm going over every key:
+
+- `task` is the name of the task that is responsible for downloading an artifact
+- `displayName` will be used in the webpage that displays the log of our CI job
+- `inputs` are like parameters for your function (here: download an artifact)
+- `artifact` must match the `artifact` key of our previous `publish` task
+- `path` must be some path other than our current working directory. Otherwise this overrides the file we previously created with `npm pack`
+- `source` tells the task that we want an artifact from a different job
+- `pipeline` and `project` tells the task that we want to artifact from the same pipeline
+- `runVersion` and `runBranch` tells the task that we want the latest artifact from our main branch
+
+Now we the current tarbal in `./dom-accessibility-api.tgz` and the one from our main branch in `/temp/artifacts-master/dom-accessibility-api.tgz` and are ready to diff
+
+```yml
+- script: |
+    mkdir $(Agent.TempDirectory)/published-previous
+    mkdir $(Agent.TempDirectory)/published-current
+    tar xfz $(Agent.TempDirectory)/artifacts-master/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-previous
+    tar xfz $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-current
+    # --no-index implies --exit-code
+    # This task is informative only.
+    # Diffs are almost always expected
+    git --no-pager diff --color --no-index $(Agent.TempDirectory)/published-previous $(Agent.TempDirectory)/published-current || exit 0
+  displayName: 'Diff tarballs'
+```
+
+We've unpacked the contents of the current tarball into `/tmp/published-previous` and the contents of the tarball on master into `/tmp/published-current`.
+To diff the contents we leverage `git diff`.
+With `--no-index` we can use this on arbitrary directories.
+`--no-pager` prints the complete diff out.
+Otherwise it wouldn't exit since it waits for user input e.g. scrolling via arrow keys .
+Azures web UI supports colors so we'll add them via `--color`.
+And last but not least we want this to be informative only.
+If there's a diff it would fail the build since `--no-index` implies `--exit-code` which exits with a non-zero code if there's a diff.
+
+## Result
+
+I can now view the diff in Azures web interface.
+A great side-effect of this change is that it also increases my confidence when I publish.
+Each commit will tell me how it affects the published files.
+If I add a new file I can check if it actually gets published.
+If I want to prevent a file from being published I can verify my work.
+All in CI without having to check the code out locally.
+
+![/writing/diff-npm-publish/azure-ui.png]()
+
+-- [Azure Pipelines UI](https://dev.azure.com/silbermannsebastian/dom-accessibility-api/_build/results?buildId=1880&view=logs&j=b8865196-746b-550b-1739-d024186ee81d&t=51b39ae9-01ae-5c3d-ebd8-1e83faa5202a)
+
+```yml
+trigger:
+  - master
+
+pr:
+  branches:
+    include:
+      - '*'
+
+pool:
+  vmImage: 'ubuntu-latest'
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: $(node_version)
+    displayName: 'Install Node.js'
+
+  - script: |
+      yarn install
+    displayName: 'Install packages'
+
+  - script: |
+      yarn build
+    displayName: 'Build'
+
+  - script: |
+      npm pack
+      mv dom-accessibility-api-*.tgz dom-accessibility-api.tgz
+    displayName: 'Create tarball'
+
+  - publish: $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz
+    displayName: 'Publish tarball'
+    artifact: dom-accessibility-api-node-$(node_version)
+
+  - task: DownloadPipelineArtifact@2
+    displayName: 'Download tarball from master'
+    inputs:
+      artifact: dom-accessibility-api-node-$(node_version)
+      path: $(Agent.TempDirectory)/artifacts-master
+      source: specific
+      pipeline: $(System.DefinitionId)
+      project: $(System.TeamProject)
+      runVersion: latestFromBranch
+      runBranch: refs/heads/master
+
+  - script: |
+      mkdir $(Agent.TempDirectory)/published-previous
+      mkdir $(Agent.TempDirectory)/published-current
+      tar xfz $(Agent.TempDirectory)/artifacts-master/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-previous
+      tar xfz $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-current
+      # --no-index implies --exit-code
+      # This task is informative only.
+      # Diffs are almost always expected
+      git --no-pager diff --color --no-index $(Agent.TempDirectory)/published-previous $(Agent.TempDirectory)/published-current || exit 0
+    displayName: 'Diff tarballs'
+```
+
+The steps described were implemented in https://github.com/eps1lon/dom-accessibility-api/pull/240. The commits highlight various implementation choices.
+
+## #Caveats and Future Work
+
+This workflow is implemented in a small project with a fairly linear workflow.
+Since it always diffs against the latest version on the main branch it might include confusing diffs when the branch is not based on the latest version on the main branch.
+It might be possible to fix this by leveraging `runVersion`
