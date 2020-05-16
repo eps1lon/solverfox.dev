@@ -95,7 +95,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "prettier",
-        "npm:1.18.2"
+        "npm:2.0.5"
       ],
       [
         "rollup",
@@ -165,7 +165,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
-            ["prettier", "npm:1.18.2"],
+            ["prettier", "npm:2.0.5"],
             ["rollup", "npm:1.23.0"],
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],
@@ -2427,10 +2427,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["prettier", [
-        ["npm:1.18.2", {
-          "packageLocation": "./.yarn/cache/prettier-npm-1.18.2-9331e06ca6-3.zip/node_modules/prettier/",
+        ["npm:2.0.5", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.0.5-f0ee4e15ce-3.zip/node_modules/prettier/",
           "packageDependencies": [
-            ["prettier", "npm:1.18.2"]
+            ["prettier", "npm:2.0.5"]
           ],
           "linkType": "HARD",
         }]
@@ -2825,7 +2825,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
-            ["prettier", "npm:1.18.2"],
+            ["prettier", "npm:2.0.5"],
             ["rollup", "npm:1.23.0"],
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],

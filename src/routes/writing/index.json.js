@@ -13,7 +13,7 @@ const promisedPosts = new Promise((resolve, reject) => {
 		if (error) reject(error);
 
 		const posts = await Promise.all(
-			files.map(async filePath => {
+			files.map(async (filePath) => {
 				const slug = path.basename(filePath, '.svx');
 				const source = await readFile(filePath, 'utf8');
 				const { attributes } = frontMatter(source);
@@ -31,7 +31,9 @@ const promisedPosts = new Promise((resolve, reject) => {
 			}),
 		);
 
-		const publishedPosts = posts.filter(post => post.publishedAt !== undefined);
+		const publishedPosts = posts.filter(
+			(post) => post.publishedAt !== undefined,
+		);
 
 		resolve(publishedPosts);
 	});

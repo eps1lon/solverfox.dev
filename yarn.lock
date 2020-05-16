@@ -1929,12 +1929,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^1.18.2":
-  version: 1.18.2
-  resolution: "prettier@npm:1.18.2"
+"prettier@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "prettier@npm:2.0.5"
   bin:
-    prettier: ./bin-prettier.js
-  checksum: 3/daa7a2908f09332264be2617d661784bccb92e756a13b318ffa62ad7c1d428b2440a8699edc3907bcaaa2a12aacc9dffb0d285ca6791f23ed5c31eab6fb86a9c
+    prettier: bin-prettier.js
+  checksum: 3/d249d89361870a29b20e8b268cb09e908490b8c9e21f70393d12a213701f29ba7e95b7f9ce0ad63929c16ce475176742481911737ae3da4a498873e4a3b90990
   languageName: node
   linkType: hard
 
@@ -2285,7 +2285,7 @@ __metadata:
     mdsvex: ^0.4.0
     npm-run-all: ^4.1.5
     polka: next
-    prettier: ^1.18.2
+    prettier: ^2.0.5
     rollup: ^1.12.0
     rollup-plugin-babel: ^4.0.2
     rollup-plugin-commonjs: ^10.0.0
