@@ -2,7 +2,6 @@
 	import 'focus-visible/dist/focus-visible.min.js';
 	import Nav from '../components/Nav.svelte';
 	import Footer from '../components/Footer.svelte';
-	import Webmentions from '../components/Webmentions.svelte';
 
 	export let segment;
 </script>
@@ -61,11 +60,7 @@
 <Nav {segment} />
 
 <main id="maincontent">
-	<article aria-details="webmentions">
-		<slot />
-	</article>
-	<hr />
-	<Webmentions id="webmentions" />
+	<slot />
 </main>
 
 <Footer />

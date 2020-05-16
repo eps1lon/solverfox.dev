@@ -99,7 +99,7 @@
 	}
 </style>
 
-<div id="webmentions">
+<div {id}>
 	<h2 font-family="system" font-size="4" font-weight="bold">Webmentions</h2>
 	<a
 		target="_blank"
@@ -168,7 +168,11 @@
 								{link.data.author.name}
 								<a href={link.data.url}>retweeted</a>
 							{:else}
-								<div font-family="system" color="text" font-weight="bold" role="comment">
+								<div
+									font-family="system"
+									color="text"
+									font-weight="bold"
+									role="comment">
 									{link.data.author.name}
 									<a
 										target="_blank"
