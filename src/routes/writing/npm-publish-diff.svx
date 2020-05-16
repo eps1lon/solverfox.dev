@@ -5,13 +5,8 @@ publishedAt: 2020-05-16
 description: Show a rich diff of your published files in npm in your CI environment.
 readingTime: 5
 slug: npm-publish-diff
+layout: ./_Article.svelte
 ---
-
-```js exec
-import SEO from './_SEO.svelte';
-```
-
-<SEO data={_metadata} />
 
 # { \_metadata.title }
 
