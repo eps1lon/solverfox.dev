@@ -1,3 +1,4 @@
+/.yarn/install-state.gz
 /src/node_modules/@sapper/
 /cypress/screenshots/
 /__sapper__/
