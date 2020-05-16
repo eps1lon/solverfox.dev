@@ -46,29 +46,32 @@ If you have a working solution for other CI providers like CircleCI or Travis le
 
 First we need to make sure we have all the distributed files in our task:
 
-```yml
+```yaml
 - script: |
-      yarn build
-    displayName: "Build"
+    yarn build
+
+  displayName: "Build"
 ```
 
 `yarn build` transpiles my source files for all my targets.
 
 Then we need to make sure we collect all files that would actually be published via `npm publish`:
 
-```yml
+```yaml
 - script: |
-      npm pack
-      mv dom-accessibility-api-*.tgz dom-accessibility-api.tgz
-    displayName: "Create tarball"
+    npm pack
+    mv dom-accessibility-api-*.tgz dom-accessibility-api.tgz
+
+  displayName: "Create tarball"
 ```
 
 `npm pack` will create a file that consists of the package name and the version string in your `package.json`. I'm removing the version via `mv` to have a consistent file name throughout the task.
 
 Since we want to diff against the latest version on the main branch I'm going to [publish this as a pipeline artifact](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/publish-pipeline-artifact?view=azure-devops).
 
-```yml
-- publish: $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz
+```yaml
+steps:
+  - publish: $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz
     displayName: "Publish tarball"
     artifact: dom-accessibility-api
 ```
@@ -78,7 +81,7 @@ The value for `publish` needs to match the target of the previous `mv`.
 So far most CI providers should have these capabilities.
 Now comes the tricky part that might be exclusive to Azure Pipelines: [downloading a specific pipeline artifact](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-pipeline-artifact?view=azure-devops).
 
-```yml
+```yaml
 - task: DownloadPipelineArtifact@2
   displayName: 'Download tarball from master'
   inputs:
@@ -104,7 +107,7 @@ There's a lot to unpack here so I'm going over every key:
 
 Now we the current tarbal in `./dom-accessibility-api.tgz` and the one from our main branch in `/temp/artifacts-master/dom-accessibility-api.tgz` and are ready to diff
 
-```yml
+```yaml
 - script: |
     mkdir $(Agent.TempDirectory)/published-previous
     mkdir $(Agent.TempDirectory)/published-current
@@ -139,7 +142,7 @@ All in CI without having to check the code out locally.
 
 -- [Azure Pipelines UI](https://dev.azure.com/silbermannsebastian/dom-accessibility-api/_build/results?buildId=1880&view=logs&j=b8865196-746b-550b-1739-d024186ee81d&t=51b39ae9-01ae-5c3d-ebd8-1e83faa5202a)
 
-```yml
+```yaml
 trigger:
   - master
 
