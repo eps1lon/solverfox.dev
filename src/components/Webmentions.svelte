@@ -51,7 +51,7 @@
 		width: 80%;
 		min-width: 300px;
 	}
-	h3 {
+	h2 {
 		display: inline;
 	}
 	.WebMentionsContainer {
@@ -100,7 +100,7 @@
 </style>
 
 <div id="webmentions">
-	<h3 font-family="system" font-size="4" font-weight="bold">Webmentions</h3>
+	<h2 font-family="system" font-size="4" font-weight="bold">Webmentions</h2>
 	<a
 		target="_blank"
 		rel="noopener"
