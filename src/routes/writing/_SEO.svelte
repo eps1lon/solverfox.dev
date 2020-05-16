@@ -22,9 +22,6 @@
 	<meta name="twitter:creator" value="https://twitter.com/sebsilbermann/" />
 	<meta name="twitter:title" value={title} />
 	<meta name="twitter:description" value={description} />
-	<meta
-		name="twitter:image"
-		content="https://www.swyx.io/og_image/writings.png" />
 	<meta name="twitter:label1" value="Published on" />
 	<meta
 		name="twitter:data1"
@@ -35,4 +32,6 @@
 		})} />
 	<meta name="twitter:label2" value="Reading Time" />
 	<meta name="twitter:data2" value={readingTime} />
+	<link rel="pingback" href="https://webmention.io/solverfox.dev/xmlrpc">
+	<link rel="webmention" href="https://webmention.io/solverfox.dev/webmention">
 </svelte:head>
