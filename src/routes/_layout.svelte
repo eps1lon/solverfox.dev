@@ -1,9 +1,12 @@
 <script>
 	import 'focus-visible/dist/focus-visible.min.js';
+	import { stores } from '@sapper/app';
 	import Nav from '../components/Nav.svelte';
 	import Footer from '../components/Footer.svelte';
 
 	export let segment;
+
+	const { page } = stores();
 </script>
 
 <style>
@@ -53,7 +56,7 @@
 
 <div id="skipnav">
 	<p class="skipnav">
-		<a href="#maincontent">Skip to main content (Press Enter)</a>
+		<a href={`${$page.path}#maincontent`}>Skip to main content (Press Enter)</a>
 	</p>
 </div>
 
