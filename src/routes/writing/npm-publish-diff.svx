@@ -138,7 +138,7 @@ If I add a new file I can check if it actually gets published.
 If I want to prevent a file from being published I can verify my work.
 All in CI without having to check the code out locally.
 
-![/writing/diff-npm-publish/azure-ui.png]()
+<img alt="diff of published files in Azure Pipelines web interface" loading="lazy" src="writing/diff-npm-publish/diff-azure-webview.png" />
 
 -- [Azure Pipelines UI](https://dev.azure.com/silbermannsebastian/dom-accessibility-api/_build/results?buildId=1880&view=logs&j=b8865196-746b-550b-1739-d024186ee81d&t=51b39ae9-01ae-5c3d-ebd8-1e83faa5202a)
 
@@ -201,7 +201,7 @@ steps:
 
 The steps described were implemented in https://github.com/eps1lon/dom-accessibility-api/pull/240. The commits highlight various implementation choices.
 
-## #Caveats and Future Work
+### Caveats and Future Work
 
 This workflow is implemented in a small project with a fairly linear workflow.
 Since it always diffs against the latest version on the main branch it might include confusing diffs when the branch is not based on the latest version on the main branch.
