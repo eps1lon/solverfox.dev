@@ -22,12 +22,12 @@
 		text-transform: initial;
 	}
 
-	article :global(code) {
-		all: unset;
-	}
-
 	article :global(pre) {
 		max-width: 100ch;
+	}
+
+	article :global(pre.hljs) :global(code) {
+			all: unset;
 	}
 
 	/* break up long github issue links */

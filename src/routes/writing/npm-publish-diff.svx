@@ -161,15 +161,18 @@ steps:
 
   - script: |
       yarn install
+
     displayName: 'Install packages'
 
   - script: |
       yarn build
+
     displayName: 'Build'
 
   - script: |
       npm pack
       mv dom-accessibility-api-*.tgz dom-accessibility-api.tgz
+
     displayName: 'Create tarball'
 
   - publish: $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz
