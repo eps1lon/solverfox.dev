@@ -4,8 +4,9 @@
 	export let id;
 	export let target;
 
+	if (!target) throw new TypeError('`target` is required');
+
 	let page = 0;
-	if (!target) console.error('error: no target');
 	let counts;
 	let mentions = [];
 	let fetchState = 'fetching';
