@@ -1,12 +1,14 @@
 <script>
 	// based off https://github.com/sw-yx/swyxdotio/blob/master/src/components/WebMentions.svelte
-	let page = 0;
+	import { onMount } from 'svelte';
+	export let id;
 	export let target;
+
+	let page = 0;
 	if (!target) console.error('error: no target');
 	let counts;
 	let mentions = [];
 	let fetchState = 'fetching';
-	import { onMount } from 'svelte';
 	onMount(() => {
 		counts = fetch(`https://webmention.io/api/count.json?target=${target}/`) // trailing slash impt
 			.then((res) => res.json())
@@ -45,9 +47,7 @@
 </script>
 
 <style>
-	#WebMentions {
-		margin: 0 auto;
-		font-style: italic;
+	#webmentions {
 		width: 80%;
 		min-width: 300px;
 	}
@@ -64,9 +64,7 @@
 		list-style-type: none;
 		padding: 0;
 	}
-	hr {
-		margin: 3rem 1rem;
-	}
+
 	.WebMentionReply {
 		margin-top: 16px;
 		margin-bottom: 16px;
@@ -101,8 +99,7 @@
 	}
 </style>
 
-<hr />
-<div id="WebMentions">
+<div id="webmentions">
 	<h3 font-family="system" font-size="4" font-weight="bold">Webmentions</h3>
 	<a
 		target="_blank"
@@ -171,7 +168,7 @@
 								{link.data.author.name}
 								<a href={link.data.url}>retweeted</a>
 							{:else}
-								<div font-family="system" color="text" font-weight="bold">
+								<div font-family="system" color="text" font-weight="bold" role="comment">
 									{link.data.author.name}
 									<a
 										target="_blank"
