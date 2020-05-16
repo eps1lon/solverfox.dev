@@ -103,6 +103,7 @@
 <div {id}>
 	<h2 font-family="system" font-size="4" font-weight="bold">Webmentions</h2>
 	<a
+		aria-label="Clientside Webmentions by Shawn Wang"
 		target="_blank"
 		rel="noopener"
 		href="http://swyx.io/writing/clientside-webmentions"
