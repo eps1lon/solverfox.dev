@@ -46,7 +46,7 @@
 	<div class="contact">
 		<address>
 			<div class="name">Sebastian Silbermann</div>
-			<a href="mailto:silbermann.sebastian@gmail.com">
+			<a href="mailto:silbermann.sebastian@gmail.com" rel="me">
 				silbermann.sebastian@gmail.com
 			</a>
 		</address>
@@ -54,14 +54,14 @@
 		<ul class="social">
 			<li>
 
-				<a href="https://github.com/eps1lon/">
+				<a href="https://github.com/eps1lon/" rel="me">
 					<img src="mark-github.svg" alt="GitHub" />
 					@eps1lon
 				</a>
 			</li>
 			<li>
 
-				<a href="https://twitter.com/sebsilbermann">
+				<a href="https://twitter.com/sebsilbermann" rel="me">
 					<img src="Twitter_Social_Icon_Circle_Color.svg" alt="Twitter" />
 					@sebsilbermann
 				</a>
