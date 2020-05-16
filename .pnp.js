@@ -131,7 +131,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "sapper",
-        "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.9"
+        "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"
       ],
       [
         "sirv",
@@ -139,7 +139,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "svelte",
-        "npm:3.12.1"
+        "npm:3.22.2"
       ]
     ],
     "locationBlacklistData": [
@@ -174,9 +174,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-replace", "npm:2.2.0"],
             ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
-            ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.9"],
+            ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
             ["sirv", "npm:0.4.2"],
-            ["svelte", "npm:3.12.1"]
+            ["svelte", "npm:3.22.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -2106,7 +2106,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it", "npm:9.1.0"],
             ["path-browserify", "npm:1.0.0"],
             ["punycode", "npm:2.1.1"],
-            ["svelte", "npm:3.12.1"]
+            ["svelte", "npm:3.22.2"]
           ],
           "packagePeers": [
             "svelte"
@@ -2668,7 +2668,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:1.23.0"],
             ["rollup-pluginutils", "npm:2.8.2"],
             ["sourcemap-codec", "npm:1.4.6"],
-            ["svelte", "npm:3.12.1"]
+            ["svelte", "npm:3.22.2"]
           ],
           "packagePeers": [
             "rollup",
@@ -2714,16 +2714,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sapper", [
-        ["virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.9", {
-          "packageLocation": "./.yarn/$$virtual/sapper-virtual-d34fff4d43/0/cache/sapper-npm-0.27.9-3d1182d63f-3.zip/node_modules/sapper/",
+        ["virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13", {
+          "packageLocation": "./.yarn/$$virtual/sapper-virtual-c59743ced0/0/cache/sapper-npm-0.27.13-73dd1c3dec-3.zip/node_modules/sapper/",
           "packageDependencies": [
-            ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.9"],
+            ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
             ["html-minifier", "npm:4.0.0"],
             ["http-link-header", "npm:1.0.2"],
             ["shimport", "npm:1.0.1"],
             ["sourcemap-codec", "npm:1.4.6"],
             ["string-hash", "npm:1.1.3"],
-            ["svelte", "npm:3.12.1"]
+            ["svelte", "npm:3.22.2"]
           ],
           "packagePeers": [
             "svelte"
@@ -2834,9 +2834,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-replace", "npm:2.2.0"],
             ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
-            ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.9"],
+            ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
             ["sirv", "npm:0.4.2"],
-            ["svelte", "npm:3.12.1"]
+            ["svelte", "npm:3.22.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -2997,10 +2997,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["svelte", [
-        ["npm:3.12.1", {
-          "packageLocation": "./.yarn/cache/svelte-npm-3.12.1-ce00fff888-3.zip/node_modules/svelte/",
+        ["npm:3.22.2", {
+          "packageLocation": "./.yarn/cache/svelte-npm-3.22.2-8e72ae3e9f-3.zip/node_modules/svelte/",
           "packageDependencies": [
-            ["svelte", "npm:3.12.1"]
+            ["svelte", "npm:3.22.2"]
           ],
           "linkType": "HARD",
         }]

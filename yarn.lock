@@ -2183,9 +2183,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sapper@npm:^0.27.9":
-  version: 0.27.9
-  resolution: "sapper@npm:0.27.9"
+"sapper@npm:^0.27.13":
+  version: 0.27.13
+  resolution: "sapper@npm:0.27.13"
   dependencies:
     html-minifier: ^4.0.0
     http-link-header: ^1.0.2
@@ -2195,8 +2195,8 @@ __metadata:
   peerDependencies:
     svelte: ^3.5.0
   bin:
-    sapper: ./sapper
-  checksum: 3/b628614b96cd6f0451c428335294790bb87834357bbd738cad7a1b7da88ef5ef1b2bc4df13a03490ca60cc618aa927ca6b6a8c8886e9b3ca58c8dff70af7c8fb
+    sapper: sapper
+  checksum: 3/045620ae433a4d578cdc9ffcb6c7e47328caf3fa1891e81beb4cb6d9c039463816e4f2d4b535b3a9aa7e67b0063e77fe4d04e221d34afd8ca4998526464e367e
   languageName: node
   linkType: hard
 
@@ -2294,9 +2294,9 @@ __metadata:
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^5.0.1
     rollup-plugin-terser: ^4.0.4
-    sapper: ^0.27.9
+    sapper: ^0.27.13
     sirv: ^0.4.0
-    svelte: ^3.12.1
+    svelte: ^3.22.2
   languageName: unknown
   linkType: soft
 
@@ -2435,10 +2435,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:^3.12.1":
-  version: 3.12.1
-  resolution: "svelte@npm:3.12.1"
-  checksum: 3/c9d41e2a8552b3bc73c9a9c384456decb5a9514f16b22512454c3b4ac5b6d9528e83ebf520ebf8947b7bbf2263aa931f58d372bcb1b2932fb58c02f7e05ead76
+"svelte@npm:^3.22.2":
+  version: 3.22.2
+  resolution: "svelte@npm:3.22.2"
+  checksum: 3/0e2a14a1ce88bb8e519ba5bc6a2116c00915ef01d41ad1d47279ab6c46c9d447c370e830210d9ef16a25b758ab46570a533ad2f3541e782e24ad781d2ed50090
   languageName: node
   linkType: hard
 
