@@ -32,6 +32,8 @@
 		})} />
 	<meta name="twitter:label2" value="Reading Time" />
 	<meta name="twitter:data2" value={readingTime} />
-	<link rel="pingback" href="https://webmention.io/solverfox.dev/xmlrpc">
-	<link rel="webmention" href="https://webmention.io/solverfox.dev/webmention">
+	<link rel="pingback" href="https://webmention.io/solverfox.dev/xmlrpc" />
+	<link
+		rel="webmention"
+		href="https://webmention.io/solverfox.dev/webmention" />
 </svelte:head>

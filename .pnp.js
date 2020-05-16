@@ -98,6 +98,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.0.5"
       ],
       [
+        "prettier-plugin-svelte",
+        "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0"
+      ],
+      [
         "rollup",
         "npm:1.23.0"
       ],
@@ -166,6 +170,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
             ["prettier", "npm:2.0.5"],
+            ["prettier-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0"],
             ["rollup", "npm:1.23.0"],
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],
@@ -2435,6 +2440,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["prettier-plugin-svelte", [
+        ["virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0", {
+          "packageLocation": "./.yarn/$$virtual/prettier-plugin-svelte-virtual-12a198d394/0/cache/prettier-plugin-svelte-npm-1.1.0-6961c3d8aa-3.zip/node_modules/prettier-plugin-svelte/",
+          "packageDependencies": [
+            ["prettier-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0"],
+            ["prettier", "npm:2.0.5"],
+            ["svelte", "npm:3.22.2"]
+          ],
+          "packagePeers": [
+            "prettier",
+            "svelte"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["private", [
         ["npm:0.1.8", {
           "packageLocation": "./.yarn/cache/private-npm-0.1.8-1df19be5d6-3.zip/node_modules/private/",
@@ -2826,6 +2846,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
             ["prettier", "npm:2.0.5"],
+            ["prettier-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0"],
             ["rollup", "npm:1.23.0"],
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],
