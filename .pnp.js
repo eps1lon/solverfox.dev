@@ -79,7 +79,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "highlight.js",
-        "npm:10.0.3"
+        "npm:10.1.2"
       ],
       [
         "mdsvex",
@@ -165,7 +165,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["focus-visible", "npm:5.1.0"],
             ["front-matter", "npm:3.0.2"],
             ["glob", "npm:7.1.4"],
-            ["highlight.js", "npm:10.0.3"],
+            ["highlight.js", "npm:10.1.2"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],
@@ -1804,10 +1804,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["highlight.js", [
-        ["npm:10.0.3", {
-          "packageLocation": "./.yarn/cache/highlight.js-npm-10.0.3-9ce0d3b2b6-59d78b9dc9.zip/node_modules/highlight.js/",
+        ["npm:10.1.2", {
+          "packageLocation": "./.yarn/cache/highlight.js-npm-10.1.2-f387aef59a-12ad98d6f2.zip/node_modules/highlight.js/",
           "packageDependencies": [
-            ["highlight.js", "npm:10.0.3"]
+            ["highlight.js", "npm:10.1.2"]
           ],
           "linkType": "HARD",
         }]
@@ -2841,7 +2841,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["focus-visible", "npm:5.1.0"],
             ["front-matter", "npm:3.0.2"],
             ["glob", "npm:7.1.4"],
-            ["highlight.js", "npm:10.0.3"],
+            ["highlight.js", "npm:10.1.2"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
             ["polka", "npm:1.0.0-next.6"],

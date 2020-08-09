@@ -1375,10 +1375,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^10.0.3":
-  version: 10.0.3
-  resolution: "highlight.js@npm:10.0.3"
-  checksum: 59d78b9dc985e896c83b2e2ef7550743757775391d1f7f0d3c61105dd368c1a9761e9958e7ed67e4bd14fc390094d143afe8a0c4966ee6b8297b3c637a14d206
+"highlight.js@npm:^10.1.2":
+  version: 10.1.2
+  resolution: "highlight.js@npm:10.1.2"
+  checksum: 12ad98d6f2b89ff7f46e2f9404bb3f3783c81cc5a98362e89e7f56d9d0315952149561e5f1661073e0bf8528412ce9262a331f27da4e263d122d34daa5473d08
   languageName: node
   linkType: hard
 
@@ -2292,7 +2292,7 @@ __metadata:
     focus-visible: ^5.1.0
     front-matter: ^3.0.2
     glob: ^7.1.4
-    highlight.js: ^10.0.3
+    highlight.js: ^10.1.2
     mdsvex: ^0.4.0
     npm-run-all: ^4.1.5
     polka: next
