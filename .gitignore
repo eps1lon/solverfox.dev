@@ -2,4 +2,4 @@
 /src/node_modules/@sapper/
 /cypress/screenshots/
 /__sapper__/
-/node_modules/.cache
+/node_modules/
