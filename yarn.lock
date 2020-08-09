@@ -2169,9 +2169,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sapper@npm:^0.27.13":
-  version: 0.27.13
-  resolution: "sapper@npm:0.27.13"
+"sapper@npm:^0.28.0":
+  version: 0.28.0
+  resolution: "sapper@npm:0.28.0"
   dependencies:
     html-minifier: ^4.0.0
     http-link-header: ^1.0.2
@@ -2179,10 +2179,10 @@ __metadata:
     sourcemap-codec: ^1.4.6
     string-hash: ^1.1.3
   peerDependencies:
-    svelte: ^3.5.0
+    svelte: ^3.17.3
   bin:
     sapper: sapper
-  checksum: 045620ae433a4d578cdc9ffcb6c7e47328caf3fa1891e81beb4cb6d9c039463816e4f2d4b535b3a9aa7e67b0063e77fe4d04e221d34afd8ca4998526464e367e
+  checksum: 33bc6cc2e15e31beaf689208ff8c5c5586c00779ccfc7a563b8c5224d662cf7c53cb45f28f66f2e2fdd5bf3d378d95dfda45d4a3f95e737cecdf3d9c80d4c726
   languageName: node
   linkType: hard
 
@@ -2278,7 +2278,7 @@ __metadata:
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^5.2.3
     rollup-plugin-terser: ^4.0.4
-    sapper: ^0.27.13
+    sapper: ^0.28.0
     sirv: ^1.0.5
     svelte: ^3.24.1
   languageName: unknown
