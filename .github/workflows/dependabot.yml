@@ -18,11 +18,11 @@ jobs:
         with:
           persist-credentials: true
 
-      - script: |
+      - run: |
           yarn install
         displayName: 'Install packages'
 
-      - script: |
+      - run: |
           git add -A
           git status
           git diff-index --quiet HEAD || (git commit  --message 'yarn autofix' && git push -u origin HEAD:{{ github.ref }})
