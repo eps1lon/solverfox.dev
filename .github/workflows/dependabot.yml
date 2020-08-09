@@ -18,15 +18,16 @@ jobs:
         with:
           persist-credentials: true
 
-      - run: |
+      - name: 'Install packages'
+        run: |
           yarn install
-        displayName: 'Install packages'
+        
 
-      - run: |
+      - name: 'Autofix yarn for dependabot'
+        run: |
           git add -A
           git status
           git diff-index --quiet HEAD || (git commit  --message 'yarn autofix' && git push -u origin HEAD:{{ github.ref }})
-        displayName: 'Autofix yarn for dependabot'
         # Pushes from actions can't trigger actions.
         # The below statement isn't needed.
         # if: {{ github.action === "dependabot-preview" }}
