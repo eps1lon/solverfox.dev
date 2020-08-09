@@ -75,7 +75,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "glob",
-        "npm:7.1.4"
+        "npm:7.1.6"
       ],
       [
         "highlight.js",
@@ -164,7 +164,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["compression", "npm:1.7.4"],
             ["focus-visible", "npm:5.1.0"],
             ["front-matter", "npm:3.0.2"],
-            ["glob", "npm:7.1.4"],
+            ["glob", "npm:7.1.6"],
             ["highlight.js", "npm:10.1.2"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
@@ -1734,10 +1734,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["glob", [
-        ["npm:7.1.4", {
-          "packageLocation": "./.yarn/cache/glob-npm-7.1.4-8bd8317a74-a6c2175670.zip/node_modules/glob/",
+        ["npm:7.1.6", {
+          "packageLocation": "./.yarn/cache/glob-npm-7.1.6-1ce3a5189a-789977b524.zip/node_modules/glob/",
           "packageDependencies": [
-            ["glob", "npm:7.1.4"],
+            ["glob", "npm:7.1.6"],
             ["fs.realpath", "npm:1.0.0"],
             ["inflight", "npm:1.0.6"],
             ["inherits", "npm:2.0.4"],
@@ -2841,7 +2841,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["compression", "npm:1.7.4"],
             ["focus-visible", "npm:5.1.0"],
             ["front-matter", "npm:3.0.2"],
-            ["glob", "npm:7.1.4"],
+            ["glob", "npm:7.1.6"],
             ["highlight.js", "npm:10.1.2"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
             ["npm-run-all", "npm:4.1.5"],
