@@ -1,5 +1,5 @@
 /.yarn/install-state.gz
-/src/node_modules/@sapper/
+/.yarn/build-state.yml
 /cypress/screenshots/
 /__sapper__/
-/node_modules/.cache
+node_modules/
