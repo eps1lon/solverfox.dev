@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  fix-yarn-berry-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: hmarr/debug-action@master
+
+      - uses: actions/checkout@v2
+
+      - name: 'Install packages'
+        run: yarn install
+
+      - name: 'Check code format'
+        run: yarn format:check
