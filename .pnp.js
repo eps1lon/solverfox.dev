@@ -127,7 +127,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "rollup-plugin-svelte",
-        "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"
+        "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.3"
       ],
       [
         "rollup-plugin-terser",
@@ -177,7 +177,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-node-resolve", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
             ["rollup-plugin-replace", "npm:2.2.0"],
-            ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
+            ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.3"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
             ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
             ["sirv", "npm:1.0.5"],
@@ -2680,14 +2680,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["rollup-plugin-svelte", [
-        ["virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0", {
-          "packageLocation": "./.yarn/$$virtual/rollup-plugin-svelte-virtual-82c107f4f9/0/cache/rollup-plugin-svelte-npm-5.1.0-aa0caeb797-7317d8f415.zip/node_modules/rollup-plugin-svelte/",
+        ["virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.3", {
+          "packageLocation": "./.yarn/$$virtual/rollup-plugin-svelte-virtual-c08976aade/0/cache/rollup-plugin-svelte-npm-5.2.3-fa593513f2-bd7e0c8397.zip/node_modules/rollup-plugin-svelte/",
           "packageDependencies": [
-            ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
+            ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.3"],
             ["require-relative", "npm:0.8.7"],
             ["rollup", "npm:1.23.0"],
             ["rollup-pluginutils", "npm:2.8.2"],
-            ["sourcemap-codec", "npm:1.4.6"],
+            ["sourcemap-codec", "npm:1.4.8"],
             ["svelte", "npm:3.22.2"]
           ],
           "packagePeers": [
@@ -2854,7 +2854,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-node-resolve", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.0"],
             ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
             ["rollup-plugin-replace", "npm:2.2.0"],
-            ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
+            ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.3"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
             ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
             ["sirv", "npm:1.0.5"],
@@ -2895,6 +2895,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/sourcemap-codec-npm-1.4.6-208a37c5b6-22a45804fe.zip/node_modules/sourcemap-codec/",
           "packageDependencies": [
             ["sourcemap-codec", "npm:1.4.6"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.4.8", {
+          "packageLocation": "./.yarn/cache/sourcemap-codec-npm-1.4.8-3a1a9e60b1-4d56d1232a.zip/node_modules/sourcemap-codec/",
+          "packageDependencies": [
+            ["sourcemap-codec", "npm:1.4.8"]
           ],
           "linkType": "HARD",
         }]
