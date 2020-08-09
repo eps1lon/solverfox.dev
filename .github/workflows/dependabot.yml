@@ -4,8 +4,6 @@ name: dependabot integration
 on:
   push:
     branches:
-      # TODO for testing only, remove first entry later
-      - 'chore/*'
       - 'dependabot/npm_and_yarn/**'
 jobs:
   fix-yarn-berry-integration:
