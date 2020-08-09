@@ -1,0 +1,31 @@
+name: dependabot integration
+
+on:
+  push:
+    branches:
+      # TODO for testing only, remove first entry later
+      - 'chore/*'
+      - 'dependabot/npm_and_yarn/**'
+jobs:
+  fix-yarn-berry-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: hmarr/debug-action
+
+      - uses: actions/checkout@v2
+
+      - script: |
+          yarn install
+        displayName: 'Install packages'
+
+      - script: |
+          git config --global user.email "silbermann.sebastian@gmail.com"
+          git config --global user.name "eps1lon[bot]"
+          git add -A
+          git status
+          git diff-index --quiet HEAD || (git commit  --message 'yarn autofix' && git push -u origin HEAD:{{ github.ref }})
+        displayName: 'Autofix yarn for dependabot'
+        # Pushes from actions can't trigger actions.
+        # The below statement isn't needed.
+        # if: {{ github.action === "dependabot-preview" }}
