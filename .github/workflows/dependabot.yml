@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: hmarr/debug-action
+      - uses: hmarr/debug-action@master
 
       - uses: actions/checkout@v2
         with:
