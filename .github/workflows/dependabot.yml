@@ -30,7 +30,7 @@ jobs:
           git config user.email github-actions@github.com
           git add -A
           git status
-          git diff-index --quiet HEAD || (git commit  --message 'yarn autofix' && git push -u origin HEAD:{{ github.ref }})
+          git diff-index --quiet HEAD || (git commit  --message 'yarn autofix' && git push)
         # Pushes from actions can't trigger actions.
         # The below statement isn't needed.
         # if: {{ github.action === "dependabot-preview" }}
