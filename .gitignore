@@ -2,11 +2,4 @@
 /.yarn/build-state.yml
 /cypress/screenshots/
 /__sapper__/
-/node_modules/
-# we need these files that are generated from @sapper before we run yarn install.
-# Otherwise the symlinks will point to non-existing files.
-# The actual file contents are generated in `yarn export`
-/src/node_modules/@sapper/*
-!/src/node_modules/@sapper/app.mjs
-!/src/node_modules/@sapper/server.mjs
-!/src/node_modules/@sapper/service-worker.js
+node_modules/

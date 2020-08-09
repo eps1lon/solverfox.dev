@@ -907,21 +907,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapper/app@link:./src/node_modules/@sapper/app::locator=solverfox.dev%40workspace%3A.":
+"@sapper/app@link:./src/@sapper/app::locator=solverfox.dev%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@sapper/app@link:./src/node_modules/@sapper/app::locator=solverfox.dev%40workspace%3A."
+  resolution: "@sapper/app@link:./src/@sapper/app::locator=solverfox.dev%40workspace%3A."
   languageName: node
   linkType: soft
 
-"@sapper/server@link:./src/node_modules/@sapper/server::locator=solverfox.dev%40workspace%3A.":
+"@sapper/server@link:./src/@sapper/server::locator=solverfox.dev%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@sapper/server@link:./src/node_modules/@sapper/server::locator=solverfox.dev%40workspace%3A."
+  resolution: "@sapper/server@link:./src/@sapper/server::locator=solverfox.dev%40workspace%3A."
   languageName: node
   linkType: soft
 
-"@sapper/service-worker@link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A.":
+"@sapper/service-worker@link:./src/@sapper/service-worker::locator=solverfox.dev%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@sapper/service-worker@link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."
+  resolution: "@sapper/service-worker@link:./src/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."
   languageName: node
   linkType: soft
 
@@ -2286,9 +2286,9 @@ __metadata:
     "@babel/plugin-transform-runtime": ^7.0.0
     "@babel/preset-env": ^7.0.0
     "@babel/runtime": ^7.0.0
-    "@sapper/app": "link:./src/node_modules/@sapper/app"
-    "@sapper/server": "link:./src/node_modules/@sapper/server"
-    "@sapper/service-worker": "link:./src/node_modules/@sapper/service-worker"
+    "@sapper/app": "link:./src/@sapper/app"
+    "@sapper/server": "link:./src/@sapper/server"
+    "@sapper/service-worker": "link:./src/@sapper/service-worker"
     compression: ^1.7.1
     focus-visible: ^5.1.0
     front-matter: ^3.0.2
