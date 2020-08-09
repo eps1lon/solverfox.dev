@@ -5,16 +5,7 @@ __metadata:
   version: 4
   cacheKey: 5
 
-"@babel/code-frame@npm:^7.0.0":
-  version: 7.5.5
-  resolution: "@babel/code-frame@npm:7.5.5"
-  dependencies:
-    "@babel/highlight": ^7.0.0
-  checksum: d9b84e0418596352f8122bf647f630e45a31e5078b663609a69ae2af7035c44a25d63aa11475fd5944360a86d28e4c4d7c538fd807a8b20fd41c1dec3e38f530
-  languageName: node
-  linkType: hard
-
-"@babel/code-frame@npm:^7.10.4":
+"@babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.5.5":
   version: 7.10.4
   resolution: "@babel/code-frame@npm:7.10.4"
   dependencies:
@@ -336,17 +327,6 @@ __metadata:
     "@babel/traverse": ^7.10.4
     "@babel/types": ^7.10.4
   checksum: 96859c490ac07fe30fe2b6ad8e474325d2504ffcc8b720b0f22a01e8334d79b4fb3051720c2146390579f7781cbc5923cb32d4e23e51b811c83aaa644fe17f2a
-  languageName: node
-  linkType: hard
-
-"@babel/highlight@npm:^7.0.0":
-  version: 7.5.0
-  resolution: "@babel/highlight@npm:7.5.0"
-  dependencies:
-    chalk: ^2.0.0
-    esutils: ^2.0.2
-    js-tokens: ^4.0.0
-  checksum: 80565131da60f89f152c321bb438c74140f42d7e8792b64ff5e4a643993a8d1dbd35e208ae566d7253866c04c1974195a21ff9e53e9b326b24937b96b0b2b5f7
   languageName: node
   linkType: hard
 
@@ -1401,6 +1381,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^2.20.0":
+  version: 2.20.3
+  resolution: "commander@npm:2.20.3"
+  checksum: b73428e97de7624323f81ba13f8ed9271de487017432d18b4da3f07cfc528ad754bbd199004bd5d14e0ccd67d1fdfe0ec8dbbd4c438b401df3c4cc387bfd1daa
+  languageName: node
+  linkType: hard
+
 "compressible@npm:~2.0.16":
   version: 2.0.17
   resolution: "compressible@npm:2.0.17"
@@ -1811,7 +1798,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^24.0.0":
+"jest-worker@npm:^24.9.0":
   version: 24.9.0
   resolution: "jest-worker@npm:24.9.0"
   dependencies:
@@ -2461,17 +2448,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-terser@npm:^4.0.4":
-  version: 4.0.4
-  resolution: "rollup-plugin-terser@npm:4.0.4"
+"rollup-plugin-terser@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "rollup-plugin-terser@npm:5.3.0"
   dependencies:
-    "@babel/code-frame": ^7.0.0
-    jest-worker: ^24.0.0
-    serialize-javascript: ^1.6.1
-    terser: ^3.14.1
+    "@babel/code-frame": ^7.5.5
+    jest-worker: ^24.9.0
+    rollup-pluginutils: ^2.8.2
+    serialize-javascript: ^2.1.2
+    terser: ^4.6.2
   peerDependencies:
-    rollup: ">=0.66.0 <2"
-  checksum: ba3921afeb0f1dbac551a56bb445177349bd13a1a6b0a1c7a469e1fa4276731c6c134398d339c48e8ff59f246d21bf97f63ed4383cfdc9085d5ed4177c1008b3
+    rollup: ">=0.66.0 <3"
+  checksum: 51d113b7288d74dfc71750e90d2247b6d0d561a8b03b13f5f3478b6297a0dfaa5cb9045d5369c8d2c4045a66191d33a354a2147750a02a6986b63599c3544240
   languageName: node
   linkType: hard
 
@@ -2539,10 +2527,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"serialize-javascript@npm:^1.6.1":
-  version: 1.9.1
-  resolution: "serialize-javascript@npm:1.9.1"
-  checksum: 84293fb87b0884a0ad7b5a4497cf197e3013d928c5b5162a9e199b91ff5ee28b5eba02e636a69a1c3ae22ad5d512775b17ba0950f16181939f510841eb37b5e3
+"serialize-javascript@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "serialize-javascript@npm:2.1.2"
+  checksum: 9a4d4da6469e327332203438eed9a408e0618519d18aaba3790c88bf87712df4d577423d8fbd7122753800fa12afe19540cba111178ab0cf1f33c2b5771731bf
   languageName: node
   linkType: hard
 
@@ -2612,20 +2600,20 @@ __metadata:
     rollup-plugin-node-resolve: ^5.2.0
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^5.2.3
-    rollup-plugin-terser: ^4.0.4
+    rollup-plugin-terser: ^5.3.0
     sapper: ^0.28.0
     sirv: ^1.0.5
     svelte: ^3.24.1
   languageName: unknown
   linkType: soft
 
-"source-map-support@npm:~0.5.10":
-  version: 0.5.13
-  resolution: "source-map-support@npm:0.5.13"
+"source-map-support@npm:~0.5.12":
+  version: 0.5.19
+  resolution: "source-map-support@npm:0.5.19"
   dependencies:
     buffer-from: ^1.0.0
     source-map: ^0.6.0
-  checksum: e4877c5d653fcce19d8f1d0b697cd6f435632cb26275699b580fc7bb6d3146bb49aceee2cb9b3159fd66747ce34e8dd9b348b9aecdae22bcc41c5e841e901dfa
+  checksum: 59d4efaae97755155b078413ecba63517e3ef054cc7ab767bbd30e6f3054be2ae8e8f5cce7eef53b7eb93e98fe27a58dd8f5e7abfb13144ba420ddaf5267bbb2
   languageName: node
   linkType: hard
 
@@ -2768,16 +2756,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:^3.14.1":
-  version: 3.17.0
-  resolution: "terser@npm:3.17.0"
+"terser@npm:^4.6.2":
+  version: 4.8.0
+  resolution: "terser@npm:4.8.0"
   dependencies:
-    commander: ^2.19.0
+    commander: ^2.20.0
     source-map: ~0.6.1
-    source-map-support: ~0.5.10
+    source-map-support: ~0.5.12
   bin:
-    terser: bin/uglifyjs
-  checksum: 4847a5b5a2618f9624f459b9df0c2528b2d69c6a025fb4a9c8c9fde51504fc8895a6ba037e26133e62336b3ed877002725e0641811ba6e5ead51a2ecc7d44cde
+    terser: bin/terser
+  checksum: d7ab95898b40e2aa3513b02fc74f520f8e65072a19d7f687b8224af01512ad4d2227bc1375c22cd050f67eb1ca3e440b4f09652c5f48f13ed9ee81c0c26015a3
   languageName: node
   linkType: hard
 
