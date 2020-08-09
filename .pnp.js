@@ -139,7 +139,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "sirv",
-        "npm:0.4.2"
+        "npm:1.0.5"
       ],
       [
         "svelte",
@@ -180,7 +180,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
             ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
-            ["sirv", "npm:0.4.2"],
+            ["sirv", "npm:1.0.5"],
             ["svelte", "npm:3.22.2"]
           ],
           "linkType": "SOFT",
@@ -1236,10 +1236,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@polka/url", [
-        ["npm:0.5.0", {
-          "packageLocation": "./.yarn/cache/@polka-url-npm-0.5.0-97fa7737e1-38bed31ba1.zip/node_modules/@polka/url/",
+        ["npm:1.0.0-next.11", {
+          "packageLocation": "./.yarn/cache/@polka-url-npm-1.0.0-next.11-a7fd32eeae-268a83f4e1.zip/node_modules/@polka/url/",
           "packageDependencies": [
-            ["@polka/url", "npm:0.5.0"]
+            ["@polka/url", "npm:1.0.0-next.11"]
           ],
           "linkType": "HARD",
         }],
@@ -2814,12 +2814,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sirv", [
-        ["npm:0.4.2", {
-          "packageLocation": "./.yarn/cache/sirv-npm-0.4.2-4dcf037f2c-34de29b708.zip/node_modules/sirv/",
+        ["npm:1.0.5", {
+          "packageLocation": "./.yarn/cache/sirv-npm-1.0.5-7679c84e0f-557989e084.zip/node_modules/sirv/",
           "packageDependencies": [
-            ["sirv", "npm:0.4.2"],
-            ["@polka/url", "npm:0.5.0"],
-            ["mime", "npm:2.4.4"]
+            ["sirv", "npm:1.0.5"],
+            ["@polka/url", "npm:1.0.0-next.11"],
+            ["mime", "npm:2.4.4"],
+            ["totalist", "npm:1.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2856,7 +2857,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
             ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
-            ["sirv", "npm:0.4.2"],
+            ["sirv", "npm:1.0.5"],
             ["svelte", "npm:3.22.2"]
           ],
           "linkType": "SOFT",
@@ -3043,6 +3044,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/to-fast-properties-npm-2.0.0-0dc60cc481-40e6198424.zip/node_modules/to-fast-properties/",
           "packageDependencies": [
             ["to-fast-properties", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["totalist", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/totalist-npm-1.1.0-4e1d9cb01b-771f194e11.zip/node_modules/totalist/",
+          "packageDependencies": [
+            ["totalist", "npm:1.1.0"]
           ],
           "linkType": "HARD",
         }]
