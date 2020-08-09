@@ -28,7 +28,7 @@
 		"@sapper/app": "link:./src/node_modules/@sapper/app",
 		"@sapper/server": "link:./src/node_modules/@sapper/server",
 		"@sapper/service-worker": "link:./src/node_modules/@sapper/service-worker",
-		"focus-visible": "^5.0.2",
+		"focus-visible": "^5.1.0",
 		"front-matter": "^3.0.2",
 		"highlight.js": "^10.0.3",
 		"mdsvex": "^0.4.0",

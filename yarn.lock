@@ -1285,10 +1285,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-visible@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "focus-visible@npm:5.0.2"
-  checksum: 8504dcb9d1bade9fd31ac5ca9cf764e3f6985966ce1c8f3ca80509826c0d96505db8fc948856a95dd3023c46cc0820e82a2d29c9a0ea3ea616f47ad59c893dc7
+"focus-visible@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "focus-visible@npm:5.1.0"
+  checksum: ae6106e1d598583666ea7fff5f11838c981f597fdefd326607b54808e6fa7c479235b39329eac7959ebdb561010ec627062e28ae34e472c8ebca94933c5dd3b9
   languageName: node
   linkType: hard
 
@@ -2289,7 +2289,7 @@ __metadata:
     "@sapper/server": "link:./src/node_modules/@sapper/server"
     "@sapper/service-worker": "link:./src/node_modules/@sapper/service-worker"
     compression: ^1.7.1
-    focus-visible: ^5.0.2
+    focus-visible: ^5.1.0
     front-matter: ^3.0.2
     glob: ^7.1.4
     highlight.js: ^10.0.3

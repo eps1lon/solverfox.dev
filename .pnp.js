@@ -67,7 +67,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "focus-visible",
-        "npm:5.0.2"
+        "npm:5.1.0"
       ],
       [
         "front-matter",
@@ -162,7 +162,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sapper/server", "link:./src/node_modules/@sapper/server::locator=solverfox.dev%40workspace%3A."],
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."],
             ["compression", "npm:1.7.4"],
-            ["focus-visible", "npm:5.0.2"],
+            ["focus-visible", "npm:5.1.0"],
             ["front-matter", "npm:3.0.2"],
             ["glob", "npm:7.1.4"],
             ["highlight.js", "npm:10.0.3"],
@@ -1697,10 +1697,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["focus-visible", [
-        ["npm:5.0.2", {
-          "packageLocation": "./.yarn/cache/focus-visible-npm-5.0.2-1b512d0be4-8504dcb9d1.zip/node_modules/focus-visible/",
+        ["npm:5.1.0", {
+          "packageLocation": "./.yarn/cache/focus-visible-npm-5.1.0-eff9398fa2-ae6106e1d5.zip/node_modules/focus-visible/",
           "packageDependencies": [
-            ["focus-visible", "npm:5.0.2"]
+            ["focus-visible", "npm:5.1.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2838,7 +2838,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sapper/server", "link:./src/node_modules/@sapper/server::locator=solverfox.dev%40workspace%3A."],
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."],
             ["compression", "npm:1.7.4"],
-            ["focus-visible", "npm:5.0.2"],
+            ["focus-visible", "npm:5.1.0"],
             ["front-matter", "npm:3.0.2"],
             ["glob", "npm:7.1.4"],
             ["highlight.js", "npm:10.0.3"],
