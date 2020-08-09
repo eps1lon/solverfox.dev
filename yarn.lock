@@ -2120,10 +2120,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-pnp-resolve@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "rollup-plugin-pnp-resolve@npm:1.1.0"
-  checksum: 3821523bb4abb0f82263ef2225008493e2770a9e6e1544ae6878d6673afb2bd575725e9f4dc913f30639b33b113393e5ce2857c6fe1ba33b793f41cd04ef5b24
+"rollup-plugin-pnp-resolve@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "rollup-plugin-pnp-resolve@npm:2.0.0"
+  checksum: 6fd37cfa9f5191920defd57c778c7b3eab784eb2743669c89e0903b169e08edcb3f6485115c5e7a4be42d22172f97c86bc950129e2f6d8b155efb7a9d132bf0b
   languageName: node
   linkType: hard
 
@@ -2303,7 +2303,7 @@ __metadata:
     rollup-plugin-babel: ^4.0.2
     rollup-plugin-commonjs: ^10.0.0
     rollup-plugin-node-resolve: ^5.2.0
-    rollup-plugin-pnp-resolve: ^1.1.0
+    rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^5.0.1
     rollup-plugin-terser: ^4.0.4

@@ -119,7 +119,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "rollup-plugin-pnp-resolve",
-        "npm:1.1.0"
+        "npm:2.0.0"
       ],
       [
         "rollup-plugin-replace",
@@ -175,7 +175,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],
             ["rollup-plugin-node-resolve", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.0"],
-            ["rollup-plugin-pnp-resolve", "npm:1.1.0"],
+            ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
             ["rollup-plugin-replace", "npm:2.2.0"],
             ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
@@ -2660,10 +2660,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["rollup-plugin-pnp-resolve", [
-        ["npm:1.1.0", {
-          "packageLocation": "./.yarn/cache/rollup-plugin-pnp-resolve-npm-1.1.0-5a60aa8c94-3821523bb4.zip/node_modules/rollup-plugin-pnp-resolve/",
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/rollup-plugin-pnp-resolve-npm-2.0.0-948ce4faec-6fd37cfa9f.zip/node_modules/rollup-plugin-pnp-resolve/",
           "packageDependencies": [
-            ["rollup-plugin-pnp-resolve", "npm:1.1.0"]
+            ["rollup-plugin-pnp-resolve", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2852,7 +2852,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],
             ["rollup-plugin-node-resolve", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.0"],
-            ["rollup-plugin-pnp-resolve", "npm:1.1.0"],
+            ["rollup-plugin-pnp-resolve", "npm:2.0.0"],
             ["rollup-plugin-replace", "npm:2.2.0"],
             ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.1.0"],
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
