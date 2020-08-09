@@ -71,7 +71,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "front-matter",
-        "npm:3.0.2"
+        "npm:4.0.2"
       ],
       [
         "glob",
@@ -163,7 +163,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."],
             ["compression", "npm:1.7.4"],
             ["focus-visible", "npm:5.1.0"],
-            ["front-matter", "npm:3.0.2"],
+            ["front-matter", "npm:4.0.2"],
             ["glob", "npm:7.1.4"],
             ["highlight.js", "npm:10.1.2"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
@@ -1713,6 +1713,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["js-yaml", "npm:3.13.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:4.0.2", {
+          "packageLocation": "./.yarn/cache/front-matter-npm-4.0.2-e1cc0efa69-2447caa315.zip/node_modules/front-matter/",
+          "packageDependencies": [
+            ["front-matter", "npm:4.0.2"],
+            ["js-yaml", "npm:3.13.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["fs.realpath", [
@@ -2840,7 +2848,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."],
             ["compression", "npm:1.7.4"],
             ["focus-visible", "npm:5.1.0"],
-            ["front-matter", "npm:3.0.2"],
+            ["front-matter", "npm:4.0.2"],
             ["glob", "npm:7.1.4"],
             ["highlight.js", "npm:10.1.2"],
             ["mdsvex", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.4.0"],
