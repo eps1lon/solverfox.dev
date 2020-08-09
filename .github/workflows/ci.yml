@@ -40,7 +40,7 @@ jobs:
         if: ${{ github.actor == 'dependabot-preview[bot]' }}
       - name: 'push dependabot autofix'
         run: git push
-        if: ${{ github.actor == 'dependabot-preview[bot]' and github.action == 'push' }}
+        if: ${{ github.actor == 'dependabot-preview[bot]' && github.action == 'push' }}
 
       - name: 'Check code format'
         run: yarn format:check
