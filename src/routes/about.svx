@@ -3,10 +3,10 @@ title: About
 ---
 
 <svelte:head>
-  <title>{_metadata.title} | solverfox.dev</title>
+  <title>{metadata.title} | solverfox.dev</title>
 </svelte:head>
 
-# { _metadata.title }
+# { metadata.title }
 
 ## Author
 

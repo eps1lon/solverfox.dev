@@ -18,15 +18,13 @@ const featureFlags = {
 const preprocess = () => {
 	return mdsvex({
 		extension: '.svx',
-		markdownOptions: {
-			typographer: true,
-			linkify: true,
-			highlight: (str, lang) => {
+		highlight: {
+			highlighter(code, lang) {
 				if (lang && hljs.getLanguage(lang)) {
 					try {
 						return (
 							'<pre class="hljs"><code>' +
-							hljs.highlight(lang, str, true).value +
+							hljs.highlight(lang, code, true).value +
 							'</code></pre>'
 						);
 					} catch (error) {

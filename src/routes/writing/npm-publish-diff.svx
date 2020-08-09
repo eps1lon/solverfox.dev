@@ -8,9 +8,9 @@ slug: npm-publish-diff
 layout: ./_Article.svelte
 ---
 
-# { \_metadata.title }
+# { metadata.title }
 
-{ \_metadata.description }
+{ metadata.description }
 
 I recently tried to optimize the published files of one of my packages: [`dom-accessibility-api`](https://www.npmjs.com/package/dom-accessibility-api).
 The goal was to remove transpilation helpers of [`babel`](https://babeljs.io/) that weren't actually needed.
