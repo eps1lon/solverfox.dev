@@ -22,7 +22,7 @@ jobs:
         run: |
           git fetch origin master --depth=1
           git checkout origin/master -- yarn.lock
-        if: {{ github.actor === "dependabot-preview" }}
+        when: {{ github.actor === "dependabot-preview" }}
 
       - name: 'Install packages'
         run: yarn install
@@ -38,7 +38,7 @@ jobs:
           git diff-index --quiet HEAD || (git commit  --message 'yarn autofix' && git push)
         # Pushes from actions can't trigger actions.
         # The below statement isn't needed.
-        if: {{ github.actor === "dependabot-preview" }}
+        when: {{ github.actor === "dependabot-preview" }}
 
       - name: 'Check code format'
         run: yarn format:check
