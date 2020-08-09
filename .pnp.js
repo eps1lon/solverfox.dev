@@ -103,7 +103,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "rollup",
-        "npm:1.23.0"
+        "npm:1.32.1"
       ],
       [
         "rollup-plugin-babel",
@@ -171,7 +171,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["polka", "npm:1.0.0-next.6"],
             ["prettier", "npm:2.0.5"],
             ["prettier-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0"],
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],
             ["rollup-plugin-node-resolve", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.0"],
@@ -2595,10 +2595,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["rollup", [
-        ["npm:1.23.0", {
-          "packageLocation": "./.yarn/cache/rollup-npm-1.23.0-f25e83cd2d-8e7c43cb9b.zip/node_modules/rollup/",
+        ["npm:1.32.1", {
+          "packageLocation": "./.yarn/cache/rollup-npm-1.32.1-2b298fe87b-fc59b8af48.zip/node_modules/rollup/",
           "packageDependencies": [
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["@types/estree", "npm:0.0.39"],
             ["@types/node", "npm:12.7.11"],
             ["acorn", "npm:7.1.0"]
@@ -2613,7 +2613,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["@babel/core", "npm:7.6.2"],
             ["@babel/helper-module-imports", "npm:7.0.0"],
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["rollup-pluginutils", "npm:2.8.2"]
           ],
           "packagePeers": [
@@ -2632,7 +2632,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-reference", "npm:1.1.4"],
             ["magic-string", "npm:0.25.4"],
             ["resolve", "patch:resolve@npm%3A1.17.0#builtin<compat/resolve>::version=1.17.0&hash=3388aa"],
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["rollup-pluginutils", "npm:2.8.2"]
           ],
           "packagePeers": [
@@ -2650,7 +2650,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["builtin-modules", "npm:3.1.0"],
             ["is-module", "npm:1.0.0"],
             ["resolve", "patch:resolve@npm%3A1.17.0#builtin<compat/resolve>::version=1.17.0&hash=3388aa"],
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["rollup-pluginutils", "npm:2.8.2"]
           ],
           "packagePeers": [
@@ -2685,7 +2685,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["rollup-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.3"],
             ["require-relative", "npm:0.8.7"],
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["rollup-pluginutils", "npm:2.8.2"],
             ["sourcemap-codec", "npm:1.4.8"],
             ["svelte", "npm:3.22.2"]
@@ -2704,7 +2704,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
             ["@babel/code-frame", "npm:7.5.5"],
             ["jest-worker", "npm:24.9.0"],
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["serialize-javascript", "npm:1.9.1"],
             ["terser", "npm:3.17.0"]
           ],
@@ -2848,7 +2848,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["polka", "npm:1.0.0-next.6"],
             ["prettier", "npm:2.0.5"],
             ["prettier-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0"],
-            ["rollup", "npm:1.23.0"],
+            ["rollup", "npm:1.32.1"],
             ["rollup-plugin-babel", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.3.3"],
             ["rollup-plugin-commonjs", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:10.1.0"],
             ["rollup-plugin-node-resolve", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:5.2.0"],

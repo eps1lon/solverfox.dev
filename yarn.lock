@@ -932,7 +932,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^12.7.10":
+"@types/node@npm:*":
   version: 12.7.11
   resolution: "@types/node@npm:12.7.11"
   checksum: e60a54c2394524ec54057895f93b74b19af557b09b0713e02ebed9d8c36b3ee6680dce58040ea5c3d748e2d1ac315aaf85c750eb11c5ce45c5b1c119fb288ec9
@@ -2174,16 +2174,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^1.12.0":
-  version: 1.23.0
-  resolution: "rollup@npm:1.23.0"
+"rollup@npm:^1.32.1":
+  version: 1.32.1
+  resolution: "rollup@npm:1.32.1"
   dependencies:
     "@types/estree": "*"
-    "@types/node": ^12.7.10
+    "@types/node": "*"
     acorn: ^7.1.0
   bin:
-    rollup: ./dist/bin/rollup
-  checksum: 8e7c43cb9be10432e2a0437eae1c0c7a57aa6de14a73231878cca1be7fd5fe3274e0781f3994b35add5136772fdbb10f60544b5f8335c1a40ccbabe029f4b5de
+    rollup: dist/bin/rollup
+  checksum: fc59b8af482e0729fd720a6be1221f477ae1848fd88b0474d10f805567aa4ad5f16afa9a976c8fd30fd196fcb689b252826cdd138e7a4ad88462547adb5dbf40
   languageName: node
   linkType: hard
 
@@ -2299,7 +2299,7 @@ __metadata:
     polka: next
     prettier: ^2.0.5
     prettier-plugin-svelte: ^1.1.0
-    rollup: ^1.12.0
+    rollup: ^1.32.1
     rollup-plugin-babel: ^4.0.2
     rollup-plugin-commonjs: ^10.0.0
     rollup-plugin-node-resolve: ^5.2.0
