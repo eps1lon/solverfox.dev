@@ -19,7 +19,6 @@ jobs:
       - name: 'Install packages'
         run: |
           yarn install
-        
 
       - name: 'Autofix yarn for dependabot'
         # https://github.com/actions/checkout#push-a-commit-using-the-built-in-token
