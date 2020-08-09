@@ -27,7 +27,7 @@
 	}
 
 	article :global(pre.hljs) :global(code) {
-			all: unset;
+		all: unset;
 	}
 
 	/* break up long github issue links */
