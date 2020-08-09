@@ -907,24 +907,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapper/app@link:./src/@sapper/app::locator=solverfox.dev%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@sapper/app@link:./src/@sapper/app::locator=solverfox.dev%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@sapper/server@link:./src/@sapper/server::locator=solverfox.dev%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@sapper/server@link:./src/@sapper/server::locator=solverfox.dev%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@sapper/service-worker@link:./src/@sapper/service-worker::locator=solverfox.dev%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@sapper/service-worker@link:./src/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."
-  languageName: node
-  linkType: soft
-
 "@types/estree@npm:*, @types/estree@npm:0.0.39":
   version: 0.0.39
   resolution: "@types/estree@npm:0.0.39"
@@ -2120,13 +2102,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-pnp-resolve@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "rollup-plugin-pnp-resolve@npm:2.0.0"
-  checksum: 6fd37cfa9f5191920defd57c778c7b3eab784eb2743669c89e0903b169e08edcb3f6485115c5e7a4be42d22172f97c86bc950129e2f6d8b155efb7a9d132bf0b
-  languageName: node
-  linkType: hard
-
 "rollup-plugin-replace@npm:^2.0.0":
   version: 2.2.0
   resolution: "rollup-plugin-replace@npm:2.2.0"
@@ -2286,9 +2261,6 @@ __metadata:
     "@babel/plugin-transform-runtime": ^7.0.0
     "@babel/preset-env": ^7.0.0
     "@babel/runtime": ^7.0.0
-    "@sapper/app": "link:./src/@sapper/app"
-    "@sapper/server": "link:./src/@sapper/server"
-    "@sapper/service-worker": "link:./src/@sapper/service-worker"
     compression: ^1.7.1
     focus-visible: ^5.1.0
     front-matter: ^3.0.2
@@ -2303,7 +2275,6 @@ __metadata:
     rollup-plugin-babel: ^4.0.2
     rollup-plugin-commonjs: ^10.0.0
     rollup-plugin-node-resolve: ^5.2.0
-    rollup-plugin-pnp-resolve: ^2.0.0
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^5.2.3
     rollup-plugin-terser: ^4.0.4
