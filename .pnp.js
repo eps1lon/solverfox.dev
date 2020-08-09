@@ -143,7 +143,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "svelte",
-        "npm:3.22.2"
+        "npm:3.24.1"
       ]
     ],
     "locationBlacklistData": [
@@ -181,7 +181,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
             ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
             ["sirv", "npm:1.0.5"],
-            ["svelte", "npm:3.22.2"]
+            ["svelte", "npm:3.24.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -2111,7 +2111,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["markdown-it", "npm:9.1.0"],
             ["path-browserify", "npm:1.0.0"],
             ["punycode", "npm:2.1.1"],
-            ["svelte", "npm:3.22.2"]
+            ["svelte", "npm:3.24.1"]
           ],
           "packagePeers": [
             "svelte"
@@ -2446,7 +2446,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["prettier-plugin-svelte", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:1.1.0"],
             ["prettier", "npm:2.0.5"],
-            ["svelte", "npm:3.22.2"]
+            ["svelte", "npm:3.24.1"]
           ],
           "packagePeers": [
             "prettier",
@@ -2688,7 +2688,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:1.32.1"],
             ["rollup-pluginutils", "npm:2.8.2"],
             ["sourcemap-codec", "npm:1.4.8"],
-            ["svelte", "npm:3.22.2"]
+            ["svelte", "npm:3.24.1"]
           ],
           "packagePeers": [
             "rollup",
@@ -2743,7 +2743,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["shimport", "npm:1.0.1"],
             ["sourcemap-codec", "npm:1.4.6"],
             ["string-hash", "npm:1.1.3"],
-            ["svelte", "npm:3.22.2"]
+            ["svelte", "npm:3.24.1"]
           ],
           "packagePeers": [
             "svelte"
@@ -2858,7 +2858,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup-plugin-terser", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:4.0.4"],
             ["sapper", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:0.27.13"],
             ["sirv", "npm:1.0.5"],
-            ["svelte", "npm:3.22.2"]
+            ["svelte", "npm:3.24.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -3026,10 +3026,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["svelte", [
-        ["npm:3.22.2", {
-          "packageLocation": "./.yarn/cache/svelte-npm-3.22.2-8e72ae3e9f-0e2a14a1ce.zip/node_modules/svelte/",
+        ["npm:3.24.1", {
+          "packageLocation": "./.yarn/cache/svelte-npm-3.24.1-4b4ebb3564-7e223a6414.zip/node_modules/svelte/",
           "packageDependencies": [
-            ["svelte", "npm:3.22.2"]
+            ["svelte", "npm:3.24.1"]
           ],
           "linkType": "HARD",
         }]

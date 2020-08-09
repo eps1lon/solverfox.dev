@@ -2309,7 +2309,7 @@ __metadata:
     rollup-plugin-terser: ^4.0.4
     sapper: ^0.27.13
     sirv: ^1.0.5
-    svelte: ^3.22.2
+    svelte: ^3.24.1
   languageName: unknown
   linkType: soft
 
@@ -2455,10 +2455,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:^3.22.2":
-  version: 3.22.2
-  resolution: "svelte@npm:3.22.2"
-  checksum: 0e2a14a1ce88bb8e519ba5bc6a2116c00915ef01d41ad1d47279ab6c46c9d447c370e830210d9ef16a25b758ab46570a533ad2f3541e782e24ad781d2ed50090
+"svelte@npm:^3.24.1":
+  version: 3.24.1
+  resolution: "svelte@npm:3.24.1"
+  checksum: 7e223a6414daf8e437b16eff0af0179d40ef072f9a1d5ac791f72042ac36184e43873a8f7ff606bc4cb175117bde2f40e8f964be6c80e82fcc4cf7f1a7194998
   languageName: node
   linkType: hard
 
