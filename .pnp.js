@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ],
       [
         "@babel/runtime",
-        "npm:7.6.2"
+        "npm:7.11.2"
       ],
       [
         "@sapper/app",
@@ -157,7 +157,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-syntax-dynamic-import", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:7.2.0"],
             ["@babel/plugin-transform-runtime", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:7.6.2"],
             ["@babel/preset-env", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:7.6.2"],
-            ["@babel/runtime", "npm:7.6.2"],
+            ["@babel/runtime", "npm:7.11.2"],
             ["@sapper/app", "link:./src/node_modules/@sapper/app::locator=solverfox.dev%40workspace%3A."],
             ["@sapper/server", "link:./src/node_modules/@sapper/server::locator=solverfox.dev%40workspace%3A."],
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."],
@@ -1184,11 +1184,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@babel/runtime", [
-        ["npm:7.6.2", {
-          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.6.2-704040a113-4ca1c6dec4.zip/node_modules/@babel/runtime/",
+        ["npm:7.11.2", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.11.2-f2cfabd212-2f127ad60a.zip/node_modules/@babel/runtime/",
           "packageDependencies": [
-            ["@babel/runtime", "npm:7.6.2"],
-            ["regenerator-runtime", "npm:0.13.3"]
+            ["@babel/runtime", "npm:7.11.2"],
+            ["regenerator-runtime", "npm:0.13.7"]
           ],
           "linkType": "HARD",
         }]
@@ -2505,10 +2505,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["regenerator-runtime", [
-        ["npm:0.13.3", {
-          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.3-bc3b9ae29d-fc026f9978.zip/node_modules/regenerator-runtime/",
+        ["npm:0.13.7", {
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.7-41bcbe64ea-6ef567c662.zip/node_modules/regenerator-runtime/",
           "packageDependencies": [
-            ["regenerator-runtime", "npm:0.13.3"]
+            ["regenerator-runtime", "npm:0.13.7"]
           ],
           "linkType": "HARD",
         }]
@@ -2834,7 +2834,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-syntax-dynamic-import", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:7.2.0"],
             ["@babel/plugin-transform-runtime", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:7.6.2"],
             ["@babel/preset-env", "virtual:576294e9f78df931c77016b1eb8263be587ed0164ac764ce8433f21486d863aab870f144349618a960e7b0b54332e4cb8a80ecc58955cf8b0ebb10a4f8cfcdd0#npm:7.6.2"],
-            ["@babel/runtime", "npm:7.6.2"],
+            ["@babel/runtime", "npm:7.11.2"],
             ["@sapper/app", "link:./src/node_modules/@sapper/app::locator=solverfox.dev%40workspace%3A."],
             ["@sapper/server", "link:./src/node_modules/@sapper/server::locator=solverfox.dev%40workspace%3A."],
             ["@sapper/service-worker", "link:./src/node_modules/@sapper/service-worker::locator=solverfox.dev%40workspace%3A."],
