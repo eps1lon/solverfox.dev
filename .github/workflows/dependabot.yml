@@ -19,6 +19,7 @@ jobs:
       - name: 'Install packages'
         # install with lockfile from master because dependabot creates v1 lockfiles
         run: |
+          git show-ref
           git fetch origin master --depth=1
           git checkout origin/master -- yarn.lock
           yarn install
