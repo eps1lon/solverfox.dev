@@ -2,7 +2,26 @@
 title: OSS
 ---
 
+<script context="module">
+  export async function preload() {
+    const {repositories, totalStars, updatedAt} = await this.fetch('contributions.json').then(response => response.json());
+
+    repositories.sort((a, b) => {
+      return b.stars - a.stars
+    });
+
+    return {repositories, totalStars, updatedAt};
+  }
+</script>
+
+<script>
+  export let totalStars;
+  export let repositories;
+  export let updatedAt;
+</script>
+
 <svelte:head>
+
   <title>{metadata.title} | solverfox.dev</title>
 </svelte:head>
 
@@ -13,6 +32,32 @@ title: OSS
 </style>
 
 # Open-source software
+
+## Contributed
+
+Last updated: <time datetime={updatedAt}>{new Date(updatedAt).toLocaleDateString()}</time>
+
+<details>
+  <summary>I created Pull Requests to {repositories.length.toLocaleString()} repositories with a sum of ≈{totalStars.toLocaleString()} stars.</summary>
+
+  <table>
+    <caption>Repositories I contributed to with their star count. Links point to a list of my Pull Requests to that repository.</caption>
+    <thead>
+      <tr>
+        <th>Repository</th>
+        <th>Stars</th>
+      </tr>
+    </thead>
+    <tbody>
+      {#each repositories as repository}
+        <tr>
+          <td><a href={`https://github.com/${repository.name}/pulls?q=is%3Apr+sort%3Aupdated-desc+author%3Aeps1lon`}>{repository.name}</a></td>
+          <td>≈{repository.stars.toLocaleString()}</td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+</details>
 
 ## Maintaining
 
@@ -61,7 +106,3 @@ Repository: https://github.com/eps1lon/dom-accessibility-api
 This is currently an experimental utility library for computing various properites
 of the accessibility tree. The goal is to have a library that can be used in your
 unit tests that run with [`jsdom`](https://github.com/jsdom/jsdom) as well as in the browser.
-
-## Contributed
-
-TODO fetch PRs
