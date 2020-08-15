@@ -1,3 +1,4 @@
 /.pnp.js
 /.yarn/
 /__sapper__/
+/static/*.json
