@@ -1,0 +1,30 @@
+name: Daily Updates
+
+on:
+  # TODO not on push
+  push:
+  schedule:
+    # Daily updates
+    # https://crontab.guru/#0_0_*_*_*
+    - cron: '0 0 * * *'
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: hmarr/debug-action@master
+
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-node@v2-beta
+        with:
+        node-version: '14'
+
+      - name: 'Install packages'
+        run: yarn install
+
+      - name: 'Run updates'
+        run: node scripts/dailyUpdates
