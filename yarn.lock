@@ -2708,7 +2708,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"polka@npm:next":
+"polka@npm:1.0.0-next.6":
   version: 1.0.0-next.6
   resolution: "polka@npm:1.0.0-next.6"
   dependencies:
@@ -3203,7 +3203,7 @@ fsevents@~2.1.2:
     highlight.js: ^10.1.2
     mdsvex: ^0.8.3
     npm-run-all: ^4.1.5
-    polka: next
+    polka: 1.0.0-next.6
     prettier: ^2.0.5
     prettier-plugin-svelte: ^1.1.0
     rollup: ^2.26.0
