@@ -7,7 +7,8 @@ const exec = promisify(childProcess.exec);
 
 async function git(command, ...args) {
 	const { stdout, stderr } = await exec(`git ${command}`, ...args);
-	if (stdout) core.debug(stdout);
+	if (stdout) core.debug(`stdout: ${stdout}`);
+	if (stderr) core.debug(`stderr: ${stderr}`);
 	return { stdout, stderr };
 }
 
