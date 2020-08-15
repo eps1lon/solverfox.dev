@@ -14,7 +14,12 @@ async function git(command, ...args) {
 async function main() {
 	const githubToken = core.getInput('token');
 
-	await exec('node scripts/loadContributions static/contributions.json');
+	await exec('node scripts/loadContributions static/contributions.json', {
+		env: {
+			...process.env,
+			GITHUB_TOKEN: githubToken,
+		},
+	});
 	await exec('yarn format');
 
 	const { stdout: gotUpdated } = await git('status --porcelain');
