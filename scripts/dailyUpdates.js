@@ -12,6 +12,8 @@ async function git(command, ...args) {
 }
 
 async function main() {
+	const githubToken = process.env.GITHUB_TOKEN;
+
 	await exec('node scripts/loadContributions static/contributions.json');
 	await exec('yarn format');
 
@@ -27,7 +29,7 @@ async function main() {
 		await git('commit -m "Daily updates"');
 
 		await git(`push origin -f ${branch}`);
-		const octokit = new github.GitHub(core.getInput('token'));
+		const octokit = new github.GitHub(githubToken);
 		try {
 			await octokit.pulls.create({
 				owner: github.context.repo.owner,

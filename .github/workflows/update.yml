@@ -28,3 +28,5 @@ jobs:
 
       - name: 'Run updates'
         run: node scripts/dailyUpdates
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
