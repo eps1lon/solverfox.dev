@@ -5,12 +5,12 @@ publishedAt: 2019-10-10
 description: Collection of common pitfalls when manually dispatch DOM events
 readingTime: 5
 slug: testing-dispatch-event-pitfalls
-layout: ./_Article.svelte
+layout: article
 ---
 
-# { \_metadata.title }
+# { metadata.title }
 
-{ \_metadata.description }
+{ metadata.description }
 
 One of the first mistakes I made when using `enzyme`'s `simulate()` was assuming
 that this is pretty much equivalent to what happens in a browser. After encountering
@@ -50,10 +50,13 @@ a big difference between receiving a focus event and actually being focused. Fir
 a focus event will not actually move the focus in the browser you can try this by
 clicking
 
-```js exec
-let button = null;
-let buttonOnFocusEvent = false;
-```
+<script>
+  let button = null;
+  let buttonOnFocusEvent = false;
+
+  let button2 = null;
+  let button2OnFocusEvent = false;
+</script>
 
 <button on:click={() => button.dispatchEvent(new window.FocusEvent('focus'))}>Clicking me fires a focus event at the element below!</button>
 
@@ -67,11 +70,6 @@ let buttonOnFocusEvent = false;
 
 The second button shouldn't have an outline since it isn't focused. Now in the second
 example we have the same setup but as you'll see
-
-```js exec
-let button2 = null;
-let button2OnFocusEvent = false;
-```
 
 <button on:click={() => button2.focus()}>Clicking me fires a focus event at the button below!</button>
 

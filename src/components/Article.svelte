@@ -1,5 +1,5 @@
 <script>
-	import Webmentions from '../../components/Webmentions.svelte';
+	import Webmentions from './Webmentions.svelte';
 
 	export let description;
 	export let publishedAt;

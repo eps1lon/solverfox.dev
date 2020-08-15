@@ -1452,6 +1452,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clipboard@npm:^2.0.0":
+  version: 2.0.6
+  resolution: "clipboard@npm:2.0.6"
+  dependencies:
+    good-listener: ^1.2.2
+    select: ^1.1.2
+    tiny-emitter: ^2.0.0
+  checksum: 25e2e6b595f764ebb541dfda5c77051200567b5dd2de42ac6ab9681febe1256a977be450ab1d6f0d41554799106cc92e79e167797c8e8b8e88edcb0aec5b5dcb
+  languageName: node
+  linkType: hard
+
 "code-point-at@npm:^1.0.0":
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
@@ -1618,6 +1629,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"delegate@npm:^3.1.2":
+  version: 3.2.0
+  resolution: "delegate@npm:3.2.0"
+  checksum: ccbbf29eb436719e4ffef06a1df2635a150f229f8ae549f4b6e118e940b17917e063c939541c6e23f38675d30acf424ecca9a8d1cca2a874d63fa0c257b0811f
+  languageName: node
+  linkType: hard
+
 "delegates@npm:^1.0.0":
   version: 1.0.0
   resolution: "delegates@npm:1.0.0"
@@ -1639,20 +1657,6 @@ __metadata:
   version: 1.3.526
   resolution: "electron-to-chromium@npm:1.3.526"
   checksum: 7a7fa4a9bd412565fc8ea8a40520f245be12b51d1d84a3b15af2540e1e7021d30af1ba77383b10433c028129ea3c303c559b58b1959dae46aeeb963f80cb3811
-  languageName: node
-  linkType: hard
-
-"entities@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "entities@npm:2.0.0"
-  checksum: cc29118c9d4ddee373392bbf81fc4a3866f2efc76e9d1e87fdc5f9ed8c308ae146c494a6200a4917655e64f43756540007142a140557eed0dea1e3cff0d03486
-  languageName: node
-  linkType: hard
-
-"entities@npm:~1.1.1":
-  version: 1.1.2
-  resolution: "entities@npm:1.1.2"
-  checksum: 3a4259db358c612853e616915d398e692a3c5dbaa4da44b9a6fce15ab88615cadc9790af608c3bee152972ece69ae61a22f4a13272fd943db2ceaee02ce5cc87
   languageName: node
   linkType: hard
 
@@ -1792,7 +1796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"front-matter@npm:^3.0.1, front-matter@npm:^3.0.2":
+"front-matter@npm:^3.0.2":
   version: 3.0.2
   resolution: "front-matter@npm:3.0.2"
   dependencies:
@@ -1892,6 +1896,15 @@ fsevents@~2.1.2:
   version: 11.12.0
   resolution: "globals@npm:11.12.0"
   checksum: 2563d3306a7e646fd9ec484b0ca29bf8847d9dc6ebbe86026f11e31bda04f420f6536c2decbd4cb96350379801d2cce352ab373c40be8b024324775b31f882f9
+  languageName: node
+  linkType: hard
+
+"good-listener@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "good-listener@npm:1.2.2"
+  dependencies:
+    delegate: ^3.1.2
+  checksum: 640a1627e528ceb3337595a8020f44d09455f284c18c765eaf9ce5dcdf1799810e7b11ca2b61582a5a4db20aad0b7e6b820235864822d84df541d74383bcd01c
   languageName: node
   linkType: hard
 
@@ -2253,15 +2266,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"linkify-it@npm:^2.0.0":
-  version: 2.2.0
-  resolution: "linkify-it@npm:2.2.0"
-  dependencies:
-    uc.micro: ^1.0.1
-  checksum: 7905b34078d1fd85d4310c5c5381164cbdf781835e0cb5ac73d13ff14d0c87347e02655bdff5cec63631949a3b586c5f8e1e81ee0ce62ae799df58178748eb3e
-  languageName: node
-  linkType: hard
-
 "load-json-file@npm:^4.0.0":
   version: 4.0.0
   resolution: "load-json-file@npm:4.0.0"
@@ -2315,40 +2319,14 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"markdown-it@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "markdown-it@npm:9.1.0"
+"mdsvex@npm:^0.8.3":
+  version: 0.8.3
+  resolution: "mdsvex@npm:0.8.3"
   dependencies:
-    argparse: ^1.0.7
-    entities: ~1.1.1
-    linkify-it: ^2.0.0
-    mdurl: ^1.0.1
-    uc.micro: ^1.0.5
-  bin:
-    markdown-it: bin/markdown-it.js
-  checksum: 83fd8f1a61bbd62878d8dbb0565e772763fe034b76a0a9782402244fe01e7a12dffae57fb6ae68354e8772adf9fca3a1181b90a72af502be9c13c6e5552d5725
-  languageName: node
-  linkType: hard
-
-"mdsvex@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "mdsvex@npm:0.4.0"
-  dependencies:
-    entities: ^2.0.0
-    front-matter: ^3.0.1
-    markdown-it: ^9.1.0
-    path-browserify: ^1.0.0
-    punycode: ^2.1.1
+    prismjs: ^1.17.1
   peerDependencies:
     svelte: 3.x
-  checksum: 58bba919910f05976dac6a643a2a18802e0851ae2fff23cf190894a26301a9dc5babf82791671536d09c6689333d1c62a57f18e7d89019ace23c36bece6c04a3
-  languageName: node
-  linkType: hard
-
-"mdurl@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "mdurl@npm:1.0.1"
-  checksum: ed5e81efed218ca1cb61bbb5c41857c98ce456382d630a2f45a1b050087a10119a24107ca1acd4ccef2f1a17b02b8d61fb3c630d3d7c0f22df906dbdd2e5f7b5
+  checksum: 3408e6674cdf18e90d61461ea6ef1002aea56cf5b9a8bcd0ae7c51cfc2d09f72a8c56fa46741272aec84d22e2f0f0237ca32f398069ce4d5674fd69f7c55e279
   languageName: node
   linkType: hard
 
@@ -2669,13 +2647,6 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"path-browserify@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "path-browserify@npm:1.0.0"
-  checksum: 438860ff46eac9e7460a2dc2889920905316346d2918402060b0847ac8cc181cb3bc72ef3679ab05b5cb173930ca7d44db57b09f3d3b77dbdb37edf03439b418
-  languageName: node
-  linkType: hard
-
 "path-is-absolute@npm:^1.0.0":
   version: 1.0.1
   resolution: "path-is-absolute@npm:1.0.1"
@@ -2755,6 +2726,18 @@ fsevents@~2.1.2:
   bin:
     prettier: bin-prettier.js
   checksum: d249d89361870a29b20e8b268cb09e908490b8c9e21f70393d12a213701f29ba7e95b7f9ce0ad63929c16ce475176742481911737ae3da4a498873e4a3b90990
+  languageName: node
+  linkType: hard
+
+"prismjs@npm:^1.17.1":
+  version: 1.21.0
+  resolution: "prismjs@npm:1.21.0"
+  dependencies:
+    clipboard: ^2.0.0
+  dependenciesMeta:
+    clipboard:
+      optional: true
+  checksum: 27f763abe2b8e93ad18b64b0d08ce990cbe5c80244c80d121d9010b0a890f2ae12286d59155b9669a89007a1868e861a0ad62051a8f602a6da79b9cebe68b65a
   languageName: node
   linkType: hard
 
@@ -3090,6 +3073,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"select@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "select@npm:1.1.2"
+  checksum: 66be63b7cf0973af48cebcca47909d0ba703bb7f01373f9ebf19880dc8fe9c97f41e2ebdefee144f60bbf416cafbf77dfb98cd1776e62d7afc336b843f1009b1
+  languageName: node
+  linkType: hard
+
 "semver@npm:2 || 3 || 4 || 5, semver@npm:^5.4.1, semver@npm:^5.5.0, semver@npm:^5.5.1":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
@@ -3193,7 +3183,7 @@ fsevents@~2.1.2:
     front-matter: ^3.0.2
     glob: ^7.1.6
     highlight.js: ^10.1.2
-    mdsvex: ^0.4.0
+    mdsvex: ^0.8.3
     npm-run-all: ^4.1.5
     polka: next
     prettier: ^2.0.5
@@ -3437,6 +3427,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"tiny-emitter@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "tiny-emitter@npm:2.1.0"
+  checksum: 0055509c72e5fe35d6ab66fa6339342e0f29129e77ed2086e475fdf80be43a8651f2517be76513b46a042c8356396f4da5a35e2e23457252176808d5a892036a
+  languageName: node
+  linkType: hard
+
 "to-fast-properties@npm:^2.0.0":
   version: 2.0.0
   resolution: "to-fast-properties@npm:2.0.0"
@@ -3483,13 +3480,6 @@ fsevents@~2.1.2:
   version: 0.14.5
   resolution: "tweetnacl@npm:0.14.5"
   checksum: e1c9d52e2e9f582fd0df9ea26ba5a9ab88b9a38b69625d8e55c5e8870a4832ac8c32f8854b41fce7b59f97258bb103535363f9eda7050aa70e75824b972c7dde
-  languageName: node
-  linkType: hard
-
-"uc.micro@npm:^1.0.1, uc.micro@npm:^1.0.5":
-  version: 1.0.6
-  resolution: "uc.micro@npm:1.0.6"
-  checksum: 9dfe5ad0a08059c3eb6ded70b7cfb6fdcb5908b385af9d4717cee7f140571f5c2bb89405093ace07cfd0e283f409495d2feafd321b4b703c1fa3014e129dab27
   languageName: node
   linkType: hard
 
