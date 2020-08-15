@@ -1,0 +1,9 @@
+name: 'daily-updates'
+description: 'Auto generates updates to the page'
+runs:
+  using: 'node12'
+  main: 'main.js'
+inputs:
+  token:
+    description: 'GitHub API token'
+    required: true
