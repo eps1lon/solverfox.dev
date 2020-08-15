@@ -23,9 +23,9 @@ const preprocess = () => {
 				if (lang && hljs.getLanguage(lang)) {
 					try {
 						return (
-							'<pre class="hljs"><code>' +
+							'{@html `<pre class="hljs"><code>' +
 							hljs.highlight(lang, code, true).value +
-							'</code></pre>'
+							'</code></pre>`}'
 						);
 					} catch (error) {
 						console.error(error);
@@ -34,6 +34,9 @@ const preprocess = () => {
 
 				return '';
 			},
+		},
+		layout: {
+			article: './src/components/Article.svelte',
 		},
 	});
 };
@@ -49,6 +52,7 @@ const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
+	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
 	(warning.code === 'CIRCULAR_DEPENDENCY' &&
 		/[/\\]@sapper[/\\]/.test(warning.message)) ||
 	onwarn(warning);
@@ -108,6 +112,7 @@ export default {
 				}),
 		],
 
+		preserveEntrySignatures: false,
 		onwarn,
 	},
 
@@ -136,6 +141,7 @@ export default {
 				Object.keys(process.binding('natives')),
 		),
 
+		preserveEntrySignatures: 'strict',
 		onwarn,
 	},
 
@@ -155,6 +161,7 @@ export default {
 			!dev && terser(),
 		],
 
+		preserveEntrySignatures: false,
 		onwarn,
 	},
 };

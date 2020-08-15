@@ -5,7 +5,7 @@ publishedAt: 2019-10-10
 description: Collection of common pitfalls when manually dispatch DOM events
 readingTime: 5
 slug: testing-dispatch-event-pitfalls
-layout: ./_Article.svelte
+layout: article
 ---
 
 # { metadata.title }
