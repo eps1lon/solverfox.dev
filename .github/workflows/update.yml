@@ -26,6 +26,6 @@ jobs:
       - name: 'Install packages'
         run: yarn install
 
-      - uses: ./actions/watch-material-ui
+      - uses: ./actions/daily-updates
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
