@@ -12,7 +12,7 @@ async function git(command, ...args) {
 }
 
 async function main() {
-	const githubToken = process.env.GITHUB_TOKEN;
+	const githubToken = core.getInput('token');
 
 	await exec('node scripts/loadContributions static/contributions.json');
 	await exec('yarn format');

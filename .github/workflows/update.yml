@@ -26,7 +26,6 @@ jobs:
       - name: 'Install packages'
         run: yarn install
 
-      - name: 'Run updates'
-        run: node scripts/dailyUpdates
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ./actions/watch-material-ui
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
