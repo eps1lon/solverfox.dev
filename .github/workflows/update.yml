@@ -1,8 +1,6 @@
 name: Daily Updates
 
 on:
-  # TODO not on push
-  push:
   schedule:
     # Daily updates
     # https://crontab.guru/#0_0_*_*_*
