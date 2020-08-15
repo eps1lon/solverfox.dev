@@ -38,7 +38,7 @@ title: OSS
 Last updated: <time datetime={updatedAt}>{new Date(updatedAt).toLocaleDateString()}</time>
 
 <details>
-  <summary>I created Pull Requests to {repositories.length.toLocaleString()} repositories with a sum of ≈{totalStars.toLocaleString()} stars.</summary>
+  <summary>I created Pull Requests in {repositories.length.toLocaleString()} repositories with a sum of ≈{totalStars.toLocaleString()} stars.</summary>
 
   <table>
     <caption>Repositories I contributed to with their star count. Links point to a list of my Pull Requests to that repository.</caption>
