@@ -3028,9 +3028,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.23.1":
-  version: 2.23.1
-  resolution: "rollup@npm:2.23.1"
+"rollup@npm:^2.26.0":
+  version: 2.26.0
+  resolution: "rollup@npm:2.26.0"
   dependencies:
     fsevents: ~2.1.2
   dependenciesMeta:
@@ -3038,7 +3038,7 @@ fsevents@~2.1.2:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 14f41440a4d58a6a25c74c365e4e1422af152cc63fc49f61fa620aa4490e99ac8ea26c613cdc85a7f5f3533f1054e6f0bfe21536b6770288732c1b14237a3b57
+  checksum: 29c2de59555c00b2af5a1867508d9b99c27099377cc6a26028316579fe7f7dd1eb874182e1f74b422ea0f6442ce0083a9460c459c1cf0a922416225c9a8705cc
   languageName: node
   linkType: hard
 
@@ -3188,7 +3188,7 @@ fsevents@~2.1.2:
     polka: next
     prettier: ^2.0.5
     prettier-plugin-svelte: ^1.1.0
-    rollup: ^2.23.1
+    rollup: ^2.26.0
     rollup-plugin-babel: ^4.4.0
     rollup-plugin-commonjs: ^10.0.0
     rollup-plugin-node-resolve: ^5.2.0
