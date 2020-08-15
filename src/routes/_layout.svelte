@@ -12,7 +12,7 @@
 <style>
 	main {
 		position: relative;
-		padding: 2em;
+		padding: 0em 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}

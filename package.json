@@ -14,10 +14,12 @@
 		"test": "run-p --race dev cy:run"
 	},
 	"dependencies": {
+		"@octokit/graphql": "^4.5.4",
 		"compression": "^1.7.1",
 		"glob": "^7.1.6",
 		"polka": "1.0.0-next.6",
-		"sirv": "^1.0.6"
+		"sirv": "^1.0.6",
+		"yargs": "^15.4.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.11.1",
