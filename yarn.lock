@@ -1323,7 +1323,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polka/url@npm:^1.0.0-next.3, @polka/url@npm:^1.0.0-next.9":
+"@polka/url@npm:^1.0.0-next.11, @polka/url@npm:^1.0.0-next.9":
   version: 1.0.0-next.11
   resolution: "@polka/url@npm:1.0.0-next.11"
   checksum: 268a83f4e1097baf0067e183b7682a00b647c6c30113a92b98c80cd719fc689a45d28c16257ffc817f5ffd4894fc52157957c39aaac329cdd12c82a10f6d61f7
@@ -3113,13 +3113,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"polka@npm:1.0.0-next.6":
-  version: 1.0.0-next.6
-  resolution: "polka@npm:1.0.0-next.6"
+"polka@npm:1.0.0-next.11":
+  version: 1.0.0-next.11
+  resolution: "polka@npm:1.0.0-next.11"
   dependencies:
-    "@polka/url": ^1.0.0-next.3
+    "@polka/url": ^1.0.0-next.11
     trouter: ^3.1.0
-  checksum: 5839dd18ab97cf2b6e6e0d955800bee1123f60bc4f64877dbb767113e72f393af816c2064da60412c2477cf56f45a9857a3a9e113174109e91ec32bd2cc0bcf8
+  checksum: 03d7e34a55cc54714fc9ec3428874a1b8d7044e02ecd3f33acd6d056b4c6188ac30f1dd18cf4afae372969e7f5c6ac8642c064c6efbb906de92f76ca8f268470
   languageName: node
   linkType: hard
 
@@ -3644,7 +3644,7 @@ fsevents@~2.1.2:
     highlight.js: ^10.1.2
     mdsvex: ^0.8.6
     npm-run-all: ^4.1.5
-    polka: 1.0.0-next.6
+    polka: 1.0.0-next.11
     prettier: ^2.0.5
     prettier-plugin-svelte: ^1.2.0
     rollup: ^2.26.0
