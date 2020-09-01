@@ -3383,6 +3383,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"rollup-dependency-tree@npm:0.0.10":
+  version: 0.0.10
+  resolution: "rollup-dependency-tree@npm:0.0.10"
+  checksum: 17bbb7406151089e299537356a178f958e1edeae3ef074ed406f5dece8b0410ce3846a93e16e074ce66260c566e7b7f5c60f16f1616d83a131e1a05df0c62923
+  languageName: node
+  linkType: hard
+
 "rollup-plugin-babel@npm:^4.4.0":
   version: 4.4.0
   resolution: "rollup-plugin-babel@npm:4.4.0"
@@ -3501,20 +3508,22 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sapper@npm:^0.28.0":
-  version: 0.28.0
-  resolution: "sapper@npm:0.28.0"
+"sapper@npm:^0.28.3":
+  version: 0.28.3
+  resolution: "sapper@npm:0.28.3"
   dependencies:
     html-minifier: ^4.0.0
     http-link-header: ^1.0.2
+    rollup-dependency-tree: 0.0.10
     shimport: ^1.0.1
+    source-map: ^0.6.1
     sourcemap-codec: ^1.4.6
     string-hash: ^1.1.3
   peerDependencies:
     svelte: ^3.17.3
   bin:
     sapper: sapper
-  checksum: 33bc6cc2e15e31beaf689208ff8c5c5586c00779ccfc7a563b8c5224d662cf7c53cb45f28f66f2e2fdd5bf3d378d95dfda45d4a3f95e737cecdf3d9c80d4c726
+  checksum: 79c5d1a9524c4797be3aeef61135e2285e91d31839a06f6c8a30367796838e3d52fafaa68064a00f738776f4b952913d661af007dc95d0761c39aabd9ba021b1
   languageName: node
   linkType: hard
 
@@ -3645,7 +3654,7 @@ fsevents@~2.1.2:
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^5.2.3
     rollup-plugin-terser: ^7.0.0
-    sapper: ^0.28.0
+    sapper: ^0.28.3
     sirv: ^1.0.6
     svelte: ^3.24.1
     yargs: ^15.4.1
@@ -3669,7 +3678,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.6.0, source-map@npm:~0.6.0, source-map@npm:~0.6.1":
+"source-map@npm:^0.6.0, source-map@npm:^0.6.1, source-map@npm:~0.6.0, source-map@npm:~0.6.1":
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 8647829a0611724114022be455ca1c8a2c8ae61df81c5b3667d9b398207226a1e21174fb7bbf0b4dbeb27ac358222afb5a14f1c74a62a62b8883b012e5eb1270
