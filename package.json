@@ -14,7 +14,7 @@
 		"test": "run-p --race dev cy:run"
 	},
 	"dependencies": {
-		"@actions/core": "^1.2.4",
+		"@actions/core": "^1.2.5",
 		"@actions/github": "^2.2.0",
 		"@octokit/graphql": "^4.5.4",
 		"compression": "^1.7.1",
