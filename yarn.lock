@@ -1367,6 +1367,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/unist@npm:^2.0.0, @types/unist@npm:^2.0.2, @types/unist@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@types/unist@npm:2.0.3"
+  checksum: 42e0dc4ac75a27c4bb91a3f8e82edfd8819cacb6edda08bdfb436700ea01a587faa30017fde744b0a0b33825f5e37686398c1eb5b664cabc3a72a6b3757f85a5
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -2651,14 +2658,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"mdsvex@npm:^0.8.3":
-  version: 0.8.3
-  resolution: "mdsvex@npm:0.8.3"
+"mdsvex@npm:^0.8.6":
+  version: 0.8.6
+  resolution: "mdsvex@npm:0.8.6"
   dependencies:
+    "@types/unist": ^2.0.3
     prismjs: ^1.17.1
+    vfile-message: ^2.0.4
   peerDependencies:
     svelte: 3.x
-  checksum: 3408e6674cdf18e90d61461ea6ef1002aea56cf5b9a8bcd0ae7c51cfc2d09f72a8c56fa46741272aec84d22e2f0f0237ca32f398069ce4d5674fd69f7c55e279
+  checksum: 9de01d46021fe8c961e7694c4b9cacf25974c543604c50352348aff61aae5278299695c2100148233d3df7f9e8beed38c24c6043a90f760771fe4c6ff0b0d9a6
   languageName: node
   linkType: hard
 
@@ -3624,7 +3633,7 @@ fsevents@~2.1.2:
     front-matter: ^3.0.2
     glob: ^7.1.6
     highlight.js: ^10.1.2
-    mdsvex: ^0.8.3
+    mdsvex: ^0.8.6
     npm-run-all: ^4.1.5
     polka: 1.0.0-next.6
     prettier: ^2.0.5
@@ -3995,6 +4004,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"unist-util-stringify-position@npm:^2.0.0":
+  version: 2.0.3
+  resolution: "unist-util-stringify-position@npm:2.0.3"
+  dependencies:
+    "@types/unist": ^2.0.2
+  checksum: 2017497ef71da8d430232daf5845f182b1892c774648e08d8b40fb2ff06980b231b463db33a8adc2138ac1451535861152bfd2ac7c85ed05123c64a7e2523b68
+  languageName: node
+  linkType: hard
+
 "universal-user-agent@npm:^4.0.0":
   version: 4.0.1
   resolution: "universal-user-agent@npm:4.0.1"
@@ -4068,6 +4086,16 @@ fsevents@~2.1.2:
     core-util-is: 1.0.2
     extsprintf: ^1.2.0
   checksum: 38ea80312cb42e5e8b4ac562d108d675b2354a79f8f125d363671f692657461b9181fd26f4fc9acdca433f8afee099cb78058806e1303e6b15b8fb022affba94
+  languageName: node
+  linkType: hard
+
+"vfile-message@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "vfile-message@npm:2.0.4"
+  dependencies:
+    "@types/unist": ^2.0.0
+    unist-util-stringify-position: ^2.0.0
+  checksum: a88f41883cb9b5adad1066803eabe6c7ce5f877dd5e5dd61cc4273ee53a2d0d62100b105778cd474ef9b7b32c06abe17f176032d24b7028d5cee8d623cc31200
   languageName: node
   linkType: hard
 
