@@ -141,12 +141,10 @@
 			<div />
 		{:else if mentions.length === 0}
 			<div>
-				No replies yet.
-				<a
+				No replies yet. <a
 					href="https://twitter.com/intent/tweet/?text=My%20thoughts%20on%20{target}">
 					Tweet about this post
-				</a>
-				and it will show up here!
+				</a> and it will show up here!
 			</div>
 		{:else}
 			<ul>
@@ -182,9 +180,7 @@
 										href={link.data.url}
 										color="blue">
 										replied
-									</a>
-									on
-									<span color="tertiary">
+									</a> on <span color="tertiary">
 										{link.data.published.slice(0, 10)}
 									</span>
 								</div>
@@ -205,12 +201,10 @@
 					</li>
 				{:else}
 					<li>
-						No further replies found.
-						<a
+						No further replies found. <a
 							href="https://twitter.com/intent/tweet/?text=My%20thoughts%20on%20{target}">
 							Tweet about this post
-						</a>
-						and it will show up here!
+						</a> and it will show up here!
 					</li>
 				{/if}
 			</ul>
