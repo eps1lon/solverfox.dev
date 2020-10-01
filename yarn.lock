@@ -1254,7 +1254,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/graphql@npm:^4.3.1, @octokit/graphql@npm:^4.5.4":
+"@octokit/graphql@npm:^4.3.1":
   version: 4.5.4
   resolution: "@octokit/graphql@npm:4.5.4"
   dependencies:
@@ -1262,6 +1262,17 @@ __metadata:
     "@octokit/types": ^5.0.0
     universal-user-agent: ^6.0.0
   checksum: ed9a54562bd211da77cafda8bb56fc667269b7113a03f4412760928b0a89a7595f2c0ba9b8077106f70183a0bd9c0224cdf520356a84ff994f93599e02bba326
+  languageName: node
+  linkType: hard
+
+"@octokit/graphql@npm:^4.5.6":
+  version: 4.5.6
+  resolution: "@octokit/graphql@npm:4.5.6"
+  dependencies:
+    "@octokit/request": ^5.3.0
+    "@octokit/types": ^5.0.0
+    universal-user-agent: ^6.0.0
+  checksum: 22456d3ac8a3738748f2e0ad1fa1a516d0ca55dc319355fff18320f2aee59f2f657d9400b3ad59ef9c0271632b8f7f8070fcd737d3d004a07c4024649d928261
   languageName: node
   linkType: hard
 
@@ -3684,7 +3695,7 @@ fsevents@~2.1.2:
     "@babel/plugin-transform-runtime": ^7.11.0
     "@babel/preset-env": ^7.11.5
     "@babel/runtime": ^7.11.2
-    "@octokit/graphql": ^4.5.4
+    "@octokit/graphql": ^4.5.6
     compression: ^1.7.1
     focus-visible: ^5.1.0
     front-matter: ^3.0.2
