@@ -51,10 +51,13 @@
 <h1>solverfox.dev</h1>
 
 <p>
-	Hey there! My name is <strong>Sebastian</strong> and I'm a frontend developer with
-	a focus on accessibility and developer tooling. I'm a member of the core team working
-	on <a href="https://material-ui.com">Material-UI</a> and member of <a href="/oss">several
-		other popular open-source libraries</a>
+	Hey there! My name is
+	<strong>Sebastian</strong>
+	and I'm a frontend developer with a focus on accessibility and developer
+	tooling. I'm a member of the core team working on
+	<a href="https://material-ui.com">Material-UI</a>
+	and member of
+	<a href="/oss">several other popular open-source libraries</a>
 </p>
 
 {#if process.env.FEATURE_POSTS}
