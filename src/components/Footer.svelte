@@ -54,12 +54,14 @@
 		<ul class="social">
 			<li>
 				<a href="https://github.com/eps1lon/" rel="me">
-					<img src="mark-github.svg" alt="GitHub" /> @eps1lon
+					<img src="mark-github.svg" alt="GitHub" />
+					@eps1lon
 				</a>
 			</li>
 			<li>
 				<a href="https://twitter.com/sebsilbermann" rel="me">
-					<img src="Twitter_Social_Icon_Circle_Color.svg" alt="Twitter" /> @sebsilbermann
+					<img src="Twitter_Social_Icon_Circle_Color.svg" alt="Twitter" />
+					@sebsilbermann
 				</a>
 			</li>
 		</ul>
