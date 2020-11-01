@@ -3502,9 +3502,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"rollup-plugin-svelte@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "rollup-plugin-svelte@npm:6.0.1"
+"rollup-plugin-svelte@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "rollup-plugin-svelte@npm:6.1.0"
   dependencies:
     require-relative: ^0.8.7
     rollup-pluginutils: ^2.8.2
@@ -3512,7 +3512,7 @@ fsevents@~2.1.2:
   peerDependencies:
     rollup: ">=1.19.2"
     svelte: "*"
-  checksum: ad6bb26732c4d1f246232089886e0aa8683f25ee7e1ba91b3a7bf7b5221ac341579d830e80a533881ffedae74f8b3098bd0b9d76b9d37161e4e834fa785d9c77
+  checksum: 2d280bd5982effe1fff27f6a45ae6f9a5fe120555fc77c7c3434cb645458e80bafb48543f31ac53041e1ece4ee0f6a841a3734a5024c45f3d99b44c37e08638b
   languageName: node
   linkType: hard
 
@@ -3711,7 +3711,7 @@ fsevents@~2.1.2:
     rollup-plugin-commonjs: ^10.0.0
     rollup-plugin-node-resolve: ^5.2.0
     rollup-plugin-replace: ^2.0.0
-    rollup-plugin-svelte: ^6.0.1
+    rollup-plugin-svelte: ^6.1.0
     rollup-plugin-terser: ^7.0.1
     sapper: ^0.28.3
     sirv: ^1.0.6
