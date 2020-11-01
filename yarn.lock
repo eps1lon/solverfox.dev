@@ -2101,10 +2101,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-visible@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "focus-visible@npm:5.1.0"
-  checksum: ae6106e1d598583666ea7fff5f11838c981f597fdefd326607b54808e6fa7c479235b39329eac7959ebdb561010ec627062e28ae34e472c8ebca94933c5dd3b9
+"focus-visible@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "focus-visible@npm:5.2.0"
+  checksum: 4e60302bd84accb92d11c22f8a5f6e38d2f5a0cc1bd45e708b9f00173cc700d1f0782c78f932023479074739fd588e0dd94c0e2575b2212843955e2d4398e752
   languageName: node
   linkType: hard
 
@@ -3697,7 +3697,7 @@ fsevents@~2.1.2:
     "@babel/runtime": ^7.11.2
     "@octokit/graphql": ^4.5.6
     compression: ^1.7.1
-    focus-visible: ^5.1.0
+    focus-visible: ^5.2.0
     front-matter: ^3.0.2
     glob: ^7.1.6
     highlight.js: ^10.1.2
