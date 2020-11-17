@@ -3444,9 +3444,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"rollup-plugin-terser@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "rollup-plugin-terser@npm:7.0.1"
+"rollup-plugin-terser@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "rollup-plugin-terser@npm:7.0.2"
   dependencies:
     "@babel/code-frame": ^7.10.4
     jest-worker: ^26.2.1
@@ -3454,7 +3454,7 @@ fsevents@~2.1.2:
     terser: ^5.0.0
   peerDependencies:
     rollup: ^2.0.0
-  checksum: 891e7f5faebf896024bfd76569bbd6fd040eed395490b0eec6270742189db2b5e4d3102b1af3d243d63ef44994acf537fe9e02ead7b55eec6c5c75a30d43c633
+  checksum: 553cc21efcea3e4d46c61fbd41cb4a82a3ab8e02ae4ce7c03f9248dea93e5a91c3624e2271490ee05b2bb481568305733b496d968d3ac9c99b777a588a336f01
   languageName: node
   linkType: hard
 
@@ -3639,7 +3639,7 @@ fsevents@~2.1.2:
     rollup-plugin-node-resolve: ^5.2.0
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^6.1.0
-    rollup-plugin-terser: ^7.0.1
+    rollup-plugin-terser: ^7.0.2
     sapper: ^0.28.10
     sirv: ^1.0.7
     svelte: ^3.29.4
