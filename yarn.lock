@@ -3600,14 +3600,14 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sirv@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "sirv@npm:1.0.6"
+"sirv@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "sirv@npm:1.0.7"
   dependencies:
     "@polka/url": ^1.0.0-next.9
     mime: ^2.3.1
     totalist: ^1.0.0
-  checksum: b85f5721535c6604cc6b3c1887a38be7733586c2db122016c2e144117ad281bdab3827e8191c45be78a1aaf0e75c81f71007c3edaef1791b50d90253b0c0e2f6
+  checksum: e3f129bb2a5974daadf171f0c9f0464a479de3b5838b0ca2f5ef502d059ec79853376721ba82b3d190d8c0c751c688fd9743791fe50b4a53e029a1b46188d36f
   languageName: node
   linkType: hard
 
@@ -3641,7 +3641,7 @@ fsevents@~2.1.2:
     rollup-plugin-svelte: ^6.1.0
     rollup-plugin-terser: ^7.0.1
     sapper: ^0.28.10
-    sirv: ^1.0.6
+    sirv: ^1.0.7
     svelte: ^3.29.4
     yargs: ^16.1.0
   languageName: unknown
