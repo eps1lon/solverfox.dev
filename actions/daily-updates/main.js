@@ -32,7 +32,7 @@ async function main() {
 		const branch = `github-actions/daily-updates`;
 		await git(`checkout -b ${branch}`);
 		await git('add -A');
-		await git('commit -m "Daily updates"');
+		await git('commit -m "Monthly updates"');
 
 		await git(`push origin -f ${branch}`);
 		const octokit = new github.GitHub(githubToken);
@@ -42,7 +42,7 @@ async function main() {
 				repo: github.context.repo.repo,
 				base: 'master',
 				head: branch,
-				title: `Daily updates`,
+				title: `Monthly updates`,
 				body: 'Automatically generated',
 				maintainer_can_modify: true,
 			});
