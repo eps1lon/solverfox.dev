@@ -1,6 +1,7 @@
 name: Daily Updates
 
 on:
+  push:
   schedule:
     # Daily updates
     # https://crontab.guru/#0_0_1_*_*
