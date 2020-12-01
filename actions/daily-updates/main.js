@@ -35,7 +35,7 @@ async function main() {
 		await git('commit -m "Monthly updates"');
 
 		await git(`push origin -f ${branch}`);
-		const octokit = new github.GitHub(githubToken);
+		const octokit = new github.getOctokit(githubToken);
 		try {
 			await octokit.pulls.create({
 				owner: github.context.repo.owner,
