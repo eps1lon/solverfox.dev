@@ -3297,17 +3297,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"rollup-plugin-svelte@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "rollup-plugin-svelte@npm:6.1.0"
+"rollup-plugin-svelte@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "rollup-plugin-svelte@npm:7.0.0"
   dependencies:
     require-relative: ^0.8.7
     rollup-pluginutils: ^2.8.2
-    sourcemap-codec: ^1.4.8
   peerDependencies:
-    rollup: ">=1.19.2"
-    svelte: "*"
-  checksum: 2d280bd5982effe1fff27f6a45ae6f9a5fe120555fc77c7c3434cb645458e80bafb48543f31ac53041e1ece4ee0f6a841a3734a5024c45f3d99b44c37e08638b
+    rollup: ">=2.0.0"
+    svelte: ">=3.5.0"
+  checksum: 9fd0f41a6caf16451370477087cd82064e7cf0b2cc5b2f81e293a02afc4eed18d9595d2632ec9efb6f3e0c0e7f8ca01e5e7bbebe3ff827b5e1350d38d7ebf4dc
   languageName: node
   linkType: hard
 
@@ -3505,7 +3504,7 @@ fsevents@~2.1.2:
     rollup-plugin-commonjs: ^10.0.0
     rollup-plugin-node-resolve: ^5.2.0
     rollup-plugin-replace: ^2.0.0
-    rollup-plugin-svelte: ^6.1.0
+    rollup-plugin-svelte: ^7.0.0
     rollup-plugin-terser: ^7.0.2
     sapper: ^0.28.10
     sirv: ^1.0.7
@@ -3538,7 +3537,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sourcemap-codec@npm:^1.4.4, sourcemap-codec@npm:^1.4.6, sourcemap-codec@npm:^1.4.8":
+"sourcemap-codec@npm:^1.4.4, sourcemap-codec@npm:^1.4.6":
   version: 1.4.8
   resolution: "sourcemap-codec@npm:1.4.8"
   checksum: 4d56d1232a45af813606d1755f11e7ae6b3542c615a7e3f904382f0134a9412ba8d090e83749254d78449eafdfcc62d5158b8f35e6241480b51b74b5c46b99f9

@@ -70,8 +70,10 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode),
 			}),
 			svelte({
-				dev,
-				hydratable: true,
+				compilerOptions: {
+					dev,
+					hydratable: true,
+				},
 				emitCss: true,
 				extensions: ['.svelte', '.svx'],
 				preprocess: preprocess(),
@@ -126,8 +128,10 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode),
 			}),
 			svelte({
-				generate: 'ssr',
-				dev,
+				compilerOptions: {
+					dev,
+					generate: 'ssr',
+				},
 				extensions: ['.svelte', '.svx'],
 				preprocess: preprocess(),
 			}),
