@@ -47,7 +47,7 @@ async function main() {
 				maintainer_can_modify: true,
 			});
 		} catch (error) {
-			core.warning(`'${JSON.stringify(error, null, 2)}'`);
+			core.warning(error);
 		}
 	}
 }
