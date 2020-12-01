@@ -128,7 +128,7 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode),
 			}),
 			svelte({
-				compilerOptions:{
+				compilerOptions: {
 					dev,
 					generate: 'ssr',
 				},
