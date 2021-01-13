@@ -31,9 +31,11 @@ const promisedPosts = new Promise((resolve, reject) => {
 			}),
 		);
 
-		const publishedPosts = posts.filter(
-			(post) => post.publishedAt !== undefined,
-		);
+		const publishedPosts = posts
+			.filter((post) => post.publishedAt !== undefined)
+			.sort((a, b) => {
+				return b.publishedAt - a.publishedAt;
+			});
 
 		resolve(publishedPosts);
 	});
