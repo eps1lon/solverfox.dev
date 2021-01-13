@@ -8,6 +8,8 @@ slug: ts-typed-join
 layout: article
 ---
 
+# { metadata.title }
+
 Creates a literal type when joining strings in TypeScript if the input array is a tuple.
 This was mainly motivated by my curiosity about [TypeScripts's template literal types](https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html).
 
