@@ -22,11 +22,16 @@ const preprocess = () => {
 			highlighter(code, lang) {
 				if (lang && hljs.getLanguage(lang)) {
 					try {
-						return (
+						const highlighted =
 							'{@html `<pre class="hljs"><code>' +
-							hljs.highlight(lang, code, true).value +
-							'</code></pre>`}'
-						);
+							hljs
+								.highlight(lang, code, true)
+								.value.replace(/{/g, '&#123;')
+								.replace(/}/g, '&#125;')
+								.replace(/`/g, '\\`') +
+							'</code></pre>`}';
+
+						return highlighted;
 					} catch (error) {
 						console.error(error);
 					}
