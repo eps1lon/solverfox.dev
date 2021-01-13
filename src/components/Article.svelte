@@ -24,6 +24,7 @@
 
 	article :global(pre) {
 		max-width: 100ch;
+		tab-size: 2;
 	}
 
 	article :global(pre.hljs) :global(code) {
