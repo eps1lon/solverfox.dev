@@ -40,7 +40,7 @@ async function main() {
 			await octokit.pulls.create({
 				owner: github.context.repo.owner,
 				repo: github.context.repo.repo,
-				base: 'master',
+				base: 'main',
 				head: branch,
 				title: `Monthly updates`,
 				body: 'Automatically generated',

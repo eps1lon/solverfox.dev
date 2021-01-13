@@ -83,15 +83,15 @@ Now comes the tricky part that might be exclusive to Azure Pipelines: [downloadi
 
 ```yaml
 - task: DownloadPipelineArtifact@2
-  displayName: 'Download tarball from master'
+  displayName: 'Download tarball from main'
   inputs:
     artifact: dom-accessibility-api
-    path: $(Agent.TempDirectory)/artifacts-master
+    path: $(Agent.TempDirectory)/artifacts-main
     source: specific
     pipeline: $(System.DefinitionId)
     project: $(System.TeamProject)
     runVersion: latestFromBranch
-    runBranch: refs/heads/master
+    runBranch: refs/heads/main
 ```
 
 There's a lot to unpack here so I'm going over every key:
@@ -105,13 +105,13 @@ There's a lot to unpack here so I'm going over every key:
 - `pipeline` and `project` tells the task that we want to artifact from the same pipeline
 - `runVersion` and `runBranch` tells the task that we want the latest artifact from our main branch
 
-Now we the current tarbal in `./dom-accessibility-api.tgz` and the one from our main branch in `/temp/artifacts-master/dom-accessibility-api.tgz` and are ready to diff
+Now we the current tarbal in `./dom-accessibility-api.tgz` and the one from our main branch in `/temp/artifacts-main/dom-accessibility-api.tgz` and are ready to diff
 
 ```yaml
 - script: |
     mkdir $(Agent.TempDirectory)/published-previous
     mkdir $(Agent.TempDirectory)/published-current
-    tar xfz $(Agent.TempDirectory)/artifacts-master/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-previous
+    tar xfz $(Agent.TempDirectory)/artifacts-main/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-previous
     tar xfz $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-current
     # --no-index implies --exit-code
     # This task is informative only.
@@ -120,7 +120,7 @@ Now we the current tarbal in `./dom-accessibility-api.tgz` and the one from our 
   displayName: 'Diff tarballs'
 ```
 
-We've unpacked the contents of the current tarball into `/tmp/published-previous` and the contents of the tarball on master into `/tmp/published-current`.
+We've unpacked the contents of the current tarball into `/tmp/published-previous` and the contents of the tarball on `main` into `/tmp/published-current`.
 To diff the contents we leverage `git diff`.
 With `--no-index` we can use this on arbitrary directories.
 `--no-pager` prints the complete diff out.
@@ -144,7 +144,7 @@ All in CI without having to check the code out locally.
 
 ```yaml
 trigger:
-  - master
+  - main
 
 pr:
   branches:
@@ -180,20 +180,20 @@ steps:
     artifact: dom-accessibility-api-node-$(node_version)
 
   - task: DownloadPipelineArtifact@2
-    displayName: 'Download tarball from master'
+    displayName: 'Download tarball from main'
     inputs:
       artifact: dom-accessibility-api-node-$(node_version)
-      path: $(Agent.TempDirectory)/artifacts-master
+      path: $(Agent.TempDirectory)/artifacts-main
       source: specific
       pipeline: $(System.DefinitionId)
       project: $(System.TeamProject)
       runVersion: latestFromBranch
-      runBranch: refs/heads/master
+      runBranch: refs/heads/main
 
   - script: |
       mkdir $(Agent.TempDirectory)/published-previous
       mkdir $(Agent.TempDirectory)/published-current
-      tar xfz $(Agent.TempDirectory)/artifacts-master/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-previous
+      tar xfz $(Agent.TempDirectory)/artifacts-main/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-previous
       tar xfz $(System.DefaultWorkingDirectory)/dom-accessibility-api.tgz --directory $(Agent.TempDirectory)/published-current
       # --no-index implies --exit-code
       # This task is informative only.

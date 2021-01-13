@@ -17,10 +17,10 @@ jobs:
 
       # TODO: revisit once https://github.com/dependabot/dependabot-core/issues/1297 is resolved
       - name: 'dependabot lockfile fix'
-        # install with lockfile from master because dependabot creates v1 lockfiles
+        # install with lockfile from main because dependabot creates v1 lockfiles
         run: |
-          git fetch origin master --depth=1
-          git checkout origin/master -- yarn.lock
+          git fetch origin main --depth=1
+          git checkout origin/main -- yarn.lock
         if: ${{ github.actor == 'dependabot-preview[bot]' }}
 
       - name: 'Install packages'
