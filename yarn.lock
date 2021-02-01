@@ -1204,7 +1204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/graphql@npm:^4.3.1, @octokit/graphql@npm:^4.5.6":
+"@octokit/graphql@npm:^4.3.1":
   version: 4.5.6
   resolution: "@octokit/graphql@npm:4.5.6"
   dependencies:
@@ -1215,10 +1215,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@octokit/graphql@npm:^4.5.9":
+  version: 4.5.9
+  resolution: "@octokit/graphql@npm:4.5.9"
+  dependencies:
+    "@octokit/request": ^5.3.0
+    "@octokit/types": ^6.0.3
+    universal-user-agent: ^6.0.0
+  checksum: 935d38128bcca75e1c4cd96edf6ebe4182e126da6da2b9e3ee57e58a300096e1f23d36a42ab52b677bba38e288d3823702a4b73a3ddfa4d9eac98eb1ba85b32c
+  languageName: node
+  linkType: hard
+
 "@octokit/openapi-types@npm:^1.2.0":
   version: 1.2.2
   resolution: "@octokit/openapi-types@npm:1.2.2"
   checksum: 8f36c71dc942bbab3e0170bd4cc6b55b64edfa93cb84b60dc0ffbc3dc396cb57d78432e7efe2170cd8b12cae3edf6888104878b5243b64395b98c3cd3516c349
+  languageName: node
+  linkType: hard
+
+"@octokit/openapi-types@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "@octokit/openapi-types@npm:3.4.1"
+  checksum: c39cca94b44849252d71e45185065353632b802033ef7ce39b8aed139fefd3987ab544ea782d6d67782088123b8040c5d37b7a1dbe89962ff869d4f83188986d
   languageName: node
   linkType: hard
 
@@ -1286,6 +1304,16 @@ __metadata:
     "@octokit/openapi-types": ^1.2.0
     "@types/node": ">= 8"
   checksum: 2107f875d3e886197ac2274baa65963f03c40fea467be385e93b177975fffc0564e5b0e15e3fd85cc59000e178bd85728303ab20a7200fb9706e17605adf1ef7
+  languageName: node
+  linkType: hard
+
+"@octokit/types@npm:^6.0.3":
+  version: 6.7.0
+  resolution: "@octokit/types@npm:6.7.0"
+  dependencies:
+    "@octokit/openapi-types": ^3.4.1
+    "@types/node": ">= 8"
+  checksum: 20c0203c199727836bf1b311169547059af1a1a9868844c3a8ef107d8090cdf20a45f200e00db05af60c2491b84b09cb66b9cf82ec63c1bcbe6ec412d42f2ad5
   languageName: node
   linkType: hard
 
@@ -3372,7 +3400,7 @@ fsevents@~2.1.2:
     "@babel/plugin-transform-runtime": ^7.11.0
     "@babel/preset-env": ^7.11.5
     "@babel/runtime": ^7.11.2
-    "@octokit/graphql": ^4.5.6
+    "@octokit/graphql": ^4.5.9
     compression: ^1.7.1
     focus-visible: ^5.2.0
     front-matter: ^3.0.2
