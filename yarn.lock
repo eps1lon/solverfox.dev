@@ -3273,13 +3273,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sapper@npm:^0.28.10":
-  version: 0.28.10
-  resolution: "sapper@npm:0.28.10"
+"sapper@npm:^0.29.1":
+  version: 0.29.1
+  resolution: "sapper@npm:0.29.1"
   dependencies:
     html-minifier: ^4.0.0
     http-link-header: ^1.0.2
-    shimport: ^2.0.4
+    shimport: ^2.0.5
     source-map: ^0.6.1
     sourcemap-codec: ^1.4.6
     string-hash: ^1.1.3
@@ -3287,7 +3287,7 @@ fsevents@~2.1.2:
     svelte: ^3.17.3
   bin:
     sapper: sapper
-  checksum: fd5ab59b11d6d18da46f3aedad5d8cb5faf522f64963a0858e75df342f759f0640ad696438925170426921a3f2d95f5d90fe3dd80fece0679fc45fd381547793
+  checksum: 214bf7463351e25cde4d4c9bb36b8ed67d390a16197813a8ee340ab649c780b3254218f0f84b3ff591ca65c6950484718f9f8fd6488d3de956c601bdaf002470
   languageName: node
   linkType: hard
 
@@ -3364,10 +3364,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"shimport@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "shimport@npm:2.0.4"
-  checksum: 75a99dc79260985352ae32e27d8e0667fe4ccd2653c882c7d3e53938042226f9fff838ea69ded7da84ea7167b1cdef5aef8b26f27547c55bee571e9b04fbd7be
+"shimport@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "shimport@npm:2.0.5"
+  checksum: 70d906f6ace71593edd24f68dd6c1d32587073777e94bfc81d25827108d951ed279a407e6c68c870a9cea426e1d739ae1d7a3df4156da9112bd88188c826083c
   languageName: node
   linkType: hard
 
@@ -3418,7 +3418,7 @@ fsevents@~2.1.2:
     rollup-plugin-replace: ^2.0.0
     rollup-plugin-svelte: ^7.1.0
     rollup-plugin-terser: ^7.0.2
-    sapper: ^0.28.10
+    sapper: ^0.29.1
     sirv: ^1.0.11
     svelte: ^3.31.0
     yargs: ^16.2.0
