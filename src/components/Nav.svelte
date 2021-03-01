@@ -60,7 +60,7 @@
 		{#if process.env.FEATURE_POSTS}
 			<li>
 				<a
-					rel="prefetch"
+					sapper:prefetch
 					aria-current={segment === 'writing' ? 'page' : undefined}
 					href="writing">
 					writing
