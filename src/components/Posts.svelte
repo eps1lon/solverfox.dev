@@ -24,14 +24,13 @@
 
 <ul aria-labelledby={labelledby}>
 	{#each posts as post}
-		<!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
+		<!-- tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
 		<li id={`post-${post.slug}`}>
 			<a
 				aria-describedby={`post-${post.slug}`}
-				rel="prefetch"
+				sapper:prefetch
 				href="writing/{post.slug}">
 				{post.title}
 			</a>
