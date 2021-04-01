@@ -9,6 +9,20 @@
 	const { page } = stores();
 </script>
 
+<div id="skipnav">
+	<p class="skipnav">
+		<a href={`${$page.path}#maincontent`}>Skip to main content (Press Enter)</a>
+	</p>
+</div>
+
+<Nav {segment} />
+
+<main id="maincontent">
+	<slot />
+</main>
+
+<Footer />
+
 <style>
 	main {
 		position: relative;
@@ -53,17 +67,3 @@
 		cursor: default;
 	}
 </style>
-
-<div id="skipnav">
-	<p class="skipnav">
-		<a href={`${$page.path}#maincontent`}>Skip to main content (Press Enter)</a>
-	</p>
-</div>
-
-<Nav {segment} />
-
-<main id="maincontent">
-	<slot />
-</main>
-
-<Footer />

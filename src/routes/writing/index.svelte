@@ -14,6 +14,14 @@
 	export let posts;
 </script>
 
+<svelte:head>
+	<title>Writings</title>
+</svelte:head>
+
+<h1 id="writings-heading">Writings</h1>
+
+<Posts labelledby="writings-heading" {posts} />
+
 <style>
 	h1 {
 		margin-bottom: 0.5em;
@@ -22,11 +30,3 @@
 		margin: 0 0 1em 0 !important;
 	}
 </style>
-
-<svelte:head>
-	<title>Writings</title>
-</svelte:head>
-
-<h1 id="writings-heading">Writings</h1>
-
-<Posts labelledby="writings-heading" {posts} />
