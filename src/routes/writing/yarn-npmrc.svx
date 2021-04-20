@@ -52,7 +52,7 @@ Then your token will be read from the environment variable `REMIX_REGISTRY_TOKEN
 
 `.npmrc`
 
-```
+```bash
 //npm.remix.run/:_authToken=${REMIX_REGISTRY_TOKEN}
 @remix-run:registry=https://npm.remix.run
 ```
