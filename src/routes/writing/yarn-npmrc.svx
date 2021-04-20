@@ -1,8 +1,8 @@
 ---
-title: private packages in yarn 
+title: private packages in yarn
 category: package-manager
 publishedAt: 2021-04-20
-description: How to teach yarn to use .npmrc 
+description: How to teach yarn to use .npmrc
 readingTime: 2
 slug: yarn-npmrc
 layout: article
@@ -13,7 +13,7 @@ layout: article
 { metadata.description }
 
 If you want to use private packages in npm you can use private registries.
-You usually set private registries up with a `.npmrc`. For example, in order to use 
+You usually set private registries up with a `.npmrc`. For example, in order to use
 [remix.run](https://remix.run/) you have to add the following to your `.npmrc`
 
 ```
@@ -24,10 +24,12 @@ You usually set private registries up with a `.npmrc`. For example, in order to 
 ## yarn
 
 Apparently `yarn` does not recognize the `@remix-run` scope and needs an additional hint
-in a `.yarnrc`: 
+in a `.yarnrc`:
+
 ```bash
 "@remix-run:registry" "https://npm.remix.run"
 ```
+
 Though you still need the `.npmrc` for the authentication.
 
 ## yarn v2
@@ -49,12 +51,14 @@ If you want to configure your token via environment variables you can do so by r
 Then your token will be read from the environment variable `REMIX_REGISTRY_TOKEN`.
 
 `.npmrc`
+
 ```
 //npm.remix.run/:_authToken=${REMIX_REGISTRY_TOKEN}
 @remix-run:registry=https://npm.remix.run
 ```
 
 `.yarnrc.yml`:
+
 ```yml
 npmScopes:
   remix-run:
