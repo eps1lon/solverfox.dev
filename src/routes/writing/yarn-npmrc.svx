@@ -16,7 +16,7 @@ If you want to use private packages in npm you can use private registries.
 You usually set private registries up with a `.npmrc`. For example, in order to use
 [remix.run](https://remix.run/) you have to add the following to your `.npmrc`
 
-```
+```bash
 //npm.remix.run/:_authToken=my-token
 @remix-run:registry=https://npm.remix.run
 ```
