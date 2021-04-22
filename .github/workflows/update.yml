@@ -3,7 +3,7 @@ name: Daily Updates
 on:
   push:
   schedule:
-    # Daily updates
+    # Monthly updates
     # https://crontab.guru/#0_0_1_*_*
     - cron: '0 0 1 * *'
 
