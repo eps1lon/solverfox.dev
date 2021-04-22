@@ -18,9 +18,14 @@ jobs:
         with:
           persist-credentials: true
 
-      - uses: actions/setup-node@v2-beta
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvmrc
+
+      - name: Setup node
+        uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
       - name: 'Install packages'
         run: yarn install
