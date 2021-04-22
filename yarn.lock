@@ -1181,7 +1181,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.13.8, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.13.17":
+  version: 7.13.17
+  resolution: "@babel/runtime@npm:7.13.17"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: c32e5e2833348b586bc919c0fbc8efbd2fdd79451cce56ed5962ace6ff74ea44fbb8723dcd3f08e52ce07e88e37f4c02cd5021855417d365558e41de38d277a8
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.8.4":
   version: 7.13.8
   resolution: "@babel/runtime@npm:7.13.8"
   dependencies:
@@ -3492,7 +3501,7 @@ fsevents@~2.1.2:
     "@babel/plugin-syntax-dynamic-import": ^7.8.3
     "@babel/plugin-transform-runtime": ^7.13.15
     "@babel/preset-env": ^7.13.15
-    "@babel/runtime": ^7.13.8
+    "@babel/runtime": ^7.13.17
     "@octokit/graphql": ^4.5.9
     compression: ^1.7.1
     focus-visible: ^5.2.0
