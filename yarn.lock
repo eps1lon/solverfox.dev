@@ -2061,21 +2061,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@~2.1.2#builtin<compat/fsevents>":
-  version: 2.1.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=11e9ea"
+"fsevents@patch:fsevents@~2.3.1#builtin<compat/fsevents>":
+  version: 2.3.2
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#builtin<compat/fsevents>::version=2.3.2&hash=11e9ea"
   dependencies:
     node-gyp: latest
-  checksum: e2b8c379340e21a786d32c653854c8876f94eb1202dd5be378fd42c062bc123aab5051c32bf0011865257c85982c41ded203f9fe8c9f9c8f8c84dc4672abc0e0
+  checksum: 7b25d9251aefe433d508a0eb614217f0495ae05a9e8af15f7dbf9998e08c4e675acd1cf32361e0fcf71d917d9e8c4b76301fdc72a1ec1105a3ea0994f5e15a8d
   languageName: node
   linkType: hard
 
-fsevents@~2.1.2:
-  version: 2.1.3
-  resolution: "fsevents@npm:2.1.3"
+fsevents@~2.3.1:
+  version: 2.3.2
+  resolution: "fsevents@npm:2.3.2"
   dependencies:
     node-gyp: latest
-  checksum: 8977781884d06c5bcb97b5f909efdce9683c925f2a0ce7e098d2cdffe2e0a0a50b1868547bb94dca75428c06535a4a70517a7bb3bb5a974d93bf9ffc067291eb
+  checksum: a1883f4ca12b8b403ec528f1a4cb312b0877eacd24719da535cabea78d6fdd78530e3538bdba590a1c0f6c295128f964a89182621885296353a44dcfa4f9db53
   languageName: node
   linkType: hard
 
@@ -3288,17 +3288,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.35.1":
-  version: 2.35.1
-  resolution: "rollup@npm:2.35.1"
+"rollup@npm:^2.45.2":
+  version: 2.45.2
+  resolution: "rollup@npm:2.45.2"
   dependencies:
-    fsevents: ~2.1.2
+    fsevents: ~2.3.1
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 01e8b621baf3b35e1a28e3679cf9bdd4c22c2e999a895343e0b1e02dfe735f92a9fe439042e1b35c981663e9a8b75c1d707e6c27d786170febbb503b83dfed39
+  checksum: b07c6051c35ed30916f529cbfb3731c9ac10355daca167ba8d863bcda6499e39593e078eb8e29b4bf94a1e3d112e1cdfa908fe147a231b6a93b9fd6b732beb98
   languageName: node
   linkType: hard
 
@@ -3463,7 +3463,7 @@ fsevents@~2.1.2:
     polka: 1.0.0-next.11
     prettier: ^2.2.1
     prettier-plugin-svelte: ^2.1.6
-    rollup: ^2.35.1
+    rollup: ^2.45.2
     rollup-plugin-babel: ^4.4.0
     rollup-plugin-commonjs: ^10.0.0
     rollup-plugin-node-resolve: ^5.2.0
