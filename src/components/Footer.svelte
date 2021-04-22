@@ -1,3 +1,33 @@
+<footer>
+	<h2>solverfox.dev</h2>
+
+	<div class="contact">
+		<address>
+			<div class="name">Sebastian Silbermann</div>
+			<a href="mailto:silbermann.sebastian@gmail.com" rel="me">
+				silbermann.sebastian@gmail.com
+			</a>
+		</address>
+
+		<ul class="social">
+			<li>
+				<a href="https://github.com/eps1lon/" rel="me">
+					<img src="mark-github.svg" alt="GitHub" />
+					@eps1lon
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/sebsilbermann" rel="me">
+					<img src="Twitter_Social_Icon_Circle_Color.svg" alt="Twitter" />
+					@sebsilbermann
+				</a>
+			</li>
+		</ul>
+
+		<p>Programmer, accessibility, dev tooling</p>
+	</div>
+</footer>
+
 <style>
 	footer {
 		border-top: 2px solid #d8c3a5;
@@ -39,33 +69,3 @@
 		vertical-align: middle;
 	}
 </style>
-
-<footer>
-	<h2>solverfox.dev</h2>
-
-	<div class="contact">
-		<address>
-			<div class="name">Sebastian Silbermann</div>
-			<a href="mailto:silbermann.sebastian@gmail.com" rel="me">
-				silbermann.sebastian@gmail.com
-			</a>
-		</address>
-
-		<ul class="social">
-			<li>
-				<a href="https://github.com/eps1lon/" rel="me">
-					<img src="mark-github.svg" alt="GitHub" />
-					@eps1lon
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/sebsilbermann" rel="me">
-					<img src="Twitter_Social_Icon_Circle_Color.svg" alt="Twitter" />
-					@sebsilbermann
-				</a>
-			</li>
-		</ul>
-
-		<p>Programmer, accessibility, dev tooling</p>
-	</div>
-</footer>

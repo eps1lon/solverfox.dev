@@ -17,6 +17,28 @@
 	export let posts;
 </script>
 
+<svelte:head>
+	<title>solverfox.dev</title>
+</svelte:head>
+
+<h1>solverfox.dev</h1>
+
+<p>
+	Hey there! My name is
+	<strong>Sebastian</strong>
+	and I'm a frontend developer with a focus on accessibility and developer tooling.
+	I'm a member of the core team working on
+	<a href="https://material-ui.com">Material-UI</a>
+	and member of
+	<a href="/oss">several other popular open-source libraries</a>
+</p>
+
+{#if process.env.FEATURE_POSTS}
+	<h2 id="posts-heading">Recent posts</h2>
+
+	<Posts labelledby="posts-heading" {posts} />
+{/if}
+
 <style>
 	h1,
 	p {
@@ -43,25 +65,3 @@
 		text-align: center;
 	}
 </style>
-
-<svelte:head>
-	<title>solverfox.dev</title>
-</svelte:head>
-
-<h1>solverfox.dev</h1>
-
-<p>
-	Hey there! My name is
-	<strong>Sebastian</strong>
-	and I'm a frontend developer with a focus on accessibility and developer
-	tooling. I'm a member of the core team working on
-	<a href="https://material-ui.com">Material-UI</a>
-	and member of
-	<a href="/oss">several other popular open-source libraries</a>
-</p>
-
-{#if process.env.FEATURE_POSTS}
-	<h2 id="posts-heading">Recent posts</h2>
-
-	<Posts labelledby="posts-heading" {posts} />
-{/if}
