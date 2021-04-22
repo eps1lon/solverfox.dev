@@ -4,6 +4,39 @@
 	export let segment;
 </script>
 
+<nav>
+	<ul>
+		<li>
+			<a aria-current={segment === undefined ? 'page' : undefined} href=".">
+				solverfox.dev
+			</a>
+		</li>
+		{#if process.env.FEATURE_POSTS}
+			<li>
+				<a
+					sapper:prefetch
+					aria-current={segment === 'writing' ? 'page' : undefined}
+					href="writing"
+				>
+					writing
+				</a>
+			</li>
+		{/if}
+		<li>
+			<a aria-current={segment === 'oss' ? 'page' : undefined} href="oss">
+				OSS
+			</a>
+		</li>
+		<li>
+			<a aria-current={segment === 'about' ? 'page' : undefined} href="about">
+				about
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<GitHubCorner repo="eps1lon/solverfox.dev" />
+
 <style>
 	nav {
 		border-bottom: 2px solid #d8c3a5;
@@ -49,35 +82,3 @@
 		display: block;
 	}
 </style>
-
-<nav>
-	<ul>
-		<li>
-			<a aria-current={segment === undefined ? 'page' : undefined} href=".">
-				solverfox.dev
-			</a>
-		</li>
-		{#if process.env.FEATURE_POSTS}
-			<li>
-				<a
-					sapper:prefetch
-					aria-current={segment === 'writing' ? 'page' : undefined}
-					href="writing">
-					writing
-				</a>
-			</li>
-		{/if}
-		<li>
-			<a aria-current={segment === 'oss' ? 'page' : undefined} href="oss">
-				OSS
-			</a>
-		</li>
-		<li>
-			<a aria-current={segment === 'about' ? 'page' : undefined} href="about">
-				about
-			</a>
-		</li>
-	</ul>
-</nav>
-
-<GitHubCorner repo="eps1lon/solverfox.dev" />
