@@ -15,6 +15,14 @@ jobs:
         with:
           persist-credentials: true
 
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
       # TODO: revisit once https://github.com/dependabot/dependabot-core/issues/1297 is resolved
       - name: 'dependabot lockfile fix'
         # install with lockfile from main because dependabot creates v1 lockfiles
