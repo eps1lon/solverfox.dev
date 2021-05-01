@@ -5,10 +5,10 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"@actions/core@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@actions/core@npm:1.2.6"
-  checksum: 984c7d5ae95c02f62f69549a9d5cfbc0db0b035f519775301b397c167791ceee269fb504cb622da541d1fa305ee4ad3fc30d017c6407045aa4eb6809eee4c549
+"@actions/core@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@actions/core@npm:1.2.7"
+  checksum: ea8aa7e54523f26e51b056e2b5b830d24a26a972e5aa80cf4c9ea2ad8785e4f67cf316a0514cec0a71bd6d1267c415b85143774a13690988532071b395bcb4a3
   languageName: node
   linkType: hard
 
@@ -3471,7 +3471,7 @@ fsevents@~2.3.1:
   version: 0.0.0-use.local
   resolution: "solverfox.dev@workspace:."
   dependencies:
-    "@actions/core": ^1.2.6
+    "@actions/core": ^1.2.7
     "@actions/github": ^4.0.0
     "@babel/core": ^7.13.8
     "@babel/plugin-syntax-dynamic-import": ^7.8.3
