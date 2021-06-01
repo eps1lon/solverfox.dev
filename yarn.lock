@@ -1335,10 +1335,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polka/url@npm:^1.0.0-next.9":
-  version: 1.0.0-next.11
-  resolution: "@polka/url@npm:1.0.0-next.11"
-  checksum: 268a83f4e1097baf0067e183b7682a00b647c6c30113a92b98c80cd719fc689a45d28c16257ffc817f5ffd4894fc52157957c39aaac329cdd12c82a10f6d61f7
+"@polka/url@npm:^1.0.0-next.15":
+  version: 1.0.0-next.15
+  resolution: "@polka/url@npm:1.0.0-next.15"
+  checksum: c2a678bdc0a46353e251fad7419f2456e7e95aac1a3814abba84291cff5ed6f9d80a1b4b59288aae6c347766d0eae8a78120dc6d063e86d54ef3ad73f621575d
   languageName: node
   linkType: hard
 
@@ -3456,14 +3456,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sirv@npm:^1.0.11":
-  version: 1.0.11
-  resolution: "sirv@npm:1.0.11"
+"sirv@npm:^1.0.12":
+  version: 1.0.12
+  resolution: "sirv@npm:1.0.12"
   dependencies:
-    "@polka/url": ^1.0.0-next.9
+    "@polka/url": ^1.0.0-next.15
     mime: ^2.3.1
     totalist: ^1.0.0
-  checksum: 9864da5c04f21bd2452545e4b61e8fc322a306dd3b8eca65729367945b0a237e60c7595679aa9d6cf9b3a6420679f0119c8d848ea9ab43ca6911abdbd430026f
+  checksum: 80fdfbdc43b5eb1dc796bb50b79a9f07e099d2732573d1a9c511fd94f80090215830e39cee963ea2787f379d1426fe65500c853432a8879d74a0c75de2c3ab17
   languageName: node
   linkType: hard
 
@@ -3497,7 +3497,7 @@ fsevents@~2.3.1:
     rollup-plugin-svelte: ^7.1.0
     rollup-plugin-terser: ^7.0.2
     sapper: ^0.29.1
-    sirv: ^1.0.11
+    sirv: ^1.0.12
     svelte: ^3.38.0
     yargs: ^16.2.0
   languageName: unknown
