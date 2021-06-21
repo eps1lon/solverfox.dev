@@ -6,12 +6,14 @@
 				return { posts };
 			});
 	}
+
 </script>
 
 <script>
 	import Posts from '../../components/Posts.svelte';
 
 	export let posts;
+
 </script>
 
 <svelte:head>
@@ -29,4 +31,5 @@
 	:global([aria-labelledby='writings-heading']) {
 		margin: 0 0 1em 0 !important;
 	}
+
 </style>

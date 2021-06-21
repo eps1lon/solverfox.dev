@@ -36,10 +36,8 @@ async function loadRepositoriesContributedTo({ graphql, user, after }) {
 		},
 	);
 
-	const {
-		nodes: repositories,
-		pageInfo,
-	} = repositoriesContributedTo.user.repositoriesContributedTo;
+	const { nodes: repositories, pageInfo } =
+		repositoriesContributedTo.user.repositoriesContributedTo;
 
 	const loadNextPage = pageInfo.hasNextPage
 		? () =>
@@ -82,10 +80,8 @@ async function main(argv) {
 	let loadNextRepositoriesContributedToPage = () =>
 		loadRepositoriesContributedTo({ graphql, user: 'eps1lon', after: null });
 	while (loadNextRepositoriesContributedToPage !== null) {
-		const {
-			loadNextPage,
-			repositories: repositoryPage,
-		} = await loadNextRepositoriesContributedToPage();
+		const { loadNextPage, repositories: repositoryPage } =
+			await loadNextRepositoriesContributedToPage();
 
 		repositories.push(...repositoryPage);
 		loadNextRepositoriesContributedToPage = loadNextPage;
