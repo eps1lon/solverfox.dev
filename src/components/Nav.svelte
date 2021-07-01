@@ -2,6 +2,7 @@
 	import GitHubCorner from '../components/GitHubCorner.svelte';
 
 	export let segment;
+
 </script>
 
 <nav>
@@ -81,4 +82,5 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
+
 </style>
