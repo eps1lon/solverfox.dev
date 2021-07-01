@@ -21,7 +21,6 @@ async function main() {
 			GITHUB_TOKEN: githubToken,
 		},
 	});
-	await exec('yarn format');
 
 	const { stdout: gotUpdated } = await git('status --porcelain');
 

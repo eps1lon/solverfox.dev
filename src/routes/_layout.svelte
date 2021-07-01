@@ -7,6 +7,7 @@
 	export let segment;
 
 	const { page } = stores();
+
 </script>
 
 <div id="skipnav">
@@ -66,4 +67,5 @@
 	.skipnav a:hover {
 		cursor: default;
 	}
+
 </style>
