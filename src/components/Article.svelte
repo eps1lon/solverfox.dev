@@ -6,6 +6,7 @@
 	export let readingTime;
 	export let slug;
 	export let title = 'Unknonw';
+
 </script>
 
 <svelte:head>
@@ -79,4 +80,5 @@
 	article :global(a) {
 		word-wrap: break-word;
 	}
+
 </style>
