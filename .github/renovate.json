@@ -4,8 +4,12 @@
 	"automerge": false,
 	"dependencyDashboard": true,
 	"labels": ["dependencies"],
+	"lockFileMaintenance": {
+		"enabled": true,
+		"schedule": "on monday before 6:00am"
+	},
 	"prConcurrentLimit": 30,
 	"prHourlyLimit": 0,
-	"schedule": "on monday before 6:00am",
+	"schedule": "before 6:00am on the first day of the month",
 	"timezone": "UTC"
 }
