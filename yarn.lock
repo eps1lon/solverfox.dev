@@ -5,14 +5,14 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"@actions/core@npm:^1.3.0":
+"@actions/core@npm:1.3.0":
   version: 1.3.0
   resolution: "@actions/core@npm:1.3.0"
   checksum: 8829af9595388018bb4eff5ebf74f868738f36a549305a7702bf0d872df0778a0bceae3b51e4a159dd698a775a5dd7efc676e811c28ce44602358c65750f150e
   languageName: node
   linkType: hard
 
-"@actions/github@npm:^4.0.0":
+"@actions/github@npm:4.0.0":
   version: 4.0.0
   resolution: "@actions/github@npm:4.0.0"
   dependencies:
@@ -49,7 +49,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.13.8, @babel/core@npm:^7.13.8":
+"@babel/core@npm:7.13.8":
   version: 7.13.8
   resolution: "@babel/core@npm:7.13.8"
   dependencies:
@@ -555,7 +555,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-dynamic-import@npm:^7.8.3":
+"@babel/plugin-syntax-dynamic-import@npm:7.8.3, @babel/plugin-syntax-dynamic-import@npm:^7.8.3":
   version: 7.8.3
   resolution: "@babel/plugin-syntax-dynamic-import@npm:7.8.3"
   dependencies:
@@ -962,7 +962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@npm:^7.13.15":
+"@babel/plugin-transform-runtime@npm:7.13.15":
   version: 7.13.15
   resolution: "@babel/plugin-transform-runtime@npm:7.13.15"
   dependencies:
@@ -1057,7 +1057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.13.15":
+"@babel/preset-env@npm:7.13.15":
   version: 7.13.15
   resolution: "@babel/preset-env@npm:7.13.15"
   dependencies:
@@ -1151,7 +1151,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.13.17, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:7.13.17, @babel/runtime@npm:^7.8.4":
   version: 7.13.17
   resolution: "@babel/runtime@npm:7.13.17"
   dependencies:
@@ -1232,6 +1232,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@octokit/graphql@npm:4.6.1":
+  version: 4.6.1
+  resolution: "@octokit/graphql@npm:4.6.1"
+  dependencies:
+    "@octokit/request": ^5.3.0
+    "@octokit/types": ^6.0.3
+    universal-user-agent: ^6.0.0
+  checksum: bcac6e3d9011a89a776fc5dd775a9ec1ced8d65909074f40f81413adadd2909153c02dea68b82b2117e9af1cd8b820422c55949a078b37073205c97771918ae1
+  languageName: node
+  linkType: hard
+
 "@octokit/graphql@npm:^4.3.1":
   version: 4.5.9
   resolution: "@octokit/graphql@npm:4.5.9"
@@ -1240,17 +1251,6 @@ __metadata:
     "@octokit/types": ^6.0.3
     universal-user-agent: ^6.0.0
   checksum: 935d38128bcca75e1c4cd96edf6ebe4182e126da6da2b9e3ee57e58a300096e1f23d36a42ab52b677bba38e288d3823702a4b73a3ddfa4d9eac98eb1ba85b32c
-  languageName: node
-  linkType: hard
-
-"@octokit/graphql@npm:^4.6.1":
-  version: 4.6.1
-  resolution: "@octokit/graphql@npm:4.6.1"
-  dependencies:
-    "@octokit/request": ^5.3.0
-    "@octokit/types": ^6.0.3
-    universal-user-agent: ^6.0.0
-  checksum: bcac6e3d9011a89a776fc5dd775a9ec1ced8d65909074f40f81413adadd2909153c02dea68b82b2117e9af1cd8b820422c55949a078b37073205c97771918ae1
   languageName: node
   linkType: hard
 
@@ -1762,7 +1762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compression@npm:^1.7.1":
+"compression@npm:1.7.4":
   version: 1.7.4
   resolution: "compression@npm:1.7.4"
   dependencies:
@@ -2029,7 +2029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-visible@npm:^5.2.0":
+"focus-visible@npm:5.2.0":
   version: 5.2.0
   resolution: "focus-visible@npm:5.2.0"
   checksum: 4e60302bd84accb92d11c22f8a5f6e38d2f5a0cc1bd45e708b9f00173cc700d1f0782c78f932023479074739fd588e0dd94c0e2575b2212843955e2d4398e752
@@ -2054,7 +2054,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"front-matter@npm:^3.0.2":
+"front-matter@npm:3.0.2":
   version: 3.0.2
   resolution: "front-matter@npm:3.0.2"
   dependencies:
@@ -2143,6 +2143,20 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"glob@npm:7.1.7":
+  version: 7.1.7
+  resolution: "glob@npm:7.1.7"
+  dependencies:
+    fs.realpath: ^1.0.0
+    inflight: ^1.0.4
+    inherits: 2
+    minimatch: ^3.0.4
+    once: ^1.3.0
+    path-is-absolute: ^1.0.0
+  checksum: 352f74f08247db5420161a2f68f2bd84b53228b5fcfc9dcc37cd54d3f19ec0232495d84aeff1286d0727059e9fdc1031400e00b971bdc59e30f8f82b199c9d02
+  languageName: node
+  linkType: hard
+
 "glob@npm:^7.1.3, glob@npm:^7.1.4":
   version: 7.1.6
   resolution: "glob@npm:7.1.6"
@@ -2154,20 +2168,6 @@ fsevents@~2.3.1:
     once: ^1.3.0
     path-is-absolute: ^1.0.0
   checksum: 789977b52432865bd63846da5c75a6efc2c56abdc0cb5ffcdb8e91eeb67a58fa5594c1195d18b2b4aff99675b0739ed6bd61024b26562e0cca18c8f993efdc82
-  languageName: node
-  linkType: hard
-
-"glob@npm:^7.1.7":
-  version: 7.1.7
-  resolution: "glob@npm:7.1.7"
-  dependencies:
-    fs.realpath: ^1.0.0
-    inflight: ^1.0.4
-    inherits: 2
-    minimatch: ^3.0.4
-    once: ^1.3.0
-    path-is-absolute: ^1.0.0
-  checksum: 352f74f08247db5420161a2f68f2bd84b53228b5fcfc9dcc37cd54d3f19ec0232495d84aeff1286d0727059e9fdc1031400e00b971bdc59e30f8f82b199c9d02
   languageName: node
   linkType: hard
 
@@ -2257,7 +2257,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^10.6.0":
+"highlight.js@npm:10.6.0":
   version: 10.6.0
   resolution: "highlight.js@npm:10.6.0"
   checksum: ffe7a217915e6d4ea4545c5006df3b9d7de981eb0a9ddee77b57ab4d450b25e5d1bf7d5c2ea3b0696bd43f3fef12237507b17c082725a5a057be064a3f2582b0
@@ -2586,7 +2586,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mdsvex@npm:^0.9.6":
+"mdsvex@npm:0.9.6":
   version: 0.9.6
   resolution: "mdsvex@npm:0.9.6"
   dependencies:
@@ -2785,7 +2785,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"npm-run-all@npm:^4.1.5":
+"npm-run-all@npm:4.1.5":
   version: 4.1.5
   resolution: "npm-run-all@npm:4.1.5"
   dependencies:
@@ -2987,7 +2987,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:^2.2.0":
+"prettier-plugin-svelte@npm:2.2.0":
   version: 2.2.0
   resolution: "prettier-plugin-svelte@npm:2.2.0"
   peerDependencies:
@@ -2997,7 +2997,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.0":
+"prettier@npm:2.3.0":
   version: 2.3.0
   resolution: "prettier@npm:2.3.0"
   bin:
@@ -3239,7 +3239,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup-plugin-babel@npm:^4.4.0":
+"rollup-plugin-babel@npm:4.4.0":
   version: 4.4.0
   resolution: "rollup-plugin-babel@npm:4.4.0"
   dependencies:
@@ -3252,7 +3252,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup-plugin-commonjs@npm:^10.0.0":
+"rollup-plugin-commonjs@npm:10.1.0":
   version: 10.1.0
   resolution: "rollup-plugin-commonjs@npm:10.1.0"
   dependencies:
@@ -3267,7 +3267,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup-plugin-node-resolve@npm:^5.2.0":
+"rollup-plugin-node-resolve@npm:5.2.0":
   version: 5.2.0
   resolution: "rollup-plugin-node-resolve@npm:5.2.0"
   dependencies:
@@ -3282,7 +3282,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup-plugin-replace@npm:^2.0.0":
+"rollup-plugin-replace@npm:2.2.0":
   version: 2.2.0
   resolution: "rollup-plugin-replace@npm:2.2.0"
   dependencies:
@@ -3292,7 +3292,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup-plugin-svelte@npm:^7.1.0":
+"rollup-plugin-svelte@npm:7.1.0":
   version: 7.1.0
   resolution: "rollup-plugin-svelte@npm:7.1.0"
   dependencies:
@@ -3305,7 +3305,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup-plugin-terser@npm:^7.0.2":
+"rollup-plugin-terser@npm:7.0.2":
   version: 7.0.2
   resolution: "rollup-plugin-terser@npm:7.0.2"
   dependencies:
@@ -3328,7 +3328,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.50.5":
+"rollup@npm:2.50.5":
   version: 2.50.5
   resolution: "rollup@npm:2.50.5"
   dependencies:
@@ -3356,7 +3356,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sapper@npm:^0.29.1":
+"sapper@npm:0.29.1":
   version: 0.29.1
   resolution: "sapper@npm:0.29.1"
   dependencies:
@@ -3470,7 +3470,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"sirv@npm:^1.0.12":
+"sirv@npm:1.0.12":
   version: 1.0.12
   resolution: "sirv@npm:1.0.12"
   dependencies:
@@ -3485,35 +3485,35 @@ fsevents@~2.3.1:
   version: 0.0.0-use.local
   resolution: "solverfox.dev@workspace:."
   dependencies:
-    "@actions/core": ^1.3.0
-    "@actions/github": ^4.0.0
-    "@babel/core": ^7.13.8
-    "@babel/plugin-syntax-dynamic-import": ^7.8.3
-    "@babel/plugin-transform-runtime": ^7.13.15
-    "@babel/preset-env": ^7.13.15
-    "@babel/runtime": ^7.13.17
-    "@octokit/graphql": ^4.6.1
-    compression: ^1.7.1
-    focus-visible: ^5.2.0
-    front-matter: ^3.0.2
-    glob: ^7.1.7
-    highlight.js: ^10.6.0
-    mdsvex: ^0.9.6
-    npm-run-all: ^4.1.5
+    "@actions/core": 1.3.0
+    "@actions/github": 4.0.0
+    "@babel/core": 7.13.8
+    "@babel/plugin-syntax-dynamic-import": 7.8.3
+    "@babel/plugin-transform-runtime": 7.13.15
+    "@babel/preset-env": 7.13.15
+    "@babel/runtime": 7.13.17
+    "@octokit/graphql": 4.6.1
+    compression: 1.7.4
+    focus-visible: 5.2.0
+    front-matter: 3.0.2
+    glob: 7.1.7
+    highlight.js: 10.6.0
+    mdsvex: 0.9.6
+    npm-run-all: 4.1.5
     polka: 1.0.0-next.14
-    prettier: ^2.3.0
-    prettier-plugin-svelte: ^2.2.0
-    rollup: ^2.50.5
-    rollup-plugin-babel: ^4.4.0
-    rollup-plugin-commonjs: ^10.0.0
-    rollup-plugin-node-resolve: ^5.2.0
-    rollup-plugin-replace: ^2.0.0
-    rollup-plugin-svelte: ^7.1.0
-    rollup-plugin-terser: ^7.0.2
-    sapper: ^0.29.1
-    sirv: ^1.0.12
-    svelte: ^3.38.0
-    yargs: ^16.2.0
+    prettier: 2.3.0
+    prettier-plugin-svelte: 2.2.0
+    rollup: 2.50.5
+    rollup-plugin-babel: 4.4.0
+    rollup-plugin-commonjs: 10.1.0
+    rollup-plugin-node-resolve: 5.2.0
+    rollup-plugin-replace: 2.2.0
+    rollup-plugin-svelte: 7.1.0
+    rollup-plugin-terser: 7.0.2
+    sapper: 0.29.1
+    sirv: 1.0.12
+    svelte: 3.38.0
+    yargs: 16.2.0
   languageName: unknown
   linkType: soft
 
@@ -3722,7 +3722,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"svelte@npm:^3.38.0":
+"svelte@npm:3.38.0":
   version: 3.38.0
   resolution: "svelte@npm:3.38.0"
   checksum: 5a08223f3d95b5ab9460c988a3abfc0fdd27a0d0ff19838c9313aec592d3577ffed5837e5e80a83d414fc9da5b318f9c510c30f901d554dee17001baf753a46f
@@ -4018,7 +4018,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"yargs@npm:^16.2.0":
+"yargs@npm:16.2.0":
   version: 16.2.0
   resolution: "yargs@npm:16.2.0"
   dependencies:
