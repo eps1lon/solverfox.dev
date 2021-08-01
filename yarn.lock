@@ -2002,12 +2002,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"front-matter@npm:3.0.2":
-  version: 3.0.2
-  resolution: "front-matter@npm:3.0.2"
+"front-matter@npm:3.2.1":
+  version: 3.2.1
+  resolution: "front-matter@npm:3.2.1"
   dependencies:
     js-yaml: ^3.13.1
-  checksum: dd4337b7e97e8582590642df168654758bd7bbd6ae3923135d6f73787c9fa4adba46850cf1b23867546763ba441e999d36c3c00535683a14888350d6e6ed3e50
+  checksum: a19afd54d94a09a1476cd24fd2fbe3facb374452400ff886ac27eca9e7b327a09943c9c553fc95346fb8de6f1816f89d4322572299a37cc270e6d507934a2ca6
   languageName: node
   linkType: hard
 
@@ -3526,7 +3526,7 @@ fsevents@~2.3.1:
     "@octokit/graphql": 4.6.1
     compression: 1.7.4
     focus-visible: 5.2.0
-    front-matter: 3.0.2
+    front-matter: 3.2.1
     glob: 7.1.7
     highlight.js: 10.6.0
     mdsvex: 0.9.6
