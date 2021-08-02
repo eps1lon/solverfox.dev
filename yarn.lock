@@ -3505,9 +3505,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sapper@npm:0.29.1":
-  version: 0.29.1
-  resolution: "sapper@npm:0.29.1"
+"sapper@npm:0.29.2":
+  version: 0.29.2
+  resolution: "sapper@npm:0.29.2"
   dependencies:
     html-minifier: ^4.0.0
     http-link-header: ^1.0.2
@@ -3519,7 +3519,7 @@ fsevents@~2.3.2:
     svelte: ^3.17.3
   bin:
     sapper: sapper
-  checksum: 214bf7463351e25cde4d4c9bb36b8ed67d390a16197813a8ee340ab649c780b3254218f0f84b3ff591ca65c6950484718f9f8fd6488d3de956c601bdaf002470
+  checksum: 4de5405bcac4203dd0efe12ee084514be68965a245c764fa3e0833ea1dac99e8b498ebf54bb64024c60bc90983306e3fd98da7a093f4e51db83a8b563721d7dd
   languageName: node
   linkType: hard
 
@@ -3682,7 +3682,7 @@ fsevents@~2.3.2:
     rollup-plugin-replace: 2.2.0
     rollup-plugin-svelte: 7.1.0
     rollup-plugin-terser: 7.0.2
-    sapper: 0.29.1
+    sapper: 0.29.2
     sirv: 1.0.12
     svelte: 3.38.0
     yargs: 17.0.1
