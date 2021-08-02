@@ -12,19 +12,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/github@npm:4.0.0":
-  version: 4.0.0
-  resolution: "@actions/github@npm:4.0.0"
+"@actions/github@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@actions/github@npm:5.0.0"
   dependencies:
-    "@actions/http-client": ^1.0.8
-    "@octokit/core": ^3.0.0
-    "@octokit/plugin-paginate-rest": ^2.2.3
-    "@octokit/plugin-rest-endpoint-methods": ^4.0.0
-  checksum: 49d606acd5b74a2f3e41c76d5a5d54341943e43b79cb94639c6c01d228263a4a287ac43d02d6c872336ab02962d0a7904b1a821bb5d5966498a78c954e34c3f2
+    "@actions/http-client": ^1.0.11
+    "@octokit/core": ^3.4.0
+    "@octokit/plugin-paginate-rest": ^2.13.3
+    "@octokit/plugin-rest-endpoint-methods": ^5.1.1
+  checksum: 29e7de0435fcca8647cfb3e0b962e4d275357b2bc0a36a517c713682870428f6e676a2c68b07806be1ef692ef6f32413e66b9e943a1d0caa8dd152ad44791dd8
   languageName: node
   linkType: hard
 
-"@actions/http-client@npm:^1.0.8":
+"@actions/http-client@npm:^1.0.11":
   version: 1.0.11
   resolution: "@actions/http-client@npm:1.0.11"
   dependencies:
@@ -1363,7 +1363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/core@npm:^3.0.0":
+"@octokit/core@npm:^3.4.0":
   version: 3.5.1
   resolution: "@octokit/core@npm:3.5.1"
   dependencies:
@@ -1407,26 +1407,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/plugin-paginate-rest@npm:^2.2.3":
-  version: 2.13.6
-  resolution: "@octokit/plugin-paginate-rest@npm:2.13.6"
-  dependencies:
-    "@octokit/types": ^6.17.3
-  peerDependencies:
-    "@octokit/core": ">=2"
-  checksum: 6a66fe7d454dd11caf16ba48e1b1565ea1529e855138b3064accf7f5a8a0386a4769a08462fb3dc5fb5095483e42997ae74468ec71033625369f72b499f91424
+"@octokit/openapi-types@npm:^9.2.0":
+  version: 9.2.0
+  resolution: "@octokit/openapi-types@npm:9.2.0"
+  checksum: a649bc6734fe910b5d00cc1fa599adce5649a456f861cb44ff89640ea6fc9ce9dce17efb952d84a91ad840c59ae785d1f250b47e1b5272f4efc294160ddb4ab5
   languageName: node
   linkType: hard
 
-"@octokit/plugin-rest-endpoint-methods@npm:^4.0.0":
-  version: 4.15.1
-  resolution: "@octokit/plugin-rest-endpoint-methods@npm:4.15.1"
+"@octokit/plugin-paginate-rest@npm:^2.13.3":
+  version: 2.14.0
+  resolution: "@octokit/plugin-paginate-rest@npm:2.14.0"
   dependencies:
-    "@octokit/types": ^6.13.0
+    "@octokit/types": ^6.18.0
+  peerDependencies:
+    "@octokit/core": ">=2"
+  checksum: a94cbc932fd40e14f76baac4100a00d346fd46b70a85c73b9f4495b97356d27d9b6c571b29425ff8d259e6e579f3b7583bae64f350cf5358c6c3b870f2d79219
+  languageName: node
+  linkType: hard
+
+"@octokit/plugin-rest-endpoint-methods@npm:^5.1.1":
+  version: 5.5.2
+  resolution: "@octokit/plugin-rest-endpoint-methods@npm:5.5.2"
+  dependencies:
+    "@octokit/types": ^6.22.0
     deprecation: ^2.3.1
   peerDependencies:
     "@octokit/core": ">=3"
-  checksum: 41f1202d0cf8754933a5e61e063bd2ef5679a8a97d95e291eb69ab6221d6c68483cbcaf728a1782be420b8aed94d5fdb7b7e378c2e7334ee89754176e55de20f
+  checksum: 5ff95ec65f70de3bc3a5dd24b101afb514226124bd2c09318863f1b3838b830f98ff403c21f457635df150b7d8e1967f17549084dca391758350cf1c7346c4ed
   languageName: node
   linkType: hard
 
@@ -1455,12 +1462,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^6.0.3, @octokit/types@npm:^6.13.0, @octokit/types@npm:^6.16.1, @octokit/types@npm:^6.17.3":
+"@octokit/types@npm:^6.0.3, @octokit/types@npm:^6.16.1":
   version: 6.17.4
   resolution: "@octokit/types@npm:6.17.4"
   dependencies:
     "@octokit/openapi-types": ^8.1.4
   checksum: 38e68f2f3318f7f3365e008b1eb2704365e3ae7d76cf8ae64496f5587ebde7fd69eae6374af49fd98a52361f2d763e21f05d11977c6511ae2e746601cd05200f
+  languageName: node
+  linkType: hard
+
+"@octokit/types@npm:^6.18.0, @octokit/types@npm:^6.22.0":
+  version: 6.22.0
+  resolution: "@octokit/types@npm:6.22.0"
+  dependencies:
+    "@octokit/openapi-types": ^9.2.0
+  checksum: b653587f44fe06ab022a4f336a1b0aeeafc9e097c82334c8aadd72ae3181a182a116b3f00f4fecc0f91b1f9e19e9f9a6b6b95b5d5467f0b0c38c1451876661d8
   languageName: node
   linkType: hard
 
@@ -3647,7 +3663,7 @@ fsevents@~2.3.2:
   resolution: "solverfox.dev@workspace:."
   dependencies:
     "@actions/core": 1.4.0
-    "@actions/github": 4.0.0
+    "@actions/github": 5.0.0
     "@babel/core": 7.14.8
     "@babel/plugin-syntax-dynamic-import": 7.8.3
     "@babel/plugin-transform-runtime": 7.14.5
