@@ -3712,7 +3712,7 @@ fsevents@~2.3.2:
     rollup-plugin-terser: 7.0.2
     sapper: 0.29.2
     sirv: 1.0.12
-    svelte: 3.41.0
+    svelte: 3.42.4
     yargs: 17.0.1
   languageName: unknown
   linkType: soft
@@ -3936,10 +3936,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"svelte@npm:3.41.0":
-  version: 3.41.0
-  resolution: "svelte@npm:3.41.0"
-  checksum: 7603d8b87aa45b94108a3bcd40f088de7010a3ed99eabc89e983a3f1a3432db0f7157b7c454bd430e2f5e617a5d2888e51b31e6c751129826b8b4925605871d7
+"svelte@npm:3.42.4":
+  version: 3.42.4
+  resolution: "svelte@npm:3.42.4"
+  checksum: c5bd6a6c4ade95c22c907019250b2dfe600685504ce973fd2468e5a2bfe4b75790d4c6d6452c0c35947f868f7d8a45e28631c49d5945c236d3cac105a403b534
   languageName: node
   linkType: hard
 
