@@ -3055,13 +3055,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:2.3.1":
-  version: 2.3.1
-  resolution: "prettier-plugin-svelte@npm:2.3.1"
+"prettier-plugin-svelte@npm:2.4.0":
+  version: 2.4.0
+  resolution: "prettier-plugin-svelte@npm:2.4.0"
   peerDependencies:
     prettier: ^1.16.4 || ^2.0.0
     svelte: ^3.2.0
-  checksum: 5d266a488995ecaeb74c38e1a750471d3e180a2b96e979bdf8eaa29eb0e2c468550f2aacf4bc5fc253a241ac7aa1ca3a4a706fd6f1d9fdd2ff7d412b657e1128
+  checksum: fb1d76c87824e4cc55dfdfddbe99679729f4aecde94857fe7c0c91a85e01e3c604e4c24013f8aff0e126e2951645ada6d2c1155b9142bbe6579cd5bc0cc8d72b
   languageName: node
   linkType: hard
 
@@ -3581,7 +3581,7 @@ fsevents@~2.3.2:
     npm-run-all: 4.1.5
     polka: 1.0.0-next.15
     prettier: 2.3.2
-    prettier-plugin-svelte: 2.3.1
+    prettier-plugin-svelte: 2.4.0
     rollup: 2.55.1
     rollup-plugin-babel: 4.4.0
     rollup-plugin-commonjs: 10.1.0
