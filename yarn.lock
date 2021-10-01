@@ -3628,7 +3628,7 @@ fsevents@~2.3.2:
     sapper: 0.29.2
     sirv: 1.0.17
     svelte: 3.42.4
-    yargs: 17.1.1
+    yargs: 17.2.1
   languageName: unknown
   linkType: soft
 
@@ -4125,9 +4125,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"yargs@npm:17.1.1":
-  version: 17.1.1
-  resolution: "yargs@npm:17.1.1"
+"yargs@npm:17.2.1":
+  version: 17.2.1
+  resolution: "yargs@npm:17.2.1"
   dependencies:
     cliui: ^7.0.2
     escalade: ^3.1.1
@@ -4136,6 +4136,6 @@ fsevents@~2.3.2:
     string-width: ^4.2.0
     y18n: ^5.0.5
     yargs-parser: ^20.2.2
-  checksum: c2a16b61eb0db8882becd0aa382a5c59b87afcd17b35dd7077b3c9d83f77a3ad3de1526e4f1cf940f9481d7ce537e883af7c16879c33258724a09bc43a04e8ea
+  checksum: b0fafd66d1b095c36d6cc9798b160ebd348f5356ca6f3c1d23e266229341905f1686e3255b3a108534b48d74e371eb65a91d89a93d6c59e2780bff42d40b370c
   languageName: node
   linkType: hard
