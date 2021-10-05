@@ -3,11 +3,15 @@ const { promises: fs } = require('fs');
 const { graphql: unauthorizedGraphQL } = require('@octokit/graphql');
 const yargs = require('yargs');
 
-async function loadRepositoriesContributedToCursor(outputFilename) {
-	const json = await fs.readFile(outputFilename, { encoding: 'utf-8' });
-	const { after } = JSON.parse(json);
+async function loadLastRun(outputFilename) {
+	try {
+		const json = await fs.readFile(outputFilename, { encoding: 'utf-8' });
+		const { after, repositories } = JSON.parse(json);
 
-	return after ?? null;
+		return { after, repositories };
+	} catch {
+		return { after: null, repositories: [] };
+	}
 }
 
 async function loadRepositoriesContributedTo({ graphql, after }) {
@@ -81,16 +85,11 @@ async function main(argv) {
 		},
 	});
 
-	const repositoryStars = new Map();
-	let after = null;
-	try {
-		after = await loadRepositoriesContributedToCursor(outputFilename);
-		console.log('Resuming contributions query at "%s"', after);
-	} catch (error) {
-		console.warn(
-			'Could not resume previous contributions query. Starting from the beginning.',
-		);
-	}
+	const lastRun = await loadLastRun(outputFilename);
+	const repositoryStars = new Map(
+		lastRun.repositories.map(({ name, stars }) => [name, stars]),
+	);
+	let after = lastRun.after;
 	let hasNextPage = true;
 	let nodesProcessed = 0;
 	while (hasNextPage) {
@@ -109,7 +108,11 @@ async function main(argv) {
 		console.log('%d/%d', nodesProcessed, totalCount);
 
 		hasNextPage = pageInfo.hasNextPage;
-		after = pageInfo.endCursor;
+		// If we stop we might just have 30/100 items loaded
+		// So we want to resume that page later
+		if (hasNextPage) {
+			after = pageInfo.endCursor;
+		}
 	}
 
 	const repositories = Array.from(
