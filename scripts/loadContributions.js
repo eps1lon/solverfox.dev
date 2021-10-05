@@ -3,27 +3,41 @@ const { promises: fs } = require('fs');
 const { graphql: unauthorizedGraphQL } = require('@octokit/graphql');
 const yargs = require('yargs');
 
-async function loadRepositoriesContributedTo({ graphql, user, after }) {
-	const repositoriesContributedTo = await graphql(
+async function loadLastRun(outputFilename) {
+	try {
+		const json = await fs.readFile(outputFilename, { encoding: 'utf-8' });
+		const { after, repositories } = JSON.parse(json);
+
+		return { after, repositories };
+	} catch {
+		return { after: null, repositories: [] };
+	}
+}
+
+async function loadRepositoriesContributedTo({ graphql, after }) {
+	const userPullRequests = await graphql(
 		`
-			query repositoriesContributedTo($user: String!, $after: String) {
-				user(login: $user) {
-					repositoriesContributedTo(
-						includeUserRepositories: false
-						contributionTypes: [PULL_REQUEST]
+			query repositoriesContributedTo($after: String) {
+				user(login: "eps1lon") {
+					pullRequests(
+						states: MERGED
 						first: 100
+						orderBy: { field: CREATED_AT, direction: ASC }
 						after: $after
 					) {
+						totalCount
 						pageInfo {
 							hasNextPage
 							endCursor
 						}
 						nodes {
-							isPrivate
-							nameWithOwner
-							isFork
-							stargazers {
-								totalCount
+							repository {
+								isPrivate
+								nameWithOwner
+								isFork
+								stargazers {
+									totalCount
+								}
 							}
 						}
 					}
@@ -31,32 +45,27 @@ async function loadRepositoriesContributedTo({ graphql, user, after }) {
 			}
 		`,
 		{
-			user,
 			after,
 		},
 	);
 
-	const { nodes: repositories, pageInfo } =
-		repositoriesContributedTo.user.repositoriesContributedTo;
-
-	const loadNextPage = pageInfo.hasNextPage
-		? () =>
-				loadRepositoriesContributedTo({
-					graphql,
-					user,
-					after: pageInfo.endCursor,
-				})
-		: null;
+	const {
+		nodes: pullRequests,
+		pageInfo,
+		totalCount,
+	} = userPullRequests.user.pullRequests;
 
 	return {
-		repositories: repositories
-			.filter((repository) => {
+		nodesCount: pullRequests.length,
+		totalCount,
+		repositories: pullRequests
+			.filter(({ repository }) => {
 				return repository.isFork === false && repository.isPrivate === false;
 			})
-			.map(({ nameWithOwner, stargazers }) => {
+			.map(({ repository: { nameWithOwner, stargazers } }) => {
 				return { name: nameWithOwner, stars: stargazers.totalCount };
 			}),
-		loadNextPage,
+		pageInfo,
 	};
 }
 
@@ -76,17 +85,42 @@ async function main(argv) {
 		},
 	});
 
-	const repositories = [];
-	let loadNextRepositoriesContributedToPage = () =>
-		loadRepositoriesContributedTo({ graphql, user: 'eps1lon', after: null });
-	while (loadNextRepositoriesContributedToPage !== null) {
-		const { loadNextPage, repositories: repositoryPage } =
-			await loadNextRepositoriesContributedToPage();
+	const lastRun = await loadLastRun(outputFilename);
+	const repositoryStars = new Map(
+		lastRun.repositories.map(({ name, stars }) => [name, stars]),
+	);
+	let after = lastRun.after;
+	let hasNextPage = true;
+	let nodesProcessed = 0;
+	while (hasNextPage) {
+		const {
+			nodesCount,
+			totalCount,
+			pageInfo,
+			repositories: repositoryPage,
+		} = await loadRepositoriesContributedTo({ graphql, after });
 
-		repositories.push(...repositoryPage);
-		loadNextRepositoriesContributedToPage = loadNextPage;
+		repositoryPage.forEach(({ name, stars }) => {
+			repositoryStars.set(name, stars);
+		});
+
+		nodesProcessed += nodesCount;
+		console.log('%d/%d', nodesProcessed, totalCount);
+
+		hasNextPage = pageInfo.hasNextPage;
+		// If we stop we might just have 30/100 items loaded
+		// So we want to resume that page later
+		if (hasNextPage) {
+			after = pageInfo.endCursor;
+		}
 	}
 
+	const repositories = Array.from(
+		repositoryStars.entries(),
+		([name, stars]) => {
+			return { name, stars };
+		},
+	).sort((a, b) => b.stars - a.stars);
 	const totalStars = repositories.reduce((stars, repository) => {
 		return stars + repository.stars;
 	}, 0);
@@ -94,6 +128,7 @@ async function main(argv) {
 	await fs.writeFile(
 		outputFilename,
 		JSON.stringify({
+			after,
 			repositories,
 			totalStars,
 			updatedAt: new Date().toISOString(),
