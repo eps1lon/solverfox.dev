@@ -68,5 +68,4 @@
 		height: 1.2em;
 		vertical-align: middle;
 	}
-
 </style>

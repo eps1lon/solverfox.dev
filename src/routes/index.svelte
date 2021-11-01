@@ -9,14 +9,12 @@
 			this.error(res.status, data.message);
 		}
 	}
-
 </script>
 
 <script>
 	import Posts from '../components/Posts.svelte';
 
 	export let posts;
-
 </script>
 
 <svelte:head>
@@ -66,5 +64,4 @@
 	#posts-heading {
 		text-align: center;
 	}
-
 </style>
