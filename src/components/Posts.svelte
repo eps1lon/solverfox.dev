@@ -7,7 +7,6 @@
 	 * @type {Array<{ slug: string, description: string, title: string}>}
 	 */
 	export let posts = [];
-
 </script>
 
 <ul aria-labelledby={labelledby}>
@@ -39,5 +38,4 @@
 		margin: unset;
 		margin-left: 1em;
 	}
-
 </style>

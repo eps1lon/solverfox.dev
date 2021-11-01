@@ -2,7 +2,6 @@
 	export let repo = 'example/repo';
 
 	$: repoHref = `https://github.com/${repo}`;
-
 </script>
 
 <a href={repoHref} class="github-corner" aria-label="View source on GitHub">
@@ -64,5 +63,4 @@
 			animation: octocat-wave 560ms ease-in-out;
 		}
 	}
-
 </style>

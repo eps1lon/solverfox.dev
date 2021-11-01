@@ -45,7 +45,6 @@
 			.replace(linky, '') // drop self referential <a> tags
 			.replace('<script>', '<$cript>'); // sneaky sneaky!
 	}
-
 </script>
 
 <div {id}>
@@ -228,5 +227,4 @@
 		border: 0;
 		text-align: left;
 	}
-
 </style>
