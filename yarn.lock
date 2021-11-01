@@ -2242,10 +2242,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:11.2.0":
-  version: 11.2.0
-  resolution: "highlight.js@npm:11.2.0"
-  checksum: e18f50d3a86bf716dcfba89ab71b1927ff4244b760da1b2721690367c1fdf351ca29b8bfdfb2233e0fe9fe13869a5d0980481358835bcbf09380b38637be294e
+"highlight.js@npm:11.3.1":
+  version: 11.3.1
+  resolution: "highlight.js@npm:11.3.1"
+  checksum: 99bf4acd4f1ae530dd4b4eb68b5955d0a3fcae30eeb2aca99dec11339650d08c963e1826c259a61f2083103609b918bb1d0b17a537396932dd030aee87ea458c
   languageName: node
   linkType: hard
 
@@ -3652,7 +3652,7 @@ fsevents@~2.3.2:
     focus-visible: 5.2.0
     front-matter: 4.0.2
     glob: 7.2.0
-    highlight.js: 11.2.0
+    highlight.js: 11.3.1
     mdsvex: 0.9.8
     npm-run-all: 4.1.5
     polka: 1.0.0-next.20
