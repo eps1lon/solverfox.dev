@@ -12,7 +12,8 @@
 		"start": "node __sapper__/build",
 		"cy:run": "cypress run",
 		"cy:open": "cypress open",
-		"test": "run-p --race dev cy:run"
+		"test": "run-p --race dev cy:run",
+		"test:types": "tsc --project tsconfig.json"
 	},
 	"dependencies": {
 		"@actions/core": "1.6.0",
@@ -45,6 +46,7 @@
 		"rollup-plugin-svelte": "7.1.0",
 		"rollup-plugin-terser": "7.0.2",
 		"sapper": "0.29.3",
-		"svelte": "3.44.1"
+		"svelte": "3.44.1",
+		"typescript": "^4.5.2"
 	}
 }
