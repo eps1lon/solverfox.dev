@@ -5,8 +5,12 @@ const { promisify } = require('util');
 
 const exec = promisify(childProcess.exec);
 
-async function git(command, ...args) {
-	const { stdout, stderr } = await exec(`git ${command}`, ...args);
+/**
+ * @param {string} command
+ * @returns
+ */
+async function git(command) {
+	const { stdout, stderr } = await exec(`git ${command}`);
 	if (stdout) core.debug(`stdout: ${stdout}`);
 	if (stderr) core.debug(`stderr: ${stderr}`);
 	return { stdout, stderr };
@@ -34,9 +38,9 @@ async function main() {
 		await git('commit -m "Monthly updates"');
 
 		await git(`push origin -f ${branch}`);
-		const octokit = new github.getOctokit(githubToken);
+		const octokit = github.getOctokit(githubToken);
 		try {
-			await octokit.pulls.create({
+			await octokit.rest.pulls.create({
 				owner: github.context.repo.owner,
 				repo: github.context.repo.repo,
 				base: 'main',
@@ -46,7 +50,11 @@ async function main() {
 				maintainer_can_modify: true,
 			});
 		} catch (error) {
-			core.warning(error);
+			core.warning(
+				/**
+				 * @type {any}
+				 */ (error),
+			);
 		}
 	}
 }

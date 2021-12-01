@@ -31,5 +31,6 @@ jobs:
           yarn dedupe
           git diff --exit-code
 
-      - name: 'Check code format'
-        run: yarn format:check
+      - run: yarn format:check
+
+      - run: yarn test:types
