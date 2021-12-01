@@ -2,6 +2,7 @@
 	"name": "solverfox.dev",
 	"description": "Source for https://solverfox.dev",
 	"version": "0.0.1",
+	"packageManager": "yarn@3.1.1",
 	"scripts": {
 		"dev": "sapper dev --ext '.svx .svelte'",
 		"build": "sapper build --legacy",
