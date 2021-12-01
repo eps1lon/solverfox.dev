@@ -3930,7 +3930,7 @@ fsevents@~2.3.2:
     sapper: 0.29.3
     sirv: 1.0.18
     svelte: 3.44.1
-    yargs: 17.2.1
+    yargs: 17.3.0
   languageName: unknown
   linkType: soft
 
@@ -4050,7 +4050,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"string-width@npm:^4.1.0, string-width@npm:^4.2.0":
+"string-width@npm:^4.1.0, string-width@npm:^4.2.0, string-width@npm:^4.2.3":
   version: 4.2.3
   resolution: "string-width@npm:4.2.3"
   dependencies:
@@ -4444,24 +4444,24 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^20.2.2":
-  version: 20.2.9
-  resolution: "yargs-parser@npm:20.2.9"
-  checksum: 3c58da6f6142f93c5207e309764bd90f723b9d7ed43f2e8aad0da1cefab83ee8ebf311dee2e81102646b74450c899e35b35053800b91fac23e6f433056f4c4cf
+"yargs-parser@npm:^21.0.0":
+  version: 21.0.0
+  resolution: "yargs-parser@npm:21.0.0"
+  checksum: d5480559eeacbcba477d0344d0e207df402b39e8adc6c2c32b15ee455320655b9c6263435bc707d7f9642d0415c2277ca756ce17e21c4564caa28e954d7d0678
   languageName: node
   linkType: hard
 
-"yargs@npm:17.2.1":
-  version: 17.2.1
-  resolution: "yargs@npm:17.2.1"
+"yargs@npm:17.3.0":
+  version: 17.3.0
+  resolution: "yargs@npm:17.3.0"
   dependencies:
     cliui: ^7.0.2
     escalade: ^3.1.1
     get-caller-file: ^2.0.5
     require-directory: ^2.1.1
-    string-width: ^4.2.0
+    string-width: ^4.2.3
     y18n: ^5.0.5
-    yargs-parser: ^20.2.2
-  checksum: b0fafd66d1b095c36d6cc9798b160ebd348f5356ca6f3c1d23e266229341905f1686e3255b3a108534b48d74e371eb65a91d89a93d6c59e2780bff42d40b370c
+    yargs-parser: ^21.0.0
+  checksum: 065360abd705d4a3af56db585ba9d3b0c47876ccbc1dbf471cfe6bbcf3ef0008968856447a9eb45dfef95dc7e3a04b315f7f79d25df567032015cb213ef235d4
   languageName: node
   linkType: hard
