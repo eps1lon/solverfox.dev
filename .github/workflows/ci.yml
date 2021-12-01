@@ -26,5 +26,10 @@ jobs:
       - name: 'Install packages'
         run: yarn install
 
+      - name: '`yarn deduplicate` committed?'
+        run: |
+          yarn deduplicate
+          git diff --exit-code
+
       - name: 'Check code format'
         run: yarn format:check
