@@ -2724,15 +2724,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mime@npm:^2.3.1":
-  version: 2.6.0
-  resolution: "mime@npm:2.6.0"
-  bin:
-    mime: cli.js
-  checksum: 1497ba7b9f6960694268a557eae24b743fd2923da46ec392b042469f4b901721ba0adcf8b0d3c2677839d0e243b209d76e5edcbd09cfdeffa2dfb6bb4df4b862
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:^3.0.4":
   version: 3.0.4
   resolution: "minimatch@npm:3.0.4"
@@ -2825,6 +2816,13 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
+  languageName: node
+  linkType: hard
+
+"mrmime@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "mrmime@npm:1.0.0"
+  checksum: 2c72a40942af7c53bc97d1e9e9c5cb0e6541d18f736811c3a1b46fa2a2b2362480d687daa8ae8372523acaacd82426a4f7ce34b0bf1825ea83b3983e8cb91afd
   languageName: node
   linkType: hard
 
@@ -3552,14 +3550,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sirv@npm:1.0.18":
-  version: 1.0.18
-  resolution: "sirv@npm:1.0.18"
+"sirv@npm:1.0.19":
+  version: 1.0.19
+  resolution: "sirv@npm:1.0.19"
   dependencies:
     "@polka/url": ^1.0.0-next.20
-    mime: ^2.3.1
+    mrmime: ^1.0.0
     totalist: ^1.0.0
-  checksum: 0839036255d121a6396f9496fb7d285628e4986f3c1febca7b7c6d675fc15305050e3278ab249213c5af332be6178f992aaf42573d9d583ef3ae203b6d1fff2a
+  checksum: c943cfc61baf85f05f125451796212ec35d4377af4da90ae8ec1fa23e6d7b0b4d9c74a8fbf65af83c94e669e88a09dc6451ba99154235eead4393c10dda5b07c
   languageName: node
   linkType: hard
 
@@ -3621,7 +3619,7 @@ __metadata:
     rollup-plugin-svelte: 7.1.0
     rollup-plugin-terser: 7.0.2
     sapper: 0.29.3
-    sirv: 1.0.18
+    sirv: 1.0.19
     svelte: 3.45.0
     typescript: ^4.5.2
     yargs: 17.3.1
