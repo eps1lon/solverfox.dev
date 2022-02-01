@@ -2680,9 +2680,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdsvex@npm:0.9.8":
-  version: 0.9.8
-  resolution: "mdsvex@npm:0.9.8"
+"mdsvex@npm:0.10.5":
+  version: 0.10.5
+  resolution: "mdsvex@npm:0.10.5"
   dependencies:
     "@types/unist": ^2.0.3
     prism-svelte: ^0.4.7
@@ -2690,7 +2690,7 @@ __metadata:
     vfile-message: ^2.0.4
   peerDependencies:
     svelte: 3.x
-  checksum: d19f18fed167542d479c85dfc575d10f50d02816d538f438bd30311b8ae5cbaac5927cfb19f3195b526bb6d60ed8081dbf9d88aba57dd560de1def4ddb5aa16c
+  checksum: 99abe194507b3adce2d1b4aa7c34e0baf436524f6978d75eebbe19415ad9697a14b6910f715b911e9a883c55c71178377ca7c269dd99df45d299db63f508eb64
   languageName: node
   linkType: hard
 
@@ -3612,7 +3612,7 @@ __metadata:
     front-matter: 4.0.2
     glob: 7.2.0
     highlight.js: 11.4.0
-    mdsvex: 0.9.8
+    mdsvex: 0.10.5
     npm-run-all: 4.1.5
     polka: 1.0.0-next.22
     prettier: 2.5.1
