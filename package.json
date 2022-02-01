@@ -26,10 +26,10 @@
 		"yargs": "17.3.1"
 	},
 	"devDependencies": {
-		"@babel/core": "7.16.7",
+		"@babel/core": "7.16.12",
 		"@babel/plugin-syntax-dynamic-import": "7.8.3",
-		"@babel/plugin-transform-runtime": "7.16.7",
-		"@babel/preset-env": "7.16.7",
+		"@babel/plugin-transform-runtime": "7.16.10",
+		"@babel/preset-env": "7.16.11",
 		"@babel/runtime": "7.16.7",
 		"focus-visible": "5.2.0",
 		"front-matter": "4.0.2",
