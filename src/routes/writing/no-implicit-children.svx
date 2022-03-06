@@ -1,0 +1,207 @@
+---
+title: Removal of implicit children
+category: testing
+publishedAt: 2022-03-06
+description: Explainer why we're getting rid of implicit children in `@types/react`
+readingTime: 10
+slug: no-implicit-children
+layout: article
+---
+
+# { metadata.title }
+
+{ metadata.description }
+
+With React 18 we have the opportunity in `@types/react` to fix long-standing issues we had to deal with for a long time.
+We originally wanted to fix these in React 17 but held off because [React 17 was a big step in enabling gradual migration](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/46691#issuecomment-672840456)
+One of these changes is removal of implicit `children` in `React.FunctionComponent` types.
+I'll try to explain why we make this change and how you can ease migration.
+
+## Just show me what breaks!
+
+```tsx
+import * as React from 'react';
+
+const Input: React.FC = ({ children }) => children
+//                         ^^^^^^^^ will error with "Property 'children'
+//                                  does not exist on type '{}'.
+<Input>children</Input>
+//^^^^ will error with "Type '{ children: string; }' has no properties in common
+//                      with type 'IntrinsicAttributes & {}'"
+```
+
+-- [TypeScript Playground](Dg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQduEAdqvAJLNgCu8AvHAAUAbzi4AFsAA2AE0rM4AXwBccYYoCUcPgD41dAJCUY3KAoA8wLrzgB6HfUX1GLNnEoFtmKjAB0uSmQYLGwCQQ16c04eGB0JaTksZnNbaN4dIA)
+
+## What are implicit `children`?
+
+We differentiate implicit and explicit props for declaration of components.
+Explicit props are the ones that are written out in the props interface.
+Implicit props are the ones that `@types/react` automatically adds.
+
+```tsx
+import * as React from 'react';
+
+interface InputProps {
+	type: string;
+}
+
+const Input: React.FC<InputProps> = ({ type }) => {
+	return <input type={type} />;
+};
+
+const ref = React.createRef();
+<Input
+	// implicit props
+	key="first"
+	// explicit props
+	type="search"
+/>;
+```
+
+-- [TypeScript Playground](https://www.typescriptlang.org/play?#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQdwAdjFlAXlnAJJNgCuMAArEw6AN50AkDACeYLAC44qGFGYBzegF8GuCE1U8+g5djwwAdADEAwgB5eA4aNQA+OAF44ACnFw5BThtAEovD0kpShh+KCY4e2ZnAPksT3FArG04AHo3HXo6fUN4SgIvTCorXEpkVmwCHxD6RxMYaRycuFAwABtgXGB4MFdpAGssWU8AIgJgKFVpjq6sAA8+gaG4EYgxaUyZ1BwoXAALJbyaIA)
+
+`ref` is also an implicit prop if the component does implement it (e.g. class components `React.Component` or ref-forwarding components `React.forwardRef`).
+
+In `@types/react@^17.0.0` and below `children` was also an implicit prop.
+
+## Problems
+
+While implicit children are definitely nice to have to quickly type out a component, they'll also hide a variety of bugs.
+
+### Excess props are generally rejected
+
+Excess props are props that are passed to a component, but not actually handled in a component.
+This catches typos in prop names or wrong assumption about the effect a prop might have:
+
+```tsx
+import * as React from 'react';
+
+interface InputProps {
+	type?: string;
+}
+
+const Input = ({ type }: InputProps) => {
+	return <input type={type} />;
+};
+
+<Input type="search" inputMode="numeric" />;
+//                   ^^^^^^^^^ excess prop that's rejected
+<Input typ="search" />;
+//     ^^^ "Type '{ typ: string; }' is not assignable to type
+//          'IntrinsicAttributes & InputProps'.
+//             Property 'typ' does not exist on type
+//             'IntrinsicAttributes & InputProps'. Did you mean 'type'?(2322)"
+```
+
+-- [TypeScript Playground](https://www.typescriptlang.org/play?#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQdwAdjFlAXlnAJJNgCuMAArEw6AN504cGAE8wWAPwAuOKhhRmAczoBfBrghN1PPoLgBeOAApxM+V12reA4aNQBKSwD44kgJCUMPxQTHAAPMyu9goW4nIKunAA9N70uvR04S7mCVgWAESoOFC4ABYFcFGCALIQACb5BUz8IGzAuJWp9MnJ0v0Dg4MAeqNjY3BYAB64WKjoYKIyZcgwZOiUAFZY+Fj1WTnwCYXFyKUVKd50vSOjcAUAKg7kdgmq6ppMWjRwumRV6CYEHgaFQwC0TGQACMADZcGAQGJcMi8DTMMG4ACCMDRUMEczgADJTK4RBAxGQAHTXPpDQZkhSwWTkBL-eoQAlA+DTYAmIxI8ioz4Y7G4-HoYmHBmoKlwAAiwHqcFkEH4cDayDCZDyZEU1gATABmfX6jwFIA)
+
+`children` is just another excess prop in this case.
+This is [surprising behavior which should be avoided in general](https://en.wikipedia.org/wiki/Principle_of_least_astonishment#:~:text=The%20principle%20of%20least%20astonishment,not%20astonish%20or%20surprise%20users.).
+What's even worse is that this excess prop is caught when you're not using `React.FC`.
+
+In summary, removing implicit children:
+
+- results in consistent behavior between `React.FC` and simple function declarations.
+- catches excess `children` props
+
+### Better errors for narrower `children`
+
+If your `children` are a subset of the types allowed by `ReactNode` you no longer have to guess what types are accept by `MyChildrenType & ReactNode`:
+
+```tsx
+import * as React from 'react';
+
+interface InputProps {
+	children: React.ReactElement;
+}
+
+const Input: React.FC<InputProps> = ({ children }) => {
+	return React.cloneElement(children);
+};
+
+<Input>foo</Input>;
+//     ^^^ "'Input' components don't accept text as child elements. Text in JSX
+//           has the type 'string', but the expected type of 'children' is
+//           'ReactElement<any, string | JSXElementConstructor<any>> & ReactNode'"
+// No more thinking about the intersection results in. It'll just error with
+// "'Input' components don't accept text as child elements. Text in JSX has the type
+//  'string', but the expected type of 'children' is
+//  'ReactElement<any, string | JSXElementConstructor<any>>'"
+```
+
+-- [TypeScript Playground](https://www.typescriptlang.org/play?ssl=14&ssc=192&pln=1&pc=1#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQdwAdjFlAXlnAJJNgCuMAArEw6AN504cXAAtgAGwAmlJgC5MVGADpseGAFEFWEFhZ0Avg1wQmqeLwEwNe-NoBiAYQA8jwSIgxAD44AF44AApxOUUVMwsASjCQyWlKGH4oJk19bVwFWywjEzMYCJjlVQTLBl8+QSCCCAhvAHo-GCC6VtbpPoA9QbgAIjIOshkSSCZS9CVbMng8XCwweFYADyX0CqU4LGNTFlRtOAAVLC24ZjgAKQBlAA04WTQ4GFkuGABPMC4yexQZgAczIABo4AAjQTvT77DZ-fBYPY-P5wCAEci7VQTYDoMiuQyHUreZBMb4QwEguAAHzuT2KRxgnlsgP4+GgpPJQRCADIcvgAHIQJRYMjDbq9YVwEDQL7yJgAa2pyEhEBhHy4zFYUFQWHwwFscEoqH4Chg6GYp24MDICgUcAAVvx7PsoMQoHAAO7AD6SkZjeq2ybgQrHODzJiLFC4FZrd6XbYyeTKfbE46nC5XG4PZ6vdCa96-f5UpigiHQ9Zwy6I1go4vozFkbFmXH4wmMklkilwUvA2n0x6dlgsuwwKDsmCc7s88VAA)
+
+### Allows removal of `{}` from `ReactNode`
+
+#### Why remove `{}` from `ReactNode`?
+
+It allows passing of objects, functions etc .to host components which errors at runtime.
+A [previous attempt to correct `ReactNode`](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56026) revealed that `{}` was required due to implicit `children`.
+
+[DefinitelyTyped/DefinitelyTyped#56026](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56026) has multiple linked issues that contain fixes that were hidden by `{}` being included in `ReactNode` (e.g. [DefinitelyTyped/DefinitelyTyped#56035](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56035/)).
+
+#### Implicit children when `{}` is not part of `ReactNode`
+
+Due to implicit children, narrowing `children` results in `children` being typed as `NarrowerChildrenType & React.ReactNode`.
+
+`string` acts here as our `NarrowerChildrenType`
+
+```tsx
+import * as React from 'react';
+
+interface RenderProps {
+	type: string;
+}
+
+interface InputProps {
+	children: string;
+}
+
+const Input: React.FC<InputProps> = ({ children }) => {
+	return <div>{children}</div>;
+	//           ^^^^^^^^ (parameter) children: string & React.ReactNode
+};
+```
+
+-- [TypeScript Playground](https://www.typescriptlang.org/play?#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQdwAdjFlAXlplkwCZsAFYmHQBvOnDgwAnmCwAuOKhhRmAczoBfBs1btOcAJJMwAVxhCIIuOMm4AFsAA2vSk0XLVTNfW11cEEzKRibmith4MAB0AGIAwgA8xmYWwqgAfHAAvHAAFKJwDs6uPHCaAJTZmbZwlDCmUExwCbzAAG7pokUubpoJAPStHVp0QA)
+
+This isn't a problem if your `NarrowerChildrenType` is a subtype of `ReactNode`.
+However, once you have a specific object or function type, you'll start seeing type errors:
+
+```tsx
+import * as React from 'react';
+
+type ReactNodeWithoutObject =
+	| React.ReactElement
+	| string
+	| number
+	| boolean
+	| null
+	| undefined;
+
+interface RenderProps {
+	type: string;
+}
+
+interface InputProps {
+	children: (props: RenderProps) => React.ReactElement;
+}
+
+const Input = ({
+	children,
+}: InputProps & { children?: ReactNodeWithoutObject }) => {
+	return children({ type: 'search' });
+};
+
+<Input>{({ type }) => <input type="search" />}</Input>;
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ "'...' is not assignable to '...'
+```
+
+-- [TypeScript Playground](https://www.typescriptlang.org/play?#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQdMAnmFplTAHIQAmWA6sBgALCAFcYAeQBGAKyz44AXjoBIAD7s8MAHTZtAUQA2WEFgB2MNZtQwowcwHNrcc2JDSsUF9IgQTyOYubkZGLmLmfAQOWDz0dA4wXgR4bNiRXgAKxGDoAN5qzKwAXHC29k70AL4MicmpcACS5mAS2RC5cAWquMLARjyU5qUAFGA5qKXpfFDtuQCUygB8Wvh6HMamFjDVDLgQ5rZNLRLKcCPdvf2DFgA0dFWlza0wc+gAZF1wVwNDAPxTDjcPiCETiKRyBTwKqLJQrbqUGBiKDmb59X4WC5wIpYUpkVA4KC9MhwGHVeIAHmeEiWeSxONJsJWFIcL2xLCwSgARATkEThFy4AB6JZVClC6kwJb0IVCuDyhUAPWVKtVavVGs1irgXLIOn1JOA6HMEHgaFQwEc5mQ0hM2Ig5H1OjIQA)
+
+## Further reading
+
+- [Pull Request for React 18 types](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56210)
+- [[RFC] React 18 and types-only breaking changes](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/46691)
+- Prior issues flagging implicit children as incorrect:
+  - [[@types/react] Alternative FunctionComponent without children](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34237)
