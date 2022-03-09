@@ -208,6 +208,10 @@ Flow types do not add implicit children:
 
 2. [facebook/flow definition of function components](https://github.com/facebook/flow/blob/c4fc16cf8c24779a3a9d68c37a8295a769bc1287/lib/react.js#L162)
 
+Previous attempts to add implicit children to Flow:
+
+- [facebook/flow#8494](https://github.com/facebook/flow/issues/8494)
+
 ## Further reading
 
 - [Pull Request for React 18 types](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56210)
