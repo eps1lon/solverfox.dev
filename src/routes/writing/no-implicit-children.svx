@@ -199,6 +199,15 @@ const Input = ({
 
 -- [TypeScript Playground](https://www.typescriptlang.org/play?#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQdMAnmFplTAHIQAmWA6sBgALCAFcYAeQBGAKyz44AXjoBIAD7s8MAHTZtAUQA2WEFgB2MNZtQwowcwHNrcc2JDSsUF9IgQTyOYubkZGLmLmfAQOWDz0dA4wXgR4bNiRXgAKxGDoAN5qzKwAXHC29k70AL4MicmpcACS5mAS2RC5cAWquMLARjyU5qUAFGA5qKXpfFDtuQCUygB8Wvh6HMamFjDVDLgQ5rZNLRLKcCPdvf2DFgA0dFWlza0wc+gAZF1wVwNDAPxTDjcPiCETiKRyBTwKqLJQrbqUGBiKDmb59X4WC5wIpYUpkVA4KC9MhwGHVeIAHmeEiWeSxONJsJWFIcL2xLCwSgARATkEThFy4AB6JZVClC6kwJb0IVCuDyhUAPWVKtVavVGs1irgXLIOn1JOA6HMEHgaFQwEc5mQ0hM2Ig5H1OjIQA)
 
+## Sync with Flow types
+
+While you may consider Flow as "dead language" it's still used to type the React codebase itself.
+Flow types do not add implicit children:
+
+1. [facebook/react definition of function components](https://github.com/facebook/react/blob/14c2be8dac2d5482fda8a0906a31d239df8551fc/packages/react/index.js#L11-L13)
+
+2. [facebook/flow definition of function components](https://github.com/facebook/flow/blob/c4fc16cf8c24779a3a9d68c37a8295a769bc1287/lib/react.js#L162)
+
 ## Further reading
 
 - [Pull Request for React 18 types](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56210)
