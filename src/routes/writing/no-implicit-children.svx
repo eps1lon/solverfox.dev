@@ -13,7 +13,7 @@ layout: article
 { metadata.description }
 
 With React 18 we have the opportunity in `@types/react` to fix long-standing issues we had to deal with for a long time.
-We originally wanted to fix these in React 17 but held off because [React 17 was a big step in enabling gradual migration](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/46691#issuecomment-672840456)
+We originally wanted to fix these in React 17, but held off because [React 17 was a big step in enabling gradual migration](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/46691#issuecomment-672840456).
 One of these changes is removal of implicit `children` in `React.FunctionComponent` types.
 I'll try to explain why we want to make this change and how you can ease migration.
 
@@ -106,7 +106,7 @@ In summary, removing implicit children:
 
 ### Better errors for narrower `children`
 
-If your `children` are a subset of the types allowed by `ReactNode` you no longer have to guess what types are accept by `MyChildrenType & ReactNode`:
+If your `children` are a subset of the types allowed by `ReactNode` you no longer have to guess what types are accepted by `MyChildrenType & ReactNode`:
 
 ```tsx
 import * as React from 'react';
