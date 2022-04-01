@@ -3687,7 +3687,7 @@ __metadata:
     rollup-plugin-terser: 7.0.2
     sapper: 0.29.3
     sirv: 1.0.19
-    svelte: 3.46.4
+    svelte: 3.46.6
     typescript: 4.6.2
     yargs: 17.4.0
   languageName: unknown
@@ -3880,10 +3880,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:3.46.4":
-  version: 3.46.4
-  resolution: "svelte@npm:3.46.4"
-  checksum: 929e6790cdd6d94c123b4b8a7b5a541164dbea6d4f4ed311f4e65cde60caa1c704e531bbf2e63519d1a96163cd3f812c6e5be5b2fd05f72d0177af5fd8ca8637
+"svelte@npm:3.46.6":
+  version: 3.46.6
+  resolution: "svelte@npm:3.46.6"
+  checksum: 0a502f16097010dfe028ee93df3714add39cb608e4c23b2d9cc2190b305838c9020d42c57ad8a285b9c003e43c0dd23e8d24dacc0034678dcba2df5879992efa
   languageName: node
   linkType: hard
 
