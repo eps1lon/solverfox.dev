@@ -22,15 +22,15 @@ I'll try to explain why we want to make this change and how you can ease migrati
 ```tsx
 import * as React from 'react';
 
-const Input: React.FC = ({ children }) => children
+const Input: React.FC = ({ children }) => <div>{children}</div>;
 //                         ^^^^^^^^ will error with "Property 'children'
 //                                  does not exist on type '{}'.
-<Input>children</Input>
+<Input>children</Input>;
 //^^^^ will error with "Type '{ children: string; }' has no properties in common
 //                      with type 'IntrinsicAttributes & {}'"
 ```
 
--- [TypeScript Playground](Dg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwBQduEAdqvAJLNgCu8AvHAAUAbzi4AFsAA2AE0rM4AXwBccYYoCUcPgD41dAJCUY3KAoA8wLrzgB6HfUX1GLNnEoFtmKjAB0uSmQYLGwCQQ16c04eGB0JaTksZnNbaN4dIA)
+-- [TypeScript Playground](https://www.typescriptlang.org/play?#code/JYWwDg9gTgLgBAKjgQwM5wEoFNkGN4BmUEIcA5FDvmQNwCwAUI7hAHarwCSrYArjAC5MVGADoAYgGE4AXjgAKAN5xcAC2AAbACaVWcAL4BKWQD44AHi3AAbicVrNOrK33mA9Fdv0Gbt3H8BgUHBgQB64RHhcADumhpwWFDEUDHAMKpwAEQACsRgiTAAnuQO2rpkjL4h1TW1WhBY6KwQ8FgAHsAccGxwRfnkivpkoozm3HwwJqVOrO7j-CbevpGpGvGJyanpWQAqhf1kytO6QhxQwKwA5jQGZHCqaHDNcGB5BcCNcBcqJCBslX5akDYts+lhyNwYOd2MBcABBGBQ4AAI34nwAZHBBmRMkA)
 
 ## What are implicit `children`?
 
