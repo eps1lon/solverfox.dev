@@ -1427,14 +1427,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/graphql@npm:5.0.0":
-  version: 5.0.0
-  resolution: "@octokit/graphql@npm:5.0.0"
+"@octokit/graphql@npm:5.0.1":
+  version: 5.0.1
+  resolution: "@octokit/graphql@npm:5.0.1"
   dependencies:
     "@octokit/request": ^6.0.0
-    "@octokit/types": ^6.0.3
+    "@octokit/types": ^7.0.0
     universal-user-agent: ^6.0.0
-  checksum: 94c3f4fb6ff6dd6151a8ba6d8a2397329eedd5c30d1119b70d2be84add12efb4405ae0af9111f06dd047fc02d12063263357e53b4d04d3ab1ae2c07717ddfef5
+  checksum: 310549c2d7966adb46428e943cd99cb766519819bd4945d8349d3ec0642e4ee39d9194e1b0a87a5404951c04c247fafb4a8456ed4c839c64bfb4042aa4a6812c
   languageName: node
   linkType: hard
 
@@ -1453,6 +1453,13 @@ __metadata:
   version: 12.11.0
   resolution: "@octokit/openapi-types@npm:12.11.0"
   checksum: 8a7d4bd6288cc4085cabe0ca9af2b87c875c303af932cb138aa1b2290eb69d32407759ac23707bb02776466e671244a902e9857896903443a69aff4b6b2b0e3b
+  languageName: node
+  linkType: hard
+
+"@octokit/openapi-types@npm:^13.6.0":
+  version: 13.6.0
+  resolution: "@octokit/openapi-types@npm:13.6.0"
+  checksum: 2abf858a24888dcede28fe9a3fe3d24fba468d90daf4e22d1238d2419fe69aa8ee8f4aad163a73870038497b3a1b77b9b16172f649fb2cd767dd11fb3d09d44d
   languageName: node
   linkType: hard
 
@@ -1535,6 +1542,15 @@ __metadata:
   dependencies:
     "@octokit/openapi-types": ^12.11.0
   checksum: fd6f75e0b19b90d1a3d244d2b0c323ed8f2f05e474a281f60a321986683548ef2e0ec2b3a946aa9405d6092e055344455f69f58957c60f58368c8bdda5b7d2ab
+  languageName: node
+  linkType: hard
+
+"@octokit/types@npm:^7.0.0":
+  version: 7.2.0
+  resolution: "@octokit/types@npm:7.2.0"
+  dependencies:
+    "@octokit/openapi-types": ^13.6.0
+  checksum: e647e20ad46cc0899d16a7c621a54857c64f6579becfedc6788b3a0759fff5ca53722309cb51e51cc34312705df6edc084a2dd6ef5850e7668e39f3ed95ba5aa
   languageName: node
   linkType: hard
 
@@ -3816,7 +3832,7 @@ __metadata:
     "@babel/plugin-transform-runtime": 7.18.9
     "@babel/preset-env": 7.18.9
     "@babel/runtime": 7.18.9
-    "@octokit/graphql": 5.0.0
+    "@octokit/graphql": 5.0.1
     compression: 1.7.4
     focus-visible: 5.2.0
     front-matter: 4.0.2
