@@ -23,7 +23,7 @@
 		"glob": "8.0.3",
 		"polka": "1.0.0-next.22",
 		"sirv": "1.0.19",
-		"yargs": "17.5.1"
+		"yargs": "17.6.0"
 	},
 	"devDependencies": {
 		"@babel/core": "7.18.13",
