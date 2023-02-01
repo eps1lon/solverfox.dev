@@ -20,7 +20,7 @@
 		"@actions/github": "5.1.1",
 		"@octokit/graphql": "5.0.4",
 		"compression": "1.7.4",
-		"glob": "8.0.3",
+		"glob": "8.1.0",
 		"polka": "1.0.0-next.22",
 		"sirv": "1.0.19",
 		"yargs": "17.6.2"
