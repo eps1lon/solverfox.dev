@@ -20,7 +20,7 @@ async function loadRepositoriesContributedTo({ graphql, after }) {
 			query repositoriesContributedTo($after: String) {
 				user(login: "eps1lon") {
 					pullRequests(
-						states: MERGED
+						states: [MERGED, CLOSED]
 						first: 100
 						orderBy: { field: CREATED_AT, direction: ASC }
 						after: $after
@@ -31,12 +31,18 @@ async function loadRepositoriesContributedTo({ graphql, after }) {
 							endCursor
 						}
 						nodes {
+							state
 							repository {
 								isPrivate
 								nameWithOwner
 								isFork
 								stargazers {
 									totalCount
+								}
+							}
+							labels(first: 100) {
+								nodes {
+									name
 								}
 							}
 						}
@@ -59,7 +65,18 @@ async function loadRepositoriesContributedTo({ graphql, after }) {
 		nodesCount: pullRequests.length,
 		totalCount,
 		repositories: pullRequests
-			.filter(({ repository }) => {
+			.filter(({ labels: { nodes: labels }, repository, state }) => {
+				if (state === 'CLOSED') {
+					// Certain repositories merge PRs in a separate commit that will cause GH to not consider them "MERGED".
+					// The following logic implements repository-custom "merged"
+					switch (repository.nameWithOwner) {
+						case 'facebook/hermes':
+						case 'facebook/react-native':
+							return labels.find(({ name }) => name === 'Merged');
+						default:
+							return false;
+					}
+				}
 				return repository.isFork === false && repository.isPrivate === false;
 			})
 			.map(({ repository: { nameWithOwner, stargazers } }) => {
