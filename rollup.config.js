@@ -19,13 +19,13 @@ const preprocess = () => {
 	return mdsvex({
 		extension: '.svx',
 		highlight: {
-			highlighter(code, lang) {
-				if (lang && hljs.getLanguage(lang)) {
+			highlighter(code, language) {
+				if (language && hljs.getLanguage(language)) {
 					try {
 						const highlighted =
 							'{@html `<pre class="hljs"><code>' +
 							hljs
-								.highlight(lang, code, true)
+								.highlight(code, { language, ignoreIllegals: true })
 								.value.replace(/{/g, '&#123;')
 								.replace(/}/g, '&#125;')
 								.replace(/`/g, '\\`') +
