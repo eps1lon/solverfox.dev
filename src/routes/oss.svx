@@ -1,5 +1,5 @@
 ---
-title: OSS
+title: Open Source
 ---
 
 <script context="module">
@@ -31,7 +31,7 @@ title: OSS
   }
 </style>
 
-# Open-source software
+# Open Source
 
 ## Contributed
 

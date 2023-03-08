@@ -24,7 +24,7 @@
 		{/if}
 		<li>
 			<a aria-current={segment === 'oss' ? 'page' : undefined} href="oss">
-				OSS
+				open source
 			</a>
 		</li>
 		<li>
