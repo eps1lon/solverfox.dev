@@ -2400,15 +2400,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:9.2.1":
-  version: 9.2.1
-  resolution: "glob@npm:9.2.1"
+"glob@npm:9.3.2":
+  version: 9.3.2
+  resolution: "glob@npm:9.3.2"
   dependencies:
     fs.realpath: ^1.0.0
     minimatch: ^7.4.1
     minipass: ^4.2.4
     path-scurry: ^1.6.1
-  checksum: ef9b1c32491e6b532bdd0d2abcc3c9f48e83446609e11285869156982fc5a756dfbaa6f59f797712343bd1e22500ac15708692806633653fde4ef67c85e2aab7
+  checksum: f3d188e9f70e24fa729a63ca197bcdb36d838677abec1fb9bbfe4b7620063bf90dc0f8d195203d632abfdfa049fad0edf22f93c60076de67cef20c23bcbfaee8
   languageName: node
   linkType: hard
 
@@ -3994,7 +3994,7 @@ __metadata:
     compression: 1.7.4
     focus-visible: 5.2.0
     front-matter: 4.0.2
-    glob: 9.2.1
+    glob: 9.3.2
     highlight.js: 11.7.0
     mdsvex: 0.10.6
     npm-run-all: 4.1.5
