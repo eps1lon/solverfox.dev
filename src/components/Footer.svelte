@@ -4,7 +4,7 @@
 	<div class="contact">
 		<address>
 			<div class="name">Sebastian Silbermann</div>
-			<a href="mailto:silbermann.sebastian@gmail.com" rel="me">
+			<a href="mailto:sebastian@solverfox.dev" rel="me">
 				silbermann.sebastian@gmail.com
 			</a>
 		</address>
