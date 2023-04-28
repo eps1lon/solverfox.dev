@@ -27,9 +27,14 @@
 	Hey there! My name is
 	<strong>Sebastian</strong>
 	and I'm a frontend developer with a focus on accessibility and developer tooling.
-	I'm a member of the core team working on
-	<a href="https://material-ui.com">Material-UI</a>
-	and member of
+	I'm a member of the
+	<a href="https://react.dev/community/team" target="_blank" rel="noopener"
+		>React Core team</a
+	>,
+	<a href="https://testing-library.com/" target="_blank" rel="noopener"
+		>Testing Library</a
+	>
+	core team and
 	<a href="/oss">several other popular open-source libraries</a>
 </p>
 
