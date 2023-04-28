@@ -1,0 +1,121 @@
+---
+title: Fixing duplicate @types/react installs
+category: testing
+publishedAt: 2023-04-28
+description: Causes of duplicate @types/react installs and how to solve it
+readingTime: 10
+slug: duplicate-types-react
+layout: article
+---
+
+# { metadata.title }
+
+{ metadata.description }
+
+Upgrading [`@types/react`](https://www.npmjs.com/package/@types/react) to a new version (even just a patch version) can sometimes introduce new, seemingly unrelated errors.
+These can read confusing messages like "'Provider' cannot be used as a JSX component" or "ReactNode cannot be assigned to import('react').ReactNode".
+
+## Possible causes
+
+A recurring, hard to recognize issue is having multiple versions of `@types/react` installed.
+Just like `react` or React renderers like `react-dom` or `react-native`, you should only have a single version of `@types/react` installed.
+
+Finding out if you have duplicate versions of this package installed depends on the package manager you're using to install NPM packages.
+
+For Yarn use `yarn why`:
+
+```bash
+$ yarn why @types/react
+=> Found "@types/react@18.0.26"
+info Has been hoisted to "@types/react"
+info Reasons this module exists
+   - "workspace-aggregator-379d6230-27ae-43f1-b152-79ca15843c74" depends on it
+   - Specified in "devDependencies"
+   - Hoisted from "_project_#@types#enzyme#@types#react"
+   - Hoisted from "_project_#@types#react-is#@types#react"
+```
+
+If you see multiple entries for `Found "@types/react`, you have multiple versions of `@types/react` installed.
+
+For Yarn Berry you can use the same command.
+The command output may look different but the same principle applies: If it lists multiple different versions of `@types/react`, you have multiple versions installed.
+
+For NPM use `npm ls`:
+
+```bash
+$ npm ls @types/react
+@testing-library/react@0.0.0-semantically-released
+└─┬ @types/react-dom@18.0.11
+  └── @types/react@18.0.35
+```
+
+If you see multiple, different versions of `@types/react`, you have multiple versions of `@types/react` installed.
+
+For PNPM use [`pnpm list`](https://pnpm.io/cli/list):
+
+```bash
+$ pnpm ls @types/react
+Legend: production dependency, optional only, dev only
+
+pnpm-types-react@1.0.0 /home/eps1lon/Development/throwaway/pnpm-types-react
+
+dependencies:
+@types/react 18.2.0
+```
+
+If you see multiple, different versions of `@types/react`, you have multiple versions of `@types/react` installed.
+
+## Fixing duplicate versions of `@types/react`
+
+In this article we'll focus on the least invasive options to remove duplicate versions of `@types/react`.
+
+### Yarn
+
+For Yarn 1.x you can use the [NPM package `yarn-deduplicate`](https://www.npmjs.com/package/yarn-deduplicate):
+
+```bash
+$ npx yarn-deduplicate @types/react
+```
+
+Yarn 2.x and 3.x have built-in support via
+
+```bash
+$ yarn dedupe @types/react
+```
+
+Note that you might still have duplicate versions of `@types/react` installed if different packages only support incompatible versions ranges (e.g. one package requires `@types/react@^17.0.0` and another package requires `@types/react@^18.0.0`).
+If this is the case, these libraries need to widen their version ranges first once they support these versions.
+
+However, you can force a single version of `@types/react` at your own risk by using Yarn `resolutions` (see [1.x `resolutions`](https://classic.yarnpkg.com/lang/en/docs/selective-version-resolutions/) or [>=2.x `resolutions`](https://yarnpkg.com/configuration/manifest/#resolutions)):
+
+```json
+{
+	"resolutions": {
+		"@types/react": "18.2.0"
+	}
+}
+```
+
+Packages not supporting that particular version (e.g. they support `@types/react@^17.0.0` yet you force `@types/react@18.2.0`) may not work as expected.
+Only do that at your own risk.
+
+### NPM and PNPM
+
+NPM and PNPM have no support for selective dependency deduplication.
+
+You can only deduplicate your full dependency tree either via [`npm dedupe`](https://docs.npmjs.com/cli/v7/commands/npm-dedupe) or [`pnpm dedupe`](https://pnpm.io/cli/dedupe).
+If you generally don't deduplicate your dependency tree regularly I would strongly advise **against** doing that just for `@types/react`.
+Instead, you should use `overrides` that I'll explain below.
+
+Note that you might still have duplicate versions of `@types/react` installed if different packages only support incompatible versions ranges (e.g. one package requires `@types/react@^17.0.0` and another package requires `@types/react@^18.0.0`).
+If this is the case, these libraries need to widen their version ranges first once they support these versions.
+
+However, you can force a single version of `@types/react` at your own risk by using [NPM `overrides`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides) or [PNPM `overrides`](https://pnpm.io/package_json#pnpmoverrides):
+
+```json
+{
+	"overrides": {
+		"@types/react": "18.2.0"
+	}
+}
+```

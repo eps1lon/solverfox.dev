@@ -58,6 +58,10 @@
 		margin-bottom: 2em;
 	}
 
+	article :global(h1) {
+		text-transform: none;
+	}
+
 	article :global(h2),
 	article :global(h3),
 	article :global(h4),
