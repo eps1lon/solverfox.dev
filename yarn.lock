@@ -1525,14 +1525,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/graphql@npm:5.0.5":
-  version: 5.0.5
-  resolution: "@octokit/graphql@npm:5.0.5"
+"@octokit/graphql@npm:5.0.6":
+  version: 5.0.6
+  resolution: "@octokit/graphql@npm:5.0.6"
   dependencies:
     "@octokit/request": ^6.0.0
     "@octokit/types": ^9.0.0
     universal-user-agent: ^6.0.0
-  checksum: eb2d1a6305a3d1f55ff0ce92fb88b677f0bb789757152d58a79ef61171fb65ecf6fe18d6c27e236c0cee6a0c2600c2cb8370f5ac7184f8e9361c085aa4555bb1
+  checksum: 7be545d348ef31dcab0a2478dd64d5746419a2f82f61459c774602bcf8a9b577989c18001f50b03f5f61a3d9e34203bdc021a4e4d75ff2d981e8c9c09cf8a65c
   languageName: node
   linkType: hard
 
@@ -3658,13 +3658,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:2.10.0":
-  version: 2.10.0
-  resolution: "prettier-plugin-svelte@npm:2.10.0"
+"prettier-plugin-svelte@npm:2.10.1":
+  version: 2.10.1
+  resolution: "prettier-plugin-svelte@npm:2.10.1"
   peerDependencies:
     prettier: ^1.16.4 || ^2.0.0
-    svelte: ^3.2.0
-  checksum: 0e7f3e05e864c99696d23a6dd482d40f9abc903bfe778af7a947041b13c662820afde8f62d9967b1b1b56792b69732fd454af17f8ffcdd0b018ca55c674cabb4
+    svelte: ^3.2.0 || ^4.0.0-next.0
+  checksum: 45f7993098d9f4be7b1c8f61ebce0161996bb6030dc4883ec3d6d9cff552f2cfb5da41ba20e01349709e793b83faaad2dfe81789cd7e17a610f0134df2743266
   languageName: node
   linkType: hard
 
@@ -3932,16 +3932,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-svelte@npm:7.1.4":
-  version: 7.1.4
-  resolution: "rollup-plugin-svelte@npm:7.1.4"
+"rollup-plugin-svelte@npm:7.1.5":
+  version: 7.1.5
+  resolution: "rollup-plugin-svelte@npm:7.1.5"
   dependencies:
     "@rollup/pluginutils": ^4.1.0
     resolve.exports: ^2.0.0
   peerDependencies:
     rollup: ">=2.0.0"
     svelte: ">=3.5.0"
-  checksum: 4eb49c8e714d58f2674c55a08f30434ff763c853c52b650d4aa677365069b2a76c0b782eb2ecd2951a04132ae6771027ee64e821a00a505c41e2dd682736eea6
+  checksum: fbf07ae67b98935e38f866aa82c8d01ace7e26683687793685ee0685e285e4cadd2e1f69dae09e3672ec376e2a0ce5f90576c5515266ba79b20c248dbc9e7a34
   languageName: node
   linkType: hard
 
@@ -4198,7 +4198,7 @@ __metadata:
     "@babel/plugin-transform-runtime": 7.22.4
     "@babel/preset-env": 7.22.4
     "@babel/runtime": 7.22.3
-    "@octokit/graphql": 5.0.5
+    "@octokit/graphql": 5.0.6
     compression: 1.7.4
     focus-visible: 5.2.0
     front-matter: 4.0.2
@@ -4208,13 +4208,13 @@ __metadata:
     npm-run-all: 4.1.5
     polka: 1.0.0-next.22
     prettier: 2.8.8
-    prettier-plugin-svelte: 2.10.0
+    prettier-plugin-svelte: 2.10.1
     rollup: 3.23.0
     rollup-plugin-babel: 4.4.0
     rollup-plugin-commonjs: 10.1.0
     rollup-plugin-node-resolve: 5.2.0
     rollup-plugin-replace: 2.2.0
-    rollup-plugin-svelte: 7.1.4
+    rollup-plugin-svelte: 7.1.5
     rollup-plugin-terser: 7.0.2
     sapper: 0.29.3
     sirv: 1.0.19
@@ -4525,11 +4525,11 @@ __metadata:
 
 "typescript@patch:typescript@5.0.4#~builtin<compat/typescript>":
   version: 5.0.4
-  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"
+  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: bb309d320c59a26565fb3793dba550576ab861018ff3fd1b7fccabbe46ae4a35546bc45f342c0a0b6f265c801ccdf64ffd68f548f117ceb7f0eac4b805cd52a9
+  checksum: d26b6ba97b6d163c55dbdffd9bbb4c211667ebebc743accfeb2c8c0154aace7afd097b51165a72a5bad2cf65a4612259344ff60f8e642362aa1695c760d303ac
   languageName: node
   linkType: hard
 
