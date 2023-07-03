@@ -3931,16 +3931,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-svelte@npm:7.1.5":
-  version: 7.1.5
-  resolution: "rollup-plugin-svelte@npm:7.1.5"
+"rollup-plugin-svelte@npm:7.1.6":
+  version: 7.1.6
+  resolution: "rollup-plugin-svelte@npm:7.1.6"
   dependencies:
     "@rollup/pluginutils": ^4.1.0
     resolve.exports: ^2.0.0
   peerDependencies:
     rollup: ">=2.0.0"
     svelte: ">=3.5.0"
-  checksum: fbf07ae67b98935e38f866aa82c8d01ace7e26683687793685ee0685e285e4cadd2e1f69dae09e3672ec376e2a0ce5f90576c5515266ba79b20c248dbc9e7a34
+  checksum: a5ef16faa9163f35d238b245f3a984c9cdc35ba7e7902db9897df4e034c1e9bc11c5623797ab4ad20e80a556e4384486833eff12c5e63961b1d71872969aab83
   languageName: node
   linkType: hard
 
@@ -4213,7 +4213,7 @@ __metadata:
     rollup-plugin-commonjs: 10.1.0
     rollup-plugin-node-resolve: 5.2.0
     rollup-plugin-replace: 2.2.0
-    rollup-plugin-svelte: 7.1.5
+    rollup-plugin-svelte: 7.1.6
     rollup-plugin-terser: 7.0.2
     sapper: 0.29.3
     sirv: 1.0.19
