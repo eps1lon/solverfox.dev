@@ -2,12 +2,12 @@
 import hljs from 'highlight.js';
 import { mdsvex } from 'mdsvex';
 import * as path from 'path';
-import resolve from 'rollup-plugin-node-resolve';
-import replace from 'rollup-plugin-replace';
-import commonjs from 'rollup-plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
+import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
-import babel from 'rollup-plugin-babel';
-import { terser } from 'rollup-plugin-terser';
+import babel from '@rollup/plugin-babel';
+import terser from '@rollup/plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
@@ -73,9 +73,12 @@ export default {
 		output: config.client.output(),
 		plugins: [
 			replace({
-				...defaultReplaces,
-				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode),
+				preventAssignment: true,
+				values: {
+					...defaultReplaces,
+					'process.browser': true,
+					'process.env.NODE_ENV': JSON.stringify(mode),
+				},
 			}),
 			svelte({
 				compilerOptions: {
@@ -94,7 +97,7 @@ export default {
 			legacy &&
 				babel({
 					extensions: ['.js', '.mjs', '.html', '.svelte'],
-					runtimeHelpers: true,
+					babelHelpers: 'runtime',
 					exclude: [/node_modules\/@babel/],
 					presets: [
 						[
@@ -131,9 +134,12 @@ export default {
 		output: config.server.output(),
 		plugins: [
 			replace({
-				...defaultReplaces,
-				'process.browser': false,
-				'process.env.NODE_ENV': JSON.stringify(mode),
+				preventAssignment: true,
+				values: {
+					...defaultReplaces,
+					'process.browser': false,
+					'process.env.NODE_ENV': JSON.stringify(mode),
+				},
 			}),
 			svelte({
 				compilerOptions: {
@@ -165,9 +171,12 @@ export default {
 				extensions: moduleExtensions,
 			}),
 			replace({
-				...defaultReplaces,
-				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode),
+				preventAssignment: true,
+				values: {
+					...defaultReplaces,
+					'process.browser': true,
+					'process.env.NODE_ENV': JSON.stringify(mode),
+				},
 			}),
 			commonjs(),
 			!dev && terser(),
