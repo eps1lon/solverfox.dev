@@ -36,6 +36,7 @@
 		"@rollup/plugin-node-resolve": "^15.2.1",
 		"@rollup/plugin-replace": "^5.0.2",
 		"@rollup/plugin-terser": "^0.4.3",
+		"@types/node": "^20.5.9",
 		"focus-visible": "5.2.0",
 		"front-matter": "4.0.2",
 		"highlight.js": "11.8.0",
