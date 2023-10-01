@@ -1,5 +1,6 @@
 <script>
 	import Webmentions from './Webmentions.svelte';
+	import 'highlight.js/styles/a11y-dark.css'
 
 	export let description;
 	export let publishedAt;
@@ -35,10 +36,6 @@
 	<link
 		rel="webmention"
 		href="https://webmention.io/solverfox.dev/webmention"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://highlightjs.org/static/demo/styles/a11y-dark.css"
 	/>
 </svelte:head>
 
