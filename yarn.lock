@@ -3700,13 +3700,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"polka@npm:1.0.0-next.22":
-  version: 1.0.0-next.22
-  resolution: "polka@npm:1.0.0-next.22"
+"polka@npm:1.0.0-next.23":
+  version: 1.0.0-next.23
+  resolution: "polka@npm:1.0.0-next.23"
   dependencies:
     "@polka/url": ^1.0.0-next.21
     trouter: ^3.1.0
-  checksum: 31e8b1eba9bbf4451f78cb60f212d685558f15f002c72b7820e2547873a686d0382b1d5ba037aa3b3b904d2da2e47df0946087895eac4d8f5582eb5d6b77c735
+  checksum: 018b421a62a478983d998ecc31ade5a9d08842bd8ab566341de886cc21bf8ee1dadd9a3625300d166b441699559512562de4818b5f84b2635f516f9011f73983
   languageName: node
   linkType: hard
 
@@ -4188,7 +4188,7 @@ __metadata:
     highlight.js: 11.8.0
     mdsvex: 0.11.0
     npm-run-all: 4.1.5
-    polka: 1.0.0-next.22
+    polka: 1.0.0-next.23
     prettier: 3.0.3
     prettier-plugin-svelte: 3.0.3
     rollup: 3.29.4
