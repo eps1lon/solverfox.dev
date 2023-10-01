@@ -1,20 +1,21 @@
-<script context="module">
-	export async function preload() {
+<script context="module" lang="ts">
+	type SveltePreload = any;
+	export async function preload(this: SveltePreload) {
 		const res = await this.fetch(`/writing.json`);
 		const posts = await res.json();
 
 		if (res.status === 200) {
 			return { posts };
 		} else {
-			this.error(res.status, data.message);
+			this.error(res.status, res.message);
 		}
 	}
 </script>
 
-<script>
-	import Posts from '../components/Posts.svelte';
+<script lang="ts">
+	import Posts, { type Post } from '../components/Posts.svelte';
 
-	export let posts;
+	export let posts: Post[];
 </script>
 
 <svelte:head>
