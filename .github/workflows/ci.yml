@@ -33,3 +33,5 @@ jobs:
       - run: yarn format:check
 
       - run: yarn test:types
+
+      - run: yarn test:types:svelte
