@@ -93,7 +93,7 @@ export default {
 			}),
 			// TODO: use something lightweight without typechecking
 			typescript({
-				sourceMap: true,
+				sourceMap: dev,
 				tsconfig: path.resolve(__dirname, 'src/tsconfig.json'),
 			}),
 			resolve({
@@ -158,7 +158,7 @@ export default {
 			}),
 			// TODO: use something lightweight without typechecking
 			typescript({
-				sourceMap: true,
+				sourceMap: dev,
 				tsconfig: path.resolve(__dirname, 'src/tsconfig.json'),
 			}),
 			resolve({
