@@ -1,17 +1,17 @@
-<script context="module">
-	export function preload({ params, query }) {
+<script context="module" lang="ts">
+	export function preload(this: any, { params, query }: any) {
 		return this.fetch(`/writing.json`)
-			.then((r) => r.json())
-			.then((posts) => {
+			.then((r: any) => r.json())
+			.then((posts: Post[]) => {
 				return { posts };
 			});
 	}
 </script>
 
-<script>
-	import Posts from '../../components/Posts.svelte';
+<script lang="ts">
+	import Posts, { type Post } from '../../components/Posts.svelte';
 
-	export let posts;
+	export let posts: Post[];
 </script>
 
 <svelte:head>

@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
 	import GitHubCorner from '../components/GitHubCorner.svelte';
 
-	export let segment;
+	export let segment: string | undefined;
 </script>
 
 <nav>

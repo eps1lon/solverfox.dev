@@ -1,3 +1,4 @@
+// @ts-nocheck
 import frontMatter from 'front-matter';
 import * as fs from 'fs';
 import glob from 'glob';

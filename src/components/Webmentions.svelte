@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
 	// based off https://github.com/sw-yx/swyxdotio/blob/master/src/components/WebMentions.svelte
 	import { onMount } from 'svelte';
-	export let id;
-	export let target;
+	export let id: any;
+	export let target: any;
 
 	if (!target) throw new TypeError('`target` is required');
 
 	let page = 0;
-	let counts;
-	let mentions = [];
+	let counts: any;
+	let mentions: any = [];
 	let fetchState = 'fetching';
 	onMount(() => {
 		counts = fetch(`https://webmention.io/api/count.json?target=${target}/`) // trailing slash impt
@@ -26,7 +26,7 @@
 			`https://webmention.io/api/mentions?page=${page}&per-page=20&target=${target}/`, // trailing slash impt
 		)
 			.then((x) => x.json())
-			.then((x) => x.links.filter((x) => x.activity.type !== 'like'));
+			.then((x) => x.links.filter((x: any) => x.activity.type !== 'like'));
 	}
 	const fetchMore = () => {
 		page += 1;
@@ -38,7 +38,7 @@
 			}
 		});
 	};
-	function cleanString(str) {
+	function cleanString(str: string) {
 		const withSlash = target + '/';
 		const linky = `<a href="${withSlash}">${withSlash}</a>`;
 		return str
@@ -48,7 +48,7 @@
 </script>
 
 <div {id}>
-	<h2 font-family="system" font-size="4" font-weight="bold">Webmentions</h2>
+	<h2 style="font-size: 4; font-weight: bold;">Webmentions</h2>
 	<a
 		aria-label="Clientside Webmentions by Shawn Wang"
 		target="_blank"
@@ -126,9 +126,7 @@
 								<a href={link.data.url}>retweeted</a>
 							{:else}
 								<div
-									font-family="system"
-									color="text"
-									font-weight="bold"
+									style="font-weight: bold; color: text;"
 									role="comment"
 								>
 									{link.data.author.name}
@@ -146,7 +144,7 @@
 									</span>
 								</div>
 								<div>
-									<p font-family="system" color="tertiary" font-size="2">
+									<p style="font-size: 2; color: tertiary;">
 										{@html cleanString(link.data.content)}
 									</p>
 								</div>

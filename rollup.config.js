@@ -8,6 +8,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
+import autoPreprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 
@@ -87,7 +89,12 @@ export default {
 				},
 				emitCss: true,
 				extensions: ['.svelte', '.svx'],
-				preprocess: preprocess(),
+				preprocess: [autoPreprocess(), preprocess()],
+			}),
+			// TODO: use something lightweight without typechecking
+			typescript({
+				sourceMap: true,
+				tsconfig: path.resolve(__dirname, 'src/tsconfig.json'),
 			}),
 			resolve({
 				extensions: moduleExtensions,
@@ -147,7 +154,12 @@ export default {
 					generate: 'ssr',
 				},
 				extensions: ['.svelte', '.svx'],
-				preprocess: preprocess(),
+				preprocess: [autoPreprocess(), preprocess()],
+			}),
+			// TODO: use something lightweight without typechecking
+			typescript({
+				sourceMap: true,
+				tsconfig: path.resolve(__dirname, 'src/tsconfig.json'),
 			}),
 			resolve({
 				extensions: moduleExtensions,

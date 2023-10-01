@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import 'focus-visible/dist/focus-visible.min.js';
 	import { stores } from '@sapper/app';
 	import Nav from '../components/Nav.svelte';
 	import Footer from '../components/Footer.svelte';
 
-	export let segment;
+	export let segment: string;
 
 	const { page } = stores();
 </script>

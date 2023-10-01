@@ -1,12 +1,19 @@
-<script>
+<script context="module" lang="ts">
+	export interface Post {
+		slug: string;
+		description: string;
+		title: string;
+	}
+</script>
+
+<script lang="ts">
+	
+
 	/**
 	 * id of the heading associated with this list of posts
 	 * */
-	export let labelledby;
-	/**
-	 * @type {Array<{ slug: string, description: string, title: string}>}
-	 */
-	export let posts = [];
+	export let labelledby: string;
+	export let posts: Post[] = [];
 </script>
 
 <ul aria-labelledby={labelledby}>
