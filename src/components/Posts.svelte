@@ -22,6 +22,7 @@
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
 		<li id={`post-${post.slug}`}>
+			<!-- svelte-ignore illegal-attribute-character -->
 			<a
 				aria-describedby={`post-${post.slug}`}
 				sapper:prefetch

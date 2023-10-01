@@ -1,11 +1,15 @@
-<script lang="ts">
+<script>
 	import Webmentions from './Webmentions.svelte';
 	import 'highlight.js/styles/a11y-dark.css'
 
-	export let description: string;
-	export let publishedAt: string;
-	export let readingTime: string;
-	export let slug: string;
+	/** @type {string} */
+	export let description;
+	/** @type {string} */
+	export let publishedAt;
+	/** @type {string} */
+	export let readingTime;
+	/** @type {string} */
+	export let slug;
 	export let title = 'Unknonw';
 </script>
 

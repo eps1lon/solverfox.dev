@@ -13,6 +13,7 @@
 		</li>
 		{#if process.env.FEATURE_POSTS}
 			<li>
+				<!-- svelte-ignore illegal-attribute-character -->
 				<a
 					sapper:prefetch
 					aria-current={segment === 'writing' ? 'page' : undefined}
