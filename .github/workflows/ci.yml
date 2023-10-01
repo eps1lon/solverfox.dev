@@ -34,4 +34,7 @@ jobs:
 
       - run: yarn test:types
 
+      # required for test:types:svelte
+      - run: yarn build
+
       - run: yarn test:types:svelte
