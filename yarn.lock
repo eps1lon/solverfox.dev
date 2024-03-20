@@ -1669,17 +1669,17 @@ __metadata:
   linkType: hard
 
 "@rollup/plugin-replace@npm:^5.0.2":
-  version: 5.0.2
-  resolution: "@rollup/plugin-replace@npm:5.0.2"
+  version: 5.0.5
+  resolution: "@rollup/plugin-replace@npm:5.0.5"
   dependencies:
     "@rollup/pluginutils": ^5.0.1
-    magic-string: ^0.27.0
+    magic-string: ^0.30.3
   peerDependencies:
-    rollup: ^1.20.0||^2.0.0||^3.0.0
+    rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
   peerDependenciesMeta:
     rollup:
       optional: true
-  checksum: 3a91b5fa2ce5acfe67c1faf8d479585da30f398f29499cf8a2d2153c899af0b2ef0363012db0e6edc2ebbb3d9fad6dd7ad591c9d977c1ae2ca3256b52e86d950
+  checksum: 5559b48fa098a842ddb3a25b23d9902d75496bed807d4cabac304bb7e75b06374ad4a44f7871ddcd1bfcf23e6015a0274d44564b42af54c722af0a514c247ec1
   languageName: node
   linkType: hard
 
