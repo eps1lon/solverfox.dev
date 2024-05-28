@@ -1,6 +1,6 @@
 <script>
 	import Webmentions from './Webmentions.svelte';
-	import 'highlight.js/styles/a11y-dark.css'
+	import 'highlight.js/styles/a11y-dark.css';
 
 	/** @type {string} */
 	export let description;

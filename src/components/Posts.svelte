@@ -7,8 +7,6 @@
 </script>
 
 <script lang="ts">
-	
-
 	/**
 	 * id of the heading associated with this list of posts
 	 * */

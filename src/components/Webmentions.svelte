@@ -126,10 +126,7 @@
 								<a href={link.data.url}>retweeted</a>
 							{:else}
 								<!-- svelte-ignore a11y-unknown-role -- new role -->
-								<div
-									style="font-weight: bold; color: text;"
-									role="comment"
-								>
+								<div style="font-weight: bold; color: text;" role="comment">
 									{link.data.author.name}
 									<a
 										target="_blank"
