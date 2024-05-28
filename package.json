@@ -22,7 +22,7 @@
 		"@octokit/graphql": "7.1.0",
 		"compression": "1.7.4",
 		"glob": "10.3.12",
-		"polka": "1.0.0-next.24",
+		"polka": "1.0.0-next.25",
 		"sirv": "1.0.19",
 		"svelte-check": "^3.5.2",
 		"yargs": "17.7.2"
