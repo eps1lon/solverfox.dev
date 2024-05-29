@@ -12,19 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: hmarr/debug-action@master
-
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
 
-      - name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+          node-version-file: .nvmrc
 
       - name: 'Install packages'
         run: yarn install
