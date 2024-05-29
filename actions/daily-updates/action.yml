@@ -1,7 +1,7 @@
 name: 'daily-updates'
 description: 'Auto generates updates to the page'
 runs:
-  using: 'node12'
+  using: 'node20'
   main: 'main.js'
 inputs:
   token:
