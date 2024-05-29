@@ -1,4 +1,4 @@
-name: Daily Updates
+name: Automatic Updates
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - cron: '0 0 1 * *'
 
 jobs:
-  static:
+  run:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +24,6 @@ jobs:
       - name: 'Install packages'
         run: yarn install
 
-      - uses: ./actions/daily-updates
+      - uses: ./actions/automatic-updates
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
