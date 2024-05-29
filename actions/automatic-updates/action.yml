@@ -1,4 +1,4 @@
-name: 'daily-updates'
+name: 'automatic-updates'
 description: 'Auto generates updates to the page'
 runs:
   using: 'node20'
