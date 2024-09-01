@@ -2475,10 +2475,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-visible@npm:5.2.0":
-  version: 5.2.0
-  resolution: "focus-visible@npm:5.2.0"
-  checksum: 10c0/bc746775e4c17d05faf7219a91fd5ae6fec320b87f20cde5402eff17fab148b6253f25748f0235b3110528a1335ee0c6d4dc3692cc6b6174d0ebd253dd28a50d
+"focus-visible@npm:5.2.1":
+  version: 5.2.1
+  resolution: "focus-visible@npm:5.2.1"
+  checksum: 10c0/1c0e4e8b22be8684a664acc340efd6a41aafb560ce09979186a1c934de321ce8d6a3d7175c946aab1c87409b0e10f623274d7ce7d42ff16a0e4dc862fa151623
   languageName: node
   linkType: hard
 
@@ -3930,7 +3930,7 @@ __metadata:
     "@tsconfig/svelte": "npm:^5.0.2"
     "@types/node": "npm:^20.5.9"
     compression: "npm:1.7.4"
-    focus-visible: "npm:5.2.0"
+    focus-visible: "npm:5.2.1"
     front-matter: "npm:4.0.2"
     glob: "npm:11.0.0"
     highlight.js: "npm:11.10.0"
