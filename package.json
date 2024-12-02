@@ -48,7 +48,7 @@
 		"npm-run-all2": "6.2.2",
 		"prettier": "3.4.1",
 		"prettier-plugin-svelte": "3.2.6",
-		"rollup": "4.19.1",
+		"rollup": "4.28.0",
 		"rollup-plugin-svelte": "7.2.2",
 		"sapper": "0.29.3",
 		"svelte": "3.59.2",
