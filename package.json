@@ -24,7 +24,7 @@
 		"glob": "11.0.0",
 		"polka": "1.0.0-next.28",
 		"sirv": "3.0.0",
-		"svelte-check": "^3.5.2",
+		"svelte-check": "^4.0.0",
 		"yargs": "17.7.2"
 	},
 	"devDependencies": {
