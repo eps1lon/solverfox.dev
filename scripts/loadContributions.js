@@ -73,6 +73,10 @@ async function loadRepositoriesContributedTo({ graphql, after }) {
 						case 'facebook/hermes':
 						case 'facebook/react-native':
 							return labels.find(({ name }) => name === 'Merged');
+						case 'nodejs/node':
+							// No special marker in nodejs/node
+							// At least one of my PRs was merged though.
+							return true;
 						default:
 							return false;
 					}
