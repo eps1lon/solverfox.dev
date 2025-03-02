@@ -19,7 +19,7 @@
 	"dependencies": {
 		"@actions/core": "1.11.1",
 		"@actions/github": "6.0.0",
-		"@octokit/graphql": "7.1.1",
+		"@octokit/graphql": "8.2.1",
 		"compression": "1.8.0",
 		"glob": "11.0.1",
 		"polka": "1.0.0-next.28",
