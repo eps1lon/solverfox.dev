@@ -23,7 +23,7 @@
 		"compression": "1.7.5",
 		"glob": "11.0.1",
 		"polka": "1.0.0-next.28",
-		"sirv": "3.0.0",
+		"sirv": "3.0.1",
 		"svelte-check": "^4.0.0",
 		"yargs": "17.7.2"
 	},
