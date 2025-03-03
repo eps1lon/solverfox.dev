@@ -43,7 +43,7 @@
 		"@types/node": "^22.0.0",
 		"focus-visible": "5.2.1",
 		"front-matter": "4.0.2",
-		"highlight.js": "11.10.0",
+		"highlight.js": "11.11.1",
 		"mdsvex": "0.12.3",
 		"npm-run-all2": "7.0.1",
 		"prettier": "3.4.1",
