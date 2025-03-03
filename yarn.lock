@@ -2073,7 +2073,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.3":
+"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.6":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
   dependencies:
@@ -2886,12 +2886,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all2@npm:7.0.1":
-  version: 7.0.1
-  resolution: "npm-run-all2@npm:7.0.1"
+"npm-run-all2@npm:7.0.2":
+  version: 7.0.2
+  resolution: "npm-run-all2@npm:7.0.2"
   dependencies:
     ansi-styles: "npm:^6.2.1"
-    cross-spawn: "npm:^7.0.3"
+    cross-spawn: "npm:^7.0.6"
     memorystream: "npm:^0.3.1"
     minimatch: "npm:^9.0.0"
     pidtree: "npm:^0.6.0"
@@ -2903,7 +2903,7 @@ __metadata:
     npm-run-all2: bin/npm-run-all/index.js
     run-p: bin/run-p/index.js
     run-s: bin/run-s/index.js
-  checksum: 10c0/1f2438341473280f7f55015f04a9c5bbbb3226e8235ef50811f50f98514f10ff2ac1640da592e0d5a2e6c7b95060e1bb1c7a86b5177fa746151912ac99a8f3b7
+  checksum: 10c0/4606c0cdaad9dc7dbe5a6ae432b1aabea25e2ffd541f959307e5c34247d0658952f98352b8ce45f925241af304c6718b2198b425f234e0e9fbc30b342cedb121
   languageName: node
   linkType: hard
 
@@ -3485,7 +3485,7 @@ __metadata:
     glob: "npm:11.0.1"
     highlight.js: "npm:11.11.1"
     mdsvex: "npm:0.12.3"
-    npm-run-all2: "npm:7.0.1"
+    npm-run-all2: "npm:7.0.2"
     polka: "npm:1.0.0-next.28"
     prettier: "npm:3.5.3"
     prettier-plugin-svelte: "npm:3.3.3"
