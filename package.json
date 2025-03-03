@@ -46,7 +46,7 @@
 		"highlight.js": "11.10.0",
 		"mdsvex": "0.12.3",
 		"npm-run-all2": "7.0.1",
-		"prettier": "3.4.1",
+		"prettier": "3.5.3",
 		"prettier-plugin-svelte": "3.3.3",
 		"rollup": "4.28.0",
 		"rollup-plugin-svelte": "7.2.2",
