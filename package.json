@@ -44,7 +44,7 @@
 		"focus-visible": "5.2.1",
 		"front-matter": "4.0.2",
 		"highlight.js": "11.11.1",
-		"mdsvex": "0.12.3",
+		"mdsvex": "0.12.6",
 		"npm-run-all2": "7.0.2",
 		"prettier": "3.5.3",
 		"prettier-plugin-svelte": "3.3.3",
