@@ -3190,16 +3190,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-svelte@npm:7.2.2":
-  version: 7.2.2
-  resolution: "rollup-plugin-svelte@npm:7.2.2"
+"rollup-plugin-svelte@npm:7.2.3":
+  version: 7.2.3
+  resolution: "rollup-plugin-svelte@npm:7.2.3"
   dependencies:
     "@rollup/pluginutils": "npm:^4.1.0"
     resolve.exports: "npm:^2.0.0"
   peerDependencies:
     rollup: ">=2.0.0"
     svelte: ">=3.5.0"
-  checksum: 10c0/f27f11b76d051a31a33200947c3a0066cdd9407679ab36ac396b1533963b004e32c1fffc9d0a04700272e02859681f215b3752200ee03d58e47c110e4a6efc91
+  checksum: 10c0/6358eebd2c265172cd945d37f69cd8c8d9d09ff904d758359f93d1331712a6e42c5f4de80935b171c7544af0b22d06f66b6cf1114193e3db75e5c50f59c9c80f
   languageName: node
   linkType: hard
 
@@ -3460,7 +3460,7 @@ __metadata:
     prettier: "npm:3.5.3"
     prettier-plugin-svelte: "npm:3.3.3"
     rollup: "npm:4.39.0"
-    rollup-plugin-svelte: "npm:7.2.2"
+    rollup-plugin-svelte: "npm:7.2.3"
     sapper: "npm:0.29.3"
     sirv: "npm:3.0.1"
     svelte: "npm:3.59.2"
